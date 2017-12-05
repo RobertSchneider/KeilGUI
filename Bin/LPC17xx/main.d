@@ -120,5 +120,8 @@
 .\bin\lpc17xx\main.o: Src\Rect.h
 .\bin\lpc17xx\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
 .\bin\lpc17xx\main.o: Src\GUIButton.h
+.\bin\lpc17xx\main.o: Src\GUILabel.h
 .\bin\lpc17xx\main.o: Src\View.h
 .\bin\lpc17xx\main.o: Src\GUIControls.h
+.\bin\lpc17xx\main.o: Src\GUISelect.h
+.\bin\lpc17xx\main.o: Src\GUISelect.h

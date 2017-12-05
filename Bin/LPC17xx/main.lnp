@@ -8,6 +8,8 @@
 ".\bin\lpc17xx\gui.o"
 ".\bin\lpc17xx\guibutton.o"
 ".\bin\lpc17xx\guicontrols.o"
+".\bin\lpc17xx\guilabel.o"
+".\bin\lpc17xx\guiselect.o"
 --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x10000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\Bin\LPC17xx\main.map" -o .\Bin\LPC17xx\main.axf

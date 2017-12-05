@@ -1,5 +1,6 @@
 .\bin\lpc17xx\guibutton.o: Src\GUIButton.cpp
 .\bin\lpc17xx\guibutton.o: Src\GUIButton.h
+.\bin\lpc17xx\guibutton.o: Src\GUILabel.h
 .\bin\lpc17xx\guibutton.o: Src\View.h
 .\bin\lpc17xx\guibutton.o: Src\IDrawable.h
 .\bin\lpc17xx\guibutton.o: ..\EmbSysLib\Lib\Src\lib.h
