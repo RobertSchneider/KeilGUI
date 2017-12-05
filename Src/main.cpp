@@ -17,6 +17,21 @@
 #include "GUIButton.h"
 #include "GUI.h"
 #include "View.h"
+#include "GUIControls.h"
+
+void onButtonTestEvent(GUIButton *_b, GUIEvent::Event _e)
+{
+	if (_e == GUIEvent::TouchDown)
+	{
+		_b->title = "click";
+		_b->redraw();
+	}
+	else if (_e == GUIEvent::TouchUp)
+	{
+		_b->title = "test";
+		_b->redraw();
+	}
+}
 
 //*******************************************************************
 int main(void)
@@ -30,13 +45,16 @@ int main(void)
 	superView.addChild(subView);
 	
 	GUIButton button(Rect(30, 20, 100, 30), BLACK, "test");
+	button.onCustomEvent = &onButtonTestEvent;
 	superView.addChild(button);
 	
 	superView.draw();
 	
+	GUIControls controls(superView, touch);
+	
   while(1)
 	{
-		
+		controls.update();
 	}
 }
 

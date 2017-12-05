@@ -9,6 +9,7 @@
 
 #include "lib.h"
 #include "Rect.h"
+#include <stdarg.h>
 
 #define COLOR WORD
 
@@ -28,6 +29,8 @@
 #define MAGENTA cHwDisplayGraphic::Magenta
 #define YELLOW cHwDisplayGraphic::Yellow
 #define WHITE cHwDisplayGraphic::White
+
+#define LCD_BUFFER_SIZE 256
 
 class GUI 
 {
@@ -61,12 +64,24 @@ public:
 		getInstance().disp->drawRectangle(_rect.x, _rect.y, _rect.w, _rect.h, _color );
 	}
 	
-	static void drawString(Rect _r, COLOR _tColor, COLOR _bgColor, char *_title)
+	static void drawRectOutline(Rect _rect, COLOR _color, BYTE _th = 1)
 	{
+		getInstance().disp->drawFrame(_rect.x, _rect.y, _rect.w, _rect.h, _th, _color);
+	}
+	
+	static void drawString(Rect _r, COLOR _tColor, COLOR _bgColor, const char *_format,...)
+	{
+		char str[LCD_BUFFER_SIZE+1]; // ein paar Zeichen als Reserve
+
+		va_list ptr;
+		va_start(ptr, _format);
+		vsprintf(str, _format, ptr);
+		va_end(ptr);
+		
 		cDevDisplayGraphic *disp = getInstance().disp;
 		disp->setTextColor(_tColor);
     disp->setBackColor(_bgColor);
-		disp->drawText(_r.x, _r.y, _title);
+		disp->drawText(_r.x, _r.y, str);
 	}
 };
 

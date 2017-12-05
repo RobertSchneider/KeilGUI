@@ -33,6 +33,8 @@ public:
 	}
 	
 	virtual void draw(Rect _r = GUI::screenRect);
+	virtual void onEvent(GUIEvent::Event _e, Rect _finger);
+	virtual void redraw();
 };
 
 #endif

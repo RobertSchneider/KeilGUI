@@ -26,9 +26,34 @@ void View::draw(Rect _r)
 	}
 }
 
+void View::redraw()
+{
+	if (parent != NULL)
+	{
+		parent->draw(rect);
+	}
+	else
+	{
+		draw();
+	}
+}
+
 void View::onDraw(Rect _r)
 {
 	GUI::drawRect(MINRECT(_r, rect), backgroundColor);
+}
+
+void View::onEvent(GUIEvent::Event _e, Rect _finger)
+{
+	IDrawable* ptr = (IDrawable*)children.getFirst();
+	while(ptr)
+	{
+		if (_e == GUIEvent::TouchUp || ptr->shouldDraw(_finger))
+		{
+			ptr->onEvent(_e, _finger);
+		}
+		ptr = (IDrawable*)ptr->getNext();
+	}
 }
 
 //EOF

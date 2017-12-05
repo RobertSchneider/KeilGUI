@@ -4,20 +4,13 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 C:\Users\robert\Documents\fh\Project\GUI\main_LPC17xx.uvproj
-Project File Date:  11/26/2017
+Project File Date:  11/28/2017
 
 <h2>Output:</h2>
-Rebuild target 'Target 1'
-assembling startup_LPC17xx.s...
-assembling RTOS_Asm.s...
-compiling lib.cpp...
-compiling RTOS.cpp...
-compiling main.cpp...
-compiling View.cpp...
-compiling GUI.cpp...
+Build target 'Target 1'
 compiling GUIButton.cpp...
 linking...
-Program Size: Code=10482 RO-data=2230 RW-data=232 ZI-data=29096  
+Program Size: Code=18274 RO-data=2958 RW-data=240 ZI-data=29136  
 FromELF: creating hex file...
 ".\Bin\LPC17xx\main.axf" - 0 Error(s), 0 Warning(s).
 Load "C:\\Users\\robert\\Documents\\fh\\Project\\GUI\\Bin\\LPC17xx\\main.axf" 
@@ -25,24 +18,99 @@ Erase Done.
 Programming Done.
 Verify OK.
 Application running ...
-</pre>
-</body>
-</html>
-.cpp...
-Src\GUI.h(67): error:  #153: expression must have class type
-                disp.setTextColor(_tColor);
-Src\GUI.h(68): error:  #153: expression must have class type
-      disp.setBackColor(_bgColor);
-Src\GUI.cpp: 0 warnings, 2 errors
-compiling GUIButton.cpp...
-Src\GUI.h(67): error:  #153: expression must have class type
-                disp.setTextColor(_tColor);
-Src\GUI.h(68): error:  #153: expression must have class type
-      disp.setBackColor(_bgColor);
+omEvent(this, _finger);
 Src\GUIButton.cpp: 0 warnings, 2 errors
-".\Bin\LPC17xx\main.axf" - 8 Error(s), 0 Warning(s).
+".\Bin\LPC17xx\main.axf" - 2 Error(s), 0 Warning(s).
 Target not created
-NumOfLines(), _disp->getNumOfColumns());
-Src\View.cpp: 0 warnings, 3 errors
-".\Bin\LPC17xx\main.axf" - 6 Error(s), 0 Warning(s).
+t::Event, Rect)" (declared at line 33 of "Src\GUIButton.h")
+  void GUIButton::onEvent(GUIEvent::Event _e, BYTE _x, BYTE _y)
+Src\GUIButton.cpp: 0 warnings, 1 error
+".\Bin\LPC17xx\main.axf" - 3 Error(s), 0 Warning(s).
+Target not created
+Event _e, BYTE _x, BYTE _y)
+Src\GUIButton.cpp: 0 warnings, 1 error
+".\Bin\LPC17xx\main.axf" - 4 Error(s), 0 Warning(s).
+Target not created
+vent::Event, Rect)" is hidden by "GUIButton::onEvent" -- virtual function override intended?
+        virtual void onEvent(GUIEvent::Event _e, BYTE _x, BYTE _y);
+Src\GUIButton.cpp: 1 warning, 0 errors
+compiling GUIControls.cpp...
+".\Bin\LPC17xx\main.axf" - 3 Error(s), 2 Warning(s).
+Target not created
+20: identifier "ObjectInfo" is undefined
+                                if ((ObjectInfo(index) & attributes) != 0)
+Src\IDrawable.h(30): error:  #20: identifier "fn" is undefined
+                                                fn(index, objectAddress);
+Src\View.cpp: 0 warnings, 5 errors
+compiling GUIButton.cpp...
+Src\IDrawable.h(25): error:  #20: identifier "uint" is undefined
+                explicit Functor(uint attributes) : attributes(attributes) {}
+Src\IDrawable.h(26): error:  #20: identifier "uint" is undefined
+                void operator () (uint index, void * objectAddress) const
+Src\IDrawable.h(33): error:  #20: identifier "uint" is undefined
+                uint attributes;
+Src\IDrawable.h(28): error:  #20: identifier "ObjectInfo" is undefined
+                                if ((ObjectInfo(index) & attributes) != 0)
+Src\IDrawable.h(30): error:  #20: identifier "fn" is undefined
+                                                fn(index, objectAddress);
+Src\GUIButton.cpp: 0 warnings, 5 errors
+compiling GUIControls.cpp...
+Src\IDrawable.h(25): error:  #20: identifier "uint" is undefined
+                explicit Functor(uint attributes) : attributes(attributes) {}
+Src\IDrawable.h(26): error:  #20: identifier "uint" is undefined
+                void operator () (uint index, void * objectAddress) const
+Src\IDrawable.h(33): error:  #20: identifier "uint" is undefined
+                uint attributes;
+Src\IDrawable.h(28): error:  #20: identifier "ObjectInfo" is undefined
+                                if ((ObjectInfo(index) & attributes) != 0)
+Src\IDrawable.h(30): error:  #20: identifier "fn" is undefined
+                                                fn(index, objectAddress);
+Src\GUIControls.cpp: 0 warnings, 5 errors
+".\Bin\LPC17xx\main.axf" - 20 Error(s), 0 Warning(s).
+Target not created
+uchUp, x, y);
+Src\GUIControls.cpp(21): error:  #20: identifier "GUIEvent_TouchUp" is undefined
+                        superView.onEvent(t ? GUIEvent_TouchDown : GUIEvent_TouchUp, x, y);
+Src\GUIControls.cpp(25): error:  #20: identifier "GUIEvent_Touch" is undefined
+                        superView.onEvent(GUIEvent_Touch, x, y);
+Src\GUIControls.cpp: 1 warning, 4 errors
+".\Bin\LPC17xx\main.axf" - 12 Error(s), 4 Warning(s).
+Target not created
+ned
+                        superView.onEvent(t ? GUIEvent_TouchDown : GUIEvent_TouchUp, x, y);
+Src\GUIControls.cpp(25): error:  #20: identifier "GUIEvent_Touch" is undefined
+                        superView.onEvent(GUIEvent_Touch, x, y);
+Src\GUIControls.cpp: 1 warning, 5 errors
+".\Bin\LPC17xx\main.axf" - 16 Error(s), 4 Warning(s).
+Target not created
+onstructor to initialize the following:
+            reference member "GUIControls::touch"
+  class GUIControls
+        ^
+Src\IDrawable.h(20): error:  #265-D: enum "GUIControls::GUIEvent" (declared at line 16 of "Src\GUIControls.h") is inaccessible
+  virtual void onEvent(GUIControls::GUIEvent _e, BYTE _x, BYTE _y) = 0;
+Src\View.h(36): error:  #265-D: enum "GUIControls::GUIEvent" (declared at line 16 of "Src\GUIControls.h") is inaccessible
+        virtual void onEvent(GUIControls::GUIEvent _e, BYTE _x, BYTE _y);
+Src\GUIButton.cpp: 2 warnings, 9 errors
+compiling GUIControls.cpp...
+Src\IDrawable.h(20): error:  #276: name followed by "::" must be a class or namespace name
+  virtual void onEvent(GUIControls::GUIEvent _e, BYTE _x, BYTE _y) = 0;
+Src\View.h(36): error:  #276: name followed by "::" must be a class or namespace name
+        virtual void onEvent(GUIControls::GUIEvent _e, BYTE _x, BYTE _y);
+Src\GUIControls.h(24): error:  #40: expected an identifier
+  private:
+Src\GUIControls.h(25): error:  #254: type name is not allowed
+        View &superView;
+Src\GUIControls.h(25): error:  #20: identifier "superView" is undefined
+        View &superView;
+Src\GUIControls.h(30): error:  #292: "superView" is not a nonstatic data member or base class of class "GUIControls"
+                : superView(_superView), touch(_touch)
+Src\GUIControls.cpp(21): error:  #20: identifier "GUIEvent_TouchDown" is undefined
+                        superView.onEvent(t ? GUIEvent_TouchDown : GUIEvent_TouchUp, x, y);
+Src\GUIControls.cpp(21): error:  #20: identifier "GUIEvent_TouchUp" is undefined
+                        superView.onEvent(t ? GUIEvent_TouchDown : GUIEvent_TouchUp, x, y);
+Src\GUIControls.cpp(25): error:  #20: identifier "GUIEvent_Touch" is undefined
+                        superView.onEvent(GUIEvent_Touch, x, y);
+Src\GUIControls.cpp: 0 warnings, 9 errors
+".\Bin\LPC17xx\main.axf" - 37 Error(s), 4 Warning(s).
 Target not created

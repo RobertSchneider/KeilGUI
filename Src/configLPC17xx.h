@@ -40,6 +40,10 @@ cHwPinConfig::MAP cHwPinConfig::table[]
       // UART
       TXD1_P2_0,
       RXD1_P2_1,
+			
+			// I2C
+			SDA2_P0_10,
+			SCL2_P0_11,
 
       END_OF_TABLE
   };
@@ -75,10 +79,15 @@ cHwADC      &adc = adc0;
   cHwDisp_SPFD5408Bspi dispHw      ( spiDisplay,
                                      pinBackLight ,
                                      fontFont_8x12, // font
-                                     2 );           // actual zoom factor
-#endif
+                                     2 );           // actual zoom factor		
+	cDevDisplayChar  disp( dispHw );						
 
-cDevDisplayChar  disp( dispHw );
+
+	cHwI2Cmaster_N       i2c_N( cHwI2Cmaster_N::I2C_2, 
+                            cHwI2Cmaster::CR_100kHz );
+
+	cHwTouch_STMPE811i2c touch( i2c_N, 0, 320, 240);
+#endif
 
 //- Joystick --------------------------------------------------------
 #if defined TERMINAL
