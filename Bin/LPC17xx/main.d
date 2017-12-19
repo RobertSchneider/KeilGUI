@@ -126,3 +126,4 @@
 .\bin\lpc17xx\main.o: Src\GUIControls.h
 .\bin\lpc17xx\main.o: Src\GUISelect.h
 .\bin\lpc17xx\main.o: Src\GUISelect.h
+.\bin\lpc17xx\main.o: Src\GUIPagedView.h

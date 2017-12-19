@@ -50,6 +50,16 @@ public:
 		va_end(ptr);
 	}
 	
+	~GUISelect()
+	{
+		GUIButton* ptr = (GUIButton*)children.getFirst();
+		while(ptr)
+		{
+			delete ptr;
+			ptr = (GUIButton*)ptr->getNext();
+		}
+	}
+	
 	void onButtonSelected(GUIButton *_b, GUIEvent::Event _e);
 	void updateSelected(GUIEvent::Event _e);
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger);

@@ -20,6 +20,7 @@
 #include "View.h"
 #include "GUIControls.h"
 #include "GUISelect.h"
+#include "GUIPagedView.h"
 
 class SampleEventHandler : public IEventHandler
 {
@@ -60,9 +61,6 @@ int main(void)
 	
 	View superView(GUI::screenRect, CYAN);
 	
-	View subView(Rect(10, 10, 10, 10), BLACK);
-	superView.addChild(subView);
-	
 	SampleEventHandler sampleHandler;
 	GUIButton button(Rect(30, 20, 100, 30), BLACK, "test");
 	button.customHandler = &sampleHandler;
@@ -77,9 +75,11 @@ int main(void)
 	select.customHandler = &selectEventHandler;
 	superView.addChild(select);
 	
-	superView.draw();
+	GUIPagedView pagedView = GUIPagedView(GUI::screenRect, 1, &superView);
 	
-	GUIControls controls(superView, touch);
+	pagedView.draw();
+	
+	GUIControls controls(pagedView, touch);
 	
   while(1)
 	{

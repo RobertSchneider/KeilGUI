@@ -500,6 +500,11 @@
               <FileType>5</FileType>
               <FilePath>.\Src\GUISelect.h</FilePath>
             </File>
+            <File>
+              <FileName>IEventHandler.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\IEventHandler.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

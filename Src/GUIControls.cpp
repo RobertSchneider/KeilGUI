@@ -9,10 +9,10 @@
 void GUIControls::update()
 {
 	touch.update();
-	BYTE t = touch.isTouched();
+	int t = touch.isTouched();
 
-	BYTE x = touch.getPosX();
-	BYTE y = touch.getPosY();
+	int x = touch.getPosX();
+	int y = touch.getPosY();
 	
 	Rect finger(x-10, y-10, 20, 20);
 	
