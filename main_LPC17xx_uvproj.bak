@@ -470,6 +470,36 @@
               <FileType>5</FileType>
               <FilePath>.\Src\GUIButton.h</FilePath>
             </File>
+            <File>
+              <FileName>GUIControls.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\GUIControls.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>GUIControls.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\GUIControls.h</FilePath>
+            </File>
+            <File>
+              <FileName>GUILabel.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\GUILabel.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>GUILabel.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\GUILabel.h</FilePath>
+            </File>
+            <File>
+              <FileName>GUISelect.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\GUISelect.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>GUISelect.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\GUISelect.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

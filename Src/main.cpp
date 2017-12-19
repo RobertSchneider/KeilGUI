@@ -21,19 +21,36 @@
 #include "GUIControls.h"
 #include "GUISelect.h"
 
-void onButtonTestEvent(GUIButton *_b, GUIEvent::Event _e)
+class SampleEventHandler : public IEventHandler
 {
-	if (_e == GUIEvent::TouchDown)
+public:
+	virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
 	{
-		_b->label.title = "click";
-		_b->redraw();
+		GUIButton *b = (GUIButton*)_caller;
+		if (_e == GUIEvent::TouchDown)
+		{
+			b->label.title = "click";
+			b->redraw();
+		}
+		else if (_e == GUIEvent::TouchUp)
+		{
+			b->label.title = "test";
+			b->redraw();
+		}
 	}
-	else if (_e == GUIEvent::TouchUp)
+};
+
+class SampleSelectEventHandler : public IEventHandler
+{
+public:
+	GUILabel *statusLabel;
+	virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
 	{
-		_b->label.title = "test";
-		_b->redraw();
+		GUISelect *select = (GUISelect*)_caller;
+		statusLabel->title = select->selectedButton->label.title;
+		statusLabel->redraw();
 	}
-}
+};
 
 //*******************************************************************
 int main(void)
@@ -46,14 +63,18 @@ int main(void)
 	View subView(Rect(10, 10, 10, 10), BLACK);
 	superView.addChild(subView);
 	
+	SampleEventHandler sampleHandler;
 	GUIButton button(Rect(30, 20, 100, 30), BLACK, "test");
-	button.onCustomEvent = &onButtonTestEvent;
+	button.customHandler = &sampleHandler;
 	superView.addChild(button);
 	
-	GUILabel label(Rect(100, 100, 100, 20), BLACK, "label");
+	GUILabel label(Rect(100, 100, 100, 30), BLACK, "label");
 	superView.addChild(label);
 	
-	GUISelect select(Rect(0, 200, 320, 20), BLACK, 3, "b1", "b2", "b3");
+	SampleSelectEventHandler selectEventHandler;
+	selectEventHandler.statusLabel = &label;
+	GUISelect select(Rect(50, 150, 200, 30), BLACK, 3, "b1", "b2", "b3");
+	select.customHandler = &selectEventHandler;
 	superView.addChild(select);
 	
 	superView.draw();

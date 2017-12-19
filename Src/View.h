@@ -15,6 +15,7 @@ class View : public IDrawable
 protected:
 	cList children;
 	virtual void onDraw(Rect _r);
+	virtual void onLateDraw(Rect _r);
 	virtual bool shouldDraw(Rect _r);
 public:
 	COLOR backgroundColor;
@@ -29,6 +30,7 @@ public:
 	void addChild(IDrawable &_child)
 	{
 		_child.parent = this;
+		_child.onAddedToDrawable(this);
 		children.add(&_child);
 	}
 	

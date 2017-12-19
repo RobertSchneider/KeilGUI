@@ -12,18 +12,21 @@
 
 #include "GUISelect.h"
 
-class GUISelect : public View
+class GUISelect : public View, IEventHandler, public IEventCaller
 {
 protected:
 	int count;
 	virtual void onDraw(Rect _r);
+	virtual void onLateDraw(Rect _r);
 public:
 	GUIButton *selectedButton;
+	COLOR outlineColor;
 	void (*onCustomEvent)(GUISelect*, GUIEvent::Event);
 
 	GUISelect(Rect _rect, COLOR _color, int _n, char *_titles,...)
 		: View(_rect, _color),
 			count(_n),
+			outlineColor(YELLOW),
 			onCustomEvent(NULL)
 	{
 		va_list ptr;
@@ -34,7 +37,8 @@ public:
 		BYTE x = 0;
 		for(int i = 0; i < count; i++)
 		{
-			GUIButton *btn = new GUIButton(Rect(x, _rect.y, _rect.w / count, _rect.h), _color, title);
+			GUIButton *btn = new GUIButton(Rect(_rect.x + x, _rect.y, _rect.w / count, _rect.h), _color, title);
+			btn->customHandler = this;
 			addChild(*btn);
 			
 			selectedButton = btn;
@@ -46,7 +50,10 @@ public:
 		va_end(ptr);
 	}
 	
+	void onButtonSelected(GUIButton *_b, GUIEvent::Event _e);
+	void updateSelected(GUIEvent::Event _e);
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger);
+	virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e);
 };
 
 #endif

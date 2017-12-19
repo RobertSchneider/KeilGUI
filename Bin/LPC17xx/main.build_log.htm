@@ -4,7 +4,7 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 C:\Users\robert\Documents\fh\Project\GUI\main_LPC17xx.uvproj
-Project File Date:  11/28/2017
+Project File Date:  12/19/2017
 
 <h2>Output:</h2>
 Rebuild target 'Target 1'
@@ -20,7 +20,7 @@ compiling GUIControls.cpp...
 compiling GUILabel.cpp...
 compiling GUISelect.cpp...
 linking...
-Program Size: Code=18858 RO-data=3022 RW-data=240 ZI-data=29136  
+Program Size: Code=19218 RO-data=3110 RW-data=240 ZI-data=29136  
 FromELF: creating hex file...
 ".\Bin\LPC17xx\main.axf" - 0 Error(s), 0 Warning(s).
 Load "C:\\Users\\robert\\Documents\\fh\\Project\\GUI\\Bin\\LPC17xx\\main.axf" 
@@ -28,87 +28,3 @@ Erase Done.
 Programming Done.
 Verify OK.
 Application running ...
-</pre>
-</body>
-</html>
-ariable "title" was declared but never referenced
-                char *title = _titles;
-Src\GUISelect.cpp: 1 warning, 1 error
-".\Bin\LPC17xx\main.axf" - 2 Error(s), 2 Warning(s).
-Target not created
-or : backgroundColor, 2);
-Src\GUISelect.cpp: 1 warning, 4 errors
-".\Bin\LPC17xx\main.axf" - 4 Error(s), 1 Warning(s).
-Target not created
-#20: identifier "drawOutline" is undefined
-        if (_e == GUIEvent::TouchDown || (_e == GUIEvent::TouchUp && drawOutline))
-Src\GUISelect.cpp(21): error:  #20: identifier "outlineColor" is undefined
-                GUI::drawRectOutline(rect, drawOutline ? outlineColor : backgroundColor, 2);
-Src\GUISelect.cpp: 1 warning, 7 errors
-".\Bin\LPC17xx\main.axf" - 7 Error(s), 1 Warning(s).
-Target not created
-            : View(_rect, _color),
-Src\GUISelect.h(23): error:  #292: "outlineColor" is not a nonstatic data member or base class of class "GUISelect"
-                        outlineColor(RED),
-Src\GUISelect.h(23): error:  #20: identifier "RED" is undefined
-                        outlineColor(RED),
-Src\GUISelect.h(24): error:  #20: identifier "NULL" is undefined
-                        onCustomEvent(NULL),
-Src\GUISelect.h(25): warning:  #1299-D: members and base-classes will be initialized in declaration order, not in member initialisation list order
-                        count(_n)
-Src\GUISelect.h(27): error:  #20: identifier "BYTE" is undefined
-                BYTE x = 0;
-Src\GUISelect.h(30): error:  #20: identifier "GUIButton" is undefined
-                        GUIButton btn(Rect(x, _rect.y, _rect.w / count, _rect.h), _color, _titles[i]);
-Src\GUISelect.h(30): error:  #20: identifier "Rect" is undefined
-                        GUIButton btn(Rect(x, _rect.y, _rect.w / count, _rect.h), _color, _titles[i]);
-Src\GUISelect.h(30): error:  #18: expected a ")"
-                        GUIButton btn(Rect(x, _rect.y, _rect.w / count, _rect.h), _color, _titles[i]);
-Src\GUISelect.h(31): error:  #20: identifier "addChild" is undefined
-                        addChild(btn);
-Src\GUISelect.cpp(9): error:  #20: identifier "Rect" is undefined
-  void GUISelect::onDraw(Rect _r)
-Src\GUISelect.cpp(11): error:  #276: name followed by "::" must be a class or namespace name
-        View::onDraw(_r);
-Src\GUISelect.cpp(14): error:  #276: name followed by "::" must be a class or namespace name
-  void GUISelect::onEvent(GUIEvent::Event _e, Rect _finger)
-Src\GUISelect.cpp(14): error:  #20: identifier "Rect" is undefined
-  void GUISelect::onEvent(GUIEvent::Event _e, Rect _finger)
-Src\GUISelect.cpp(18): error:  #276: name followed by "::" must be a class or namespace name
-        if (_e == GUIEvent::TouchDown || (_e == GUIEvent::TouchUp && drawOutline))
-Src\GUISelect.cpp(18): error:  #276: name followed by "::" must be a class or namespace name
-        if (_e == GUIEvent::TouchDown || (_e == GUIEvent::TouchUp && drawOutline))
-Src\GUISelect.cpp(18): error:  #20: identifier "drawOutline" is undefined
-        if (_e == GUIEvent::TouchDown || (_e == GUIEvent::TouchUp && drawOutline))
-Src\GUISelect.cpp(20): error:  #276: name followed by "::" must be a class or namespace name
-                drawOutline = _e == GUIEvent::TouchDown;
-Src\GUISelect.cpp(21): error:  #276: name followed by "::" must be a class or namespace name
-                GUI::drawRectOutline(rect, drawOutline ? outlineColor : backgroundColor, 2);
-Src\GUISelect.cpp(21): error:  #20: identifier "rect" is undefined
-                GUI::drawRectOutline(rect, drawOutline ? outlineColor : backgroundColor, 2);
-Src\GUISelect.cpp(21): error:  #20: identifier "outlineColor" is undefined
-                GUI::drawRectOutline(rect, drawOutline ? outlineColor : backgroundColor, 2);
-Src\GUISelect.cpp: 1 warning, 30 errors
-".\Bin\LPC17xx\main.axf" - 30 Error(s), 1 Warning(s).
-Target not created
-e a class or namespace name
-  virtual void onEvent(GUIControls::GUIEvent _e, BYTE _x, BYTE _y) = 0;
-Src\View.h(36): error:  #276: name followed by "::" must be a class or namespace name
-        virtual void onEvent(GUIControls::GUIEvent _e, BYTE _x, BYTE _y);
-Src\GUIControls.h(24): error:  #40: expected an identifier
-  private:
-Src\GUIControls.h(25): error:  #254: type name is not allowed
-        View &superView;
-Src\GUIControls.h(25): error:  #20: identifier "superView" is undefined
-        View &superView;
-Src\GUIControls.h(30): error:  #292: "superView" is not a nonstatic data member or base class of class "GUIControls"
-                : superView(_superView), touch(_touch)
-Src\GUIControls.cpp(21): error:  #20: identifier "GUIEvent_TouchDown" is undefined
-                        superView.onEvent(t ? GUIEvent_TouchDown : GUIEvent_TouchUp, x, y);
-Src\GUIControls.cpp(21): error:  #20: identifier "GUIEvent_TouchUp" is undefined
-                        superView.onEvent(t ? GUIEvent_TouchDown : GUIEvent_TouchUp, x, y);
-Src\GUIControls.cpp(25): error:  #20: identifier "GUIEvent_Touch" is undefined
-                        superView.onEvent(GUIEvent_Touch, x, y);
-Src\GUIControls.cpp: 0 warnings, 9 errors
-".\Bin\LPC17xx\main.axf" - 37 Error(s), 4 Warning(s).
-Target not created

@@ -30,6 +30,10 @@ public:
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger) = 0;
 	virtual bool shouldDraw(Rect _r) = 0;
 	virtual void redraw() = 0;
+	virtual void onAddedToDrawable(IDrawable *_super)
+	{
+		
+	}
 	
 protected:
 	virtual void update()

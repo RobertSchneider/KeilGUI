@@ -23,6 +23,8 @@ void View::draw(Rect _r)
 			ptr->draw(_r);
 			ptr = (IDrawable*)ptr->getNext();
 		}
+		
+		onLateDraw(_r);
 	}
 }
 
@@ -41,6 +43,11 @@ void View::redraw()
 void View::onDraw(Rect _r)
 {
 	GUI::drawRect(MINRECT(_r, rect), backgroundColor);
+}
+
+void View::onLateDraw(Rect _r)
+{
+	
 }
 
 void View::onEvent(GUIEvent::Event _e, Rect _finger)

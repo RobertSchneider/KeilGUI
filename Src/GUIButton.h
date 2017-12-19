@@ -8,8 +8,9 @@
 //-------------------------------------------------------------------
 
 #include "GUILabel.h"
+#include "IEventHandler.h"
 
-class GUIButton : public View
+class GUIButton : public View, public IEventCaller
 {
 protected:
 	bool drawOutline;
@@ -17,13 +18,11 @@ protected:
 public:
 	GUILabel label;
 	COLOR outlineColor;
-	void (*onCustomEvent)(GUIButton*, GUIEvent::Event);
 
 	GUIButton(Rect _rect, COLOR _color, char *_title)
 		: View(_rect, _color),
 			label(_rect, _color, _title),
-			outlineColor(RED),
-			onCustomEvent(NULL)
+			outlineColor(RED)
 	{
 		drawOutline = false;
 		addChild(label);

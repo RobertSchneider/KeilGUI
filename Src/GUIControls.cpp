@@ -21,7 +21,7 @@ void GUIControls::update()
 		wasTouching = t;
 		superView.onEvent(t ? GUIEvent::TouchDown : GUIEvent::TouchUp, finger);
 	}
-	else
+	else if (t)
 	{
 		superView.onEvent(GUIEvent::Touch, finger);
 	}
