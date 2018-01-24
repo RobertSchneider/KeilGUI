@@ -16,16 +16,21 @@ protected:
 	bool drawOutline;
 	virtual void onDraw(Rect _r);
 public:
-	GUILabel label;
+	GUILabel *label;
 	COLOR outlineColor;
 
 	GUIButton(Rect _rect, COLOR _color, char *_title)
 		: View(_rect, _color),
-			label(_rect, _color, _title),
 			outlineColor(RED)
 	{
+		label = new GUILabel(_rect, _color, _title);
 		drawOutline = false;
-		addChild(label);
+		addChild(*label);
+	}
+	
+	~GUIButton()
+	{
+		delete label;
 	}
 	
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger);

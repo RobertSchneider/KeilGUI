@@ -24,7 +24,7 @@ public:
 	View(Rect _rect, COLOR _color)
 		: backgroundColor(_color), rect(_rect)
 	{
-		
+		isHidden = true;
 	}
 	
 	void addChild(IDrawable &_child)
@@ -34,6 +34,7 @@ public:
 		children.add(&_child);
 	}
 	
+	virtual bool getIsHidden();
 	virtual void draw(Rect _r = GUI::screenRect);
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger);
 	virtual void redraw();

@@ -21,6 +21,7 @@
 #include "GUIControls.h"
 #include "GUISelect.h"
 #include "GUIPagedView.h"
+#include "GUIMeasurement.h"
 
 class SampleEventHandler : public IEventHandler
 {
@@ -30,13 +31,11 @@ public:
 		GUIButton *b = (GUIButton*)_caller;
 		if (_e == GUIEvent::TouchDown)
 		{
-			b->label.title = "click";
-			b->redraw();
+			b->label->setTitle("click");
 		}
 		else if (_e == GUIEvent::TouchUp)
 		{
-			b->label.title = "test";
-			b->redraw();
+			b->label->setTitle("test");
 		}
 	}
 };
@@ -47,9 +46,11 @@ public:
 	GUILabel *statusLabel;
 	virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
 	{
-		GUISelect *select = (GUISelect*)_caller;
-		statusLabel->title = select->selectedButton->label.title;
-		statusLabel->redraw();
+		if (_e == GUIEvent::TouchUp)
+		{
+			GUISelect *select = (GUISelect*)_caller;
+			statusLabel->setTitle(select->selectedButton->label->getTitle());
+		}
 	}
 };
 
@@ -59,31 +60,36 @@ int main(void)
 	cDevDisplayGraphic graphics( dispHw );
 	GUI::init(&graphics, 320, 240);
 	
-	View superView(GUI::screenRect, CYAN);
+	View *superView = new View(GUI::screenRect, CYAN);
 	
-	SampleEventHandler sampleHandler;
-	GUIButton button(Rect(30, 20, 100, 30), BLACK, "test");
-	button.customHandler = &sampleHandler;
-	superView.addChild(button);
+	SampleEventHandler *sampleHandler = new SampleEventHandler();
+	GUIButton *button = new GUIButton(Rect(30, 20, 100, 30), BLACK, "test");
+	button->setCustomHandler(sampleHandler);
+	superView->addChild(*button);
 	
-	GUILabel label(Rect(100, 100, 100, 30), BLACK, "label");
-	superView.addChild(label);
+	GUILabel *label = new GUILabel(Rect(100, 100, 100, 30), BLACK, "label");
+	superView->addChild(*label);
 	
-	SampleSelectEventHandler selectEventHandler;
-	selectEventHandler.statusLabel = &label;
-	GUISelect select(Rect(50, 150, 200, 30), BLACK, 3, "b1", "b2", "b3");
-	select.customHandler = &selectEventHandler;
-	superView.addChild(select);
+	SampleSelectEventHandler *selectEventHandler = new SampleSelectEventHandler();
+	selectEventHandler->statusLabel = label;
+	GUISelect *select = new GUISelect(Rect(50, 150, 200, 30), BLACK, 3, "b1", "b2", "b3");
+	select->setCustomHandler(selectEventHandler);
+	superView->addChild(*select);
 	
-	GUIPagedView pagedView = GUIPagedView(GUI::screenRect, 1, &superView);
+	View *secondView = new View(GUI::screenRect, WHITE);
+	GUIMeasurement *measure = new GUIMeasurement(Rect(10, 10, 200, 30), BLACK, "t:", "s");
+	measure->setValue(10);
+	secondView->addChild(*measure);
 	
-	pagedView.draw();
+	GUIPagedView *pagedView = new GUIPagedView(GUI::screenRect, 2, superView, secondView);
 	
-	GUIControls controls(pagedView, touch);
+	GUIControls *controls = new GUIControls(pagedView, touch);
+	
+	pagedView->draw();
 	
   while(1)
 	{
-		controls.update();
+		controls->update();
 	}
 }
 

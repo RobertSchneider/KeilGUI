@@ -127,3 +127,4 @@
 .\bin\lpc17xx\main.o: Src\GUISelect.h
 .\bin\lpc17xx\main.o: Src\GUISelect.h
 .\bin\lpc17xx\main.o: Src\GUIPagedView.h
+.\bin\lpc17xx\main.o: Src\GUIMeasurement.h

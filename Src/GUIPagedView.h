@@ -10,13 +10,16 @@
 #include "View.h"
 #include "GUIButton.h"
 
-class GUIPagedView : public View
+class GUIPagedView : public View, public IEventHandler
 {
 protected:
 	virtual void onDraw(Rect _r);
 public:
 	cList views;
 	int selectedView;
+	int viewCount;
+	GUIButton *bLeft;
+	GUIButton *bRight;
 
 	GUIPagedView(Rect _rect, int _n, View *_views,...)
 		: View(_rect, BLACK),
@@ -29,14 +32,19 @@ public:
 		
 		for(int i = 0; i < _n; i++)
 		{
+			view->isHidden = i != 0;
 			views.add(view);
 			view = va_arg(ptr, View*);
 		}
 		
-		GUIButton *bLeft = new GUIButton(Rect(_rect.x, _rect.y + _rect.h - 50, 50, 50), BLACK, "<");
+		viewCount = _n;
+		
+		bLeft = new GUIButton(Rect(_rect.x, _rect.y + _rect.h - 50, 50, 50), BLACK, "<");
+		bLeft->setCustomHandler(this);
 		addChild(*bLeft);
 		
-		GUIButton *bRight = new GUIButton(Rect(_rect.x + _rect.w - 50, _rect.y + _rect.h - 50, 50, 50), BLACK, ">");
+		bRight = new GUIButton(Rect(_rect.x + _rect.w - 50, _rect.y + _rect.h - 50, 50, 50), BLACK, ">");
+		bRight->setCustomHandler(this);
 		addChild(*bRight);
 		
 		va_end(ptr);
@@ -53,6 +61,7 @@ public:
 	}
 	
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger);
+	virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e);
 };
 
 #endif

@@ -12,16 +12,30 @@
 class GUILabel : public View
 {
 protected:
+	int strLen;
+	char *title;
 	virtual void onDraw(Rect _r);
 public:
-	char *title;
 	COLOR textColor;
+	virtual void setTitle(const char *_title);
 
-	GUILabel(Rect _rect, COLOR _color, char *_title)
+	GUILabel(Rect _rect, COLOR _color, const char *_title)
 		: View(_rect, _color),
 			textColor(WHITE)
 	{
-		title = _title;
+		title = NULL;
+		strLen = strlen(_title);
+		setTitle(_title);
+	}
+	
+	char *getTitle()
+	{
+		return title;
+	}
+	
+	~GUILabel()
+	{
+		delete title;
 	}
 };
 

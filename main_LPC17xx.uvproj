@@ -515,6 +515,16 @@
               <FileType>5</FileType>
               <FilePath>.\Src\GUIPagedView.h</FilePath>
             </File>
+            <File>
+              <FileName>GUIMeasurement.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\GUIMeasurement.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>GUIMeasurement.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\GUIMeasurement.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

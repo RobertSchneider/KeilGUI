@@ -505,6 +505,16 @@
               <FileType>5</FileType>
               <FilePath>.\Src\IEventHandler.h</FilePath>
             </File>
+            <File>
+              <FileName>GUIPagedView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\GUIPagedView.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>GUIPagedView.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\GUIPagedView.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

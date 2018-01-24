@@ -15,14 +15,14 @@ class GUIControls
 {
 	
 private:
-	View &superView;
+	View *superView;
 	cHwTouch &touch;
 	BYTE wasTouching;
 public:
-	GUIControls(View &_superView, cHwTouch &_touch)
+	GUIControls(View *_superView, cHwTouch &_touch)
 		: superView(_superView), touch(_touch)
 	{
-		
+		superView->isHidden = false;
 	}
 	
 	void update();

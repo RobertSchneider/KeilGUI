@@ -25,7 +25,12 @@ class IDrawable : public cList::Item
 {
 public:
 	IDrawable *parent;
-	
+	bool isHidden;
+
+	virtual bool getIsHidden()
+	{
+		return isHidden;
+	}
 	virtual void draw(Rect _r = GUI::screenRect) = 0;
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger) = 0;
 	virtual bool shouldDraw(Rect _r) = 0;

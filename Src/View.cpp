@@ -13,6 +13,11 @@ bool View::shouldDraw(Rect _r)
 
 void View::draw(Rect _r)
 {
+	if (getIsHidden()) 
+	{
+		return;
+	}
+	
 	if (_r.isValid() && shouldDraw(_r))
 	{
 		onDraw(_r);
@@ -20,6 +25,7 @@ void View::draw(Rect _r)
 		IDrawable* ptr = (IDrawable*)children.getFirst();
 		while(ptr)
 		{
+			ptr->isHidden = false;
 			ptr->draw(_r);
 			ptr = (IDrawable*)ptr->getNext();
 		}
@@ -28,8 +34,18 @@ void View::draw(Rect _r)
 	}
 }
 
+bool View::getIsHidden()
+{
+	return isHidden || (parent != NULL && parent->getIsHidden());
+}
+
 void View::redraw()
 {
+	if (getIsHidden()) 
+	{
+		return;
+	}
+	
 	if (parent != NULL)
 	{
 		parent->draw(rect);

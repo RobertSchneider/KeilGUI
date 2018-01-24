@@ -19,11 +19,11 @@ void GUIControls::update()
 	if (wasTouching != t)
 	{
 		wasTouching = t;
-		superView.onEvent(t ? GUIEvent::TouchDown : GUIEvent::TouchUp, finger);
+		superView->onEvent(t ? GUIEvent::TouchDown : GUIEvent::TouchUp, finger);
 	}
 	else if (t)
 	{
-		superView.onEvent(GUIEvent::Touch, finger);
+		superView->onEvent(GUIEvent::Touch, finger);
 	}
 }
 

@@ -20,8 +20,18 @@ public:
 
 class IEventCaller
 {
-public:
+protected:
 	IEventHandler *customHandler;
+	virtual void onHandlerSet()
+	{
+		
+	}
+public:
+	void setCustomHandler(IEventHandler *_handler)
+	{
+		customHandler = _handler;
+		onHandlerSet();
+	}
 	void callHandler(GUIEvent::Event _e)
 	{
 		if (customHandler != NULL)
