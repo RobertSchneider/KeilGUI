@@ -119,4 +119,3 @@
 .\bin\lpc17xx\guiselect.o: Src\GUIButton.h
 .\bin\lpc17xx\guiselect.o: Src\GUILabel.h
 .\bin\lpc17xx\guiselect.o: Src\IEventHandler.h
-.\bin\lpc17xx\guiselect.o: Src\GUISelect.h

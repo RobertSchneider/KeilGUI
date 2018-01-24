@@ -17,6 +17,7 @@ protected:
 	virtual void onDraw(Rect _r);
 	virtual void onLateDraw(Rect _r);
 	virtual bool shouldDraw(Rect _r);
+	virtual void destroy();
 public:
 	COLOR backgroundColor;
 	Rect rect;
@@ -32,6 +33,11 @@ public:
 		_child.parent = this;
 		_child.onAddedToDrawable(this);
 		children.add(&_child);
+	}
+	
+	~View()
+	{
+		destroy();
 	}
 	
 	virtual bool getIsHidden();

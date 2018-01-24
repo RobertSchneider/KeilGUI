@@ -32,10 +32,21 @@
 
 #define LCD_BUFFER_SIZE 256
 
+namespace GUIAlignment
+{
+	enum Alignment
+	{
+		Left = 0,
+		Center = 1,
+		Right = 2
+	};
+};
+
 class GUI 
 {
 protected:
 	cDevDisplayGraphic *disp;	
+	int charWidth;
 public:
 	static Rect screenRect;
 
@@ -50,8 +61,9 @@ public:
 		
 	}
 	
-	static void init(cDevDisplayGraphic *_disp, int _width, int _height)
+	static void init(cDevDisplayGraphic *_disp, int _width, int _height, int _charWidth)
 	{
+		getInstance().charWidth = _charWidth;
 		getInstance().disp = _disp;
 		GUI::screenRect = Rect(0, 0, _width, _height);
 	}
@@ -71,6 +83,11 @@ public:
 	
 	static void drawString(Rect _r, COLOR _tColor, COLOR _bgColor, const char *_format,...)
 	{
+		drawString(_r, _tColor, _bgColor, GUIAlignment::Left, _format);
+	}
+	
+	static void drawString(Rect _r, COLOR _tColor, COLOR _bgColor, GUIAlignment::Alignment _alignment, const char *_format,...)
+	{
 		char str[LCD_BUFFER_SIZE+1]; // ein paar Zeichen als Reserve
 
 		va_list ptr;
@@ -81,7 +98,19 @@ public:
 		cDevDisplayGraphic *disp = getInstance().disp;
 		disp->setTextColor(_tColor);
     disp->setBackColor(_bgColor);
-		disp->drawText(_r.x, _r.y, str);
+		
+		int x = _r.x;
+		
+		if (_alignment == GUIAlignment::Center)
+		{
+			x = (int)(_r.x + _r.w / 2.0f) - strlen(str) / 2 * getInstance().charWidth * 2;
+		}
+		if (_alignment == GUIAlignment::Right)
+		{
+			x = _r.x + _r.w - strlen(str) * getInstance().charWidth;
+		}
+		
+		disp->drawText(x, _r.y, str);
 	}
 };
 

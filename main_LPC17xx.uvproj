@@ -456,11 +456,6 @@
               <FilePath>.\Src\GUI.h</FilePath>
             </File>
             <File>
-              <FileName>GUI.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Src\GUI.cpp</FilePath>
-            </File>
-            <File>
               <FileName>GUIButton.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>.\Src\GUIButton.cpp</FilePath>
@@ -524,6 +519,26 @@
               <FileName>GUIMeasurement.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Src\GUIMeasurement.h</FilePath>
+            </File>
+            <File>
+              <FileName>GUIStepper.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\GUIStepper.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>GUIStepper.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\GUIStepper.h</FilePath>
+            </File>
+            <File>
+              <FileName>GUITitleView.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\GUITitleView.h</FilePath>
+            </File>
+            <File>
+              <FileName>GUI.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\GUI.cpp</FilePath>
             </File>
           </Files>
         </Group>

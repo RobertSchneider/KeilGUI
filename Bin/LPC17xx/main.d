@@ -125,6 +125,7 @@
 .\bin\lpc17xx\main.o: Src\IEventHandler.h
 .\bin\lpc17xx\main.o: Src\GUIControls.h
 .\bin\lpc17xx\main.o: Src\GUISelect.h
-.\bin\lpc17xx\main.o: Src\GUISelect.h
 .\bin\lpc17xx\main.o: Src\GUIPagedView.h
 .\bin\lpc17xx\main.o: Src\GUIMeasurement.h
+.\bin\lpc17xx\main.o: Src\GUIStepper.h
+.\bin\lpc17xx\main.o: Src\GUITitleView.h

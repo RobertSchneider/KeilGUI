@@ -13,11 +13,10 @@
 
 class GUIControls
 {
-	
 private:
 	View *superView;
 	cHwTouch &touch;
-	BYTE wasTouching;
+	BYTE wasTouching;	
 public:
 	GUIControls(View *_superView, cHwTouch &_touch)
 		: superView(_superView), touch(_touch)

@@ -28,11 +28,6 @@ public:
 		addChild(*label);
 	}
 	
-	~GUIButton()
-	{
-		delete label;
-	}
-	
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger);
 };
 

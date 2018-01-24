@@ -22,6 +22,8 @@
 #include "GUISelect.h"
 #include "GUIPagedView.h"
 #include "GUIMeasurement.h"
+#include "GUIStepper.h"
+#include "GUITitleView.h"
 
 class SampleEventHandler : public IEventHandler
 {
@@ -58,7 +60,7 @@ public:
 int main(void)
 {
 	cDevDisplayGraphic graphics( dispHw );
-	GUI::init(&graphics, 320, 240);
+	GUI::init(&graphics, 320, 240, 8);
 	
 	View *superView = new View(GUI::screenRect, CYAN);
 	
@@ -76,10 +78,13 @@ int main(void)
 	select->setCustomHandler(selectEventHandler);
 	superView->addChild(*select);
 	
-	View *secondView = new View(GUI::screenRect, WHITE);
+	GUITitleView *secondView = new GUITitleView(GUI::screenRect, WHITE, "second");
 	GUIMeasurement *measure = new GUIMeasurement(Rect(10, 10, 200, 30), BLACK, "t:", "s");
 	measure->setValue(10);
 	secondView->addChild(*measure);
+	
+	GUIStepper *stepper = new GUIStepper(Rect(40, 100, 240, 30), BLACK, 0, 1, 0.1f);
+	secondView->addChild(*stepper);
 	
 	GUIPagedView *pagedView = new GUIPagedView(GUI::screenRect, 2, superView, secondView);
 	

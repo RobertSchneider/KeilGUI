@@ -50,16 +50,6 @@ public:
 		va_end(ptr);
 	}
 	
-	~GUIPagedView()
-	{
-		GUIButton* ptr = (GUIButton*)children.getFirst();
-		while(ptr)
-		{
-			delete ptr;
-			ptr = (GUIButton*)ptr->getNext();
-		}
-	}
-	
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger);
 	virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e);
 };

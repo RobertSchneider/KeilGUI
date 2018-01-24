@@ -5,13 +5,14 @@
 ".\bin\lpc17xx\rtos.o"
 ".\bin\lpc17xx\main.o"
 ".\bin\lpc17xx\view.o"
-".\bin\lpc17xx\gui.o"
 ".\bin\lpc17xx\guibutton.o"
 ".\bin\lpc17xx\guicontrols.o"
 ".\bin\lpc17xx\guilabel.o"
 ".\bin\lpc17xx\guiselect.o"
 ".\bin\lpc17xx\guipagedview.o"
 ".\bin\lpc17xx\guimeasurement.o"
+".\bin\lpc17xx\guistepper.o"
+".\bin\lpc17xx\gui.o"
 --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x10000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\Bin\LPC17xx\main.map" -o .\Bin\LPC17xx\main.axf

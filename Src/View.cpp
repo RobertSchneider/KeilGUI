@@ -6,6 +6,17 @@
 
 #include "View.h"
 
+
+void View::destroy()
+{
+	IDrawable* ptr = (IDrawable*)children.getFirst();
+	while(ptr)
+	{
+		delete ptr;
+		ptr = (IDrawable*)ptr->getNext();
+	}
+}
+
 bool View::shouldDraw(Rect _r)
 {
 	return _r.intersects(rect);

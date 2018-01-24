@@ -15,6 +15,14 @@ class GUIMeasurement : public GUILabel
 protected:
 	char *desc;
 	char *unit;
+	
+	virtual void destroy()
+	{
+		delete title;
+		delete desc;
+		delete unit;
+		View::destroy();
+	}
 public:
 
 	GUIMeasurement(Rect _rect, COLOR _color, char *_desc, char *_unit)
@@ -27,13 +35,6 @@ public:
 		memcpy(unit, _unit, sizeof(char) * strlen(_unit) + 1);
 		
 		setValue("--");
-	}
-	
-	~GUIMeasurement()
-	{
-		delete title;
-		delete desc;
-		delete unit;
 	}
 	
 	void setText(char *_desc, char *_unit, const char *_data);

@@ -10,8 +10,6 @@
 #include "View.h"
 #include "GUIButton.h"
 
-#include "GUISelect.h"
-
 class GUISelect : public View, public IEventHandler, public IEventCaller
 {
 protected:
@@ -52,16 +50,6 @@ public:
 		}
 		
 		va_end(ptr);
-	}
-	
-	~GUISelect()
-	{
-		GUIButton* ptr = (GUIButton*)children.getFirst();
-		while(ptr)
-		{
-			delete ptr;
-			ptr = (GUIButton*)ptr->getNext();
-		}
 	}
 	
 	void onButtonSelected(GUIButton *_b, GUIEvent::Event _e);

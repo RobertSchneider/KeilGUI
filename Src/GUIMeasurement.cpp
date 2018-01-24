@@ -10,7 +10,7 @@
 void GUIMeasurement::setText(char *_desc, char *_unit, const char *_data)
 {
 	char *text = (char*)malloc(sizeof(char) * (strlen(_desc) + strlen(_unit) + strlen(_data) + 1));
-	sprintf(text, "%s %s %s", _desc, _data, _unit);
+	sprintf(text, "%s%s%s", _desc, _data, _unit);
 	setTitle(text);
 	delete text;
 }
@@ -42,7 +42,7 @@ void GUIMeasurement::setValue(int _val)
 void GUIMeasurement::setValue(float _val)
 {
 	char tmp[15];
-	snprintf(tmp, 15, "%f", _val);
+	snprintf(tmp, 15, "%.3f", _val);
 	setText(tmp);
 }
 
