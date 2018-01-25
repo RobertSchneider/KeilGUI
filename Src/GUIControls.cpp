@@ -20,6 +20,8 @@ void GUIControls::update()
 	{
 		wasTouching = t;
 		superView->onEvent(t ? GUIEvent::TouchDown : GUIEvent::TouchUp, finger);
+	
+		for (int i = 0; i < 10000; i++);
 	}
 	else if (t)
 	{

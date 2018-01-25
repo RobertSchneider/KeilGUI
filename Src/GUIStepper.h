@@ -36,15 +36,15 @@ public:
 		
 		btnUp = new GUIButton(Rect(_rect.x + _rect.w - btnWidth, _rect.y, btnWidth, _rect.h), _color, "+");
 		btnUp->setCustomHandler(this);
-		addChild(*btnUp);
+		addChild(btnUp);
 		
 		btnDown = new GUIButton(Rect(_rect.x, _rect.y, btnWidth, _rect.h), _color, "-");
 		btnDown->setCustomHandler(this);
-		addChild(*btnDown);
+		addChild(btnDown);
 		
 		label = new GUIMeasurement(Rect(_rect.x + btnWidth, _rect.y, _rect.w - btnWidth * 2, _rect.h), _color, "", "");
 		label->setValue(current);
-		addChild(*label);
+		addChild(label);
 	}
 	
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger);

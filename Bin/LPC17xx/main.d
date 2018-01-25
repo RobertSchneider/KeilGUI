@@ -129,3 +129,4 @@
 .\bin\lpc17xx\main.o: Src\GUIMeasurement.h
 .\bin\lpc17xx\main.o: Src\GUIStepper.h
 .\bin\lpc17xx\main.o: Src\GUITitleView.h
+.\bin\lpc17xx\main.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h

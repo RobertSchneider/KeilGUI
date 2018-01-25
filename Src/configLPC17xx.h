@@ -55,6 +55,7 @@ cHwTimer_N  timerPWM( cHwTimer_N::TIM_PWM, 100/*us*/ );
 //- Digital Port ----------------------------------------------------
 cHwPort_N   port0( cHwPort_N::P0 );
 cHwPort_N   port1( cHwPort_N::P1 );
+cHwPort_N   port2( cHwPort_N::P2 );
 cHwPort_N   port4( cHwPort_N::P4 );
 
 //- Analog Output ---------------------------------------------------
@@ -103,6 +104,11 @@ cHwADC      &adc = adc0;
 cDevControlEncoderJoystick  enc( &btnLeft, &btnRight, &btnCtrl, &timer, 200 );
 
 //- LED -------------------------------------------------------------
-cDevDigital  led( port1, 31, cDevDigital::Out, 0 );
+cDevDigital  led1( port1, 31, cDevDigital::Out, 0 );
+cDevDigital  led2( port2, 2, cDevDigital::Out, 0 );
+cDevDigital  led3( port2, 3, cDevDigital::Out, 0 );
+cDevDigital  led4( port2, 4, cDevDigital::Out, 0 );
+
+cHwPort::Pin  pinPoti ( port0,  25 );
 
 //*******************************************************************

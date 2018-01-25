@@ -28,11 +28,11 @@ public:
 		isHidden = true;
 	}
 	
-	void addChild(IDrawable &_child)
+	void addChild(IDrawable *_child)
 	{
-		_child.parent = this;
-		_child.onAddedToDrawable(this);
-		children.add(&_child);
+		_child->parent = this;
+		_child->onAddedToDrawable(this);
+		children.add(_child);
 	}
 	
 	~View()

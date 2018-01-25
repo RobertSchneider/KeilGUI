@@ -25,7 +25,7 @@ public:
 	{
 		label = new GUILabel(_rect, _color, _title);
 		drawOutline = false;
-		addChild(*label);
+		addChild(label);
 	}
 	
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger);

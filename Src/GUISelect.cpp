@@ -27,6 +27,16 @@ void GUISelect::onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
 {
 	if (_e == GUIEvent::TouchUp)
 	{
+		selectedIndex = 0;
+		IDrawable* ptr = (IDrawable*)children.getFirst();
+		while(ptr)
+		{
+			if (ptr == (GUIButton*)_caller)
+				break;
+			selectedIndex++;
+			ptr = (IDrawable*)ptr->getNext();
+		}
+		
 		selectedButton = (GUIButton*)_caller;
 	}
 	

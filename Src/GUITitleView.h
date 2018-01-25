@@ -20,7 +20,7 @@ public:
 	{
 		titleLabel = new GUILabel(Rect(_rect.x, _rect.y, _rect.w, 30), _color, _title);
 		titleLabel->textColor = 1 - _color;
-		addChild(*titleLabel);
+		addChild(titleLabel);
 	}
 };
 

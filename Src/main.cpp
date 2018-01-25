@@ -25,36 +25,79 @@
 #include "GUIStepper.h"
 #include "GUITitleView.h"
 
-class SampleEventHandler : public IEventHandler
+#include <math.h>
+
+class LedToggleEventHandler : public IEventHandler
 {
 public:
+	bool toggled;
+	cDevDigital *digital;
+
+	LedToggleEventHandler(cDevDigital &_digital)
+	{
+		digital = &_digital;
+	}
+
 	virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
 	{
 		GUIButton *b = (GUIButton*)_caller;
-		if (_e == GUIEvent::TouchDown)
+		if (_e == GUIEvent::TouchUp)
 		{
-			b->label->setTitle("click");
-		}
-		else if (_e == GUIEvent::TouchUp)
-		{
-			b->label->setTitle("test");
+			toggled = !toggled;
+			digital->set(toggled);
+			b->label->setTitle(toggled ? "LED1: on" : "LED1: off");
 		}
 	}
 };
 
-class SampleSelectEventHandler : public IEventHandler
+class LedSelectEventHandler : public IEventHandler
 {
 public:
-	GUILabel *statusLabel;
+	cDevDigital *digitalLed1;
+	cDevDigital *digitalLed2;
+	cDevDigital *digitalLed3;
+
+	LedSelectEventHandler(cDevDigital *_l1, cDevDigital *_l2, cDevDigital *_l3)
+	{
+		digitalLed1 = _l1;
+		digitalLed2 = _l2;
+		digitalLed3 = _l3;
+	}
+
 	virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
 	{
 		if (_e == GUIEvent::TouchUp)
 		{
 			GUISelect *select = (GUISelect*)_caller;
-			statusLabel->setTitle(select->selectedButton->label->getTitle());
+			digitalLed1->set(select->selectedIndex == 0);
+			digitalLed2->set(select->selectedIndex == 1);
+			digitalLed3->set(select->selectedIndex == 2);
 		}
 	}
 };
+
+class SampleTimer : public cList::Item
+{
+public:
+	float time;
+	float cycle;
+	GUIStepper *stepper;
+
+	SampleTimer(float _cycle)
+	{
+		cycle = _cycle;
+	}
+
+	virtual void update()
+	{
+		time += 1.0f / cycle;
+		float f = sin(2 * 3.141 * time * stepper->current);
+		f = (f + 1) * 100.0f / 3000.0f * 0xFFFF;
+		dac.set(f);
+	}
+};
+
+SampleTimer sampleTimer(1000);
 
 //*******************************************************************
 int main(void)
@@ -62,39 +105,56 @@ int main(void)
 	cDevDisplayGraphic graphics( dispHw );
 	GUI::init(&graphics, 320, 240, 8);
 	
-	View *superView = new View(GUI::screenRect, CYAN);
+	//setup
+	adc0.enable(2);
+	timer.add(&sampleTimer);
 	
-	SampleEventHandler *sampleHandler = new SampleEventHandler();
-	GUIButton *button = new GUIButton(Rect(30, 20, 100, 30), BLACK, "test");
-	button->setCustomHandler(sampleHandler);
-	superView->addChild(*button);
+	//======LEDS
+	GUITitleView *firstView = new GUITitleView(GUI::screenRect, WHITE, "LED");
 	
-	GUILabel *label = new GUILabel(Rect(100, 100, 100, 30), BLACK, "label");
-	superView->addChild(*label);
+	LedToggleEventHandler *handler = new LedToggleEventHandler(led1);
+	GUIButton *ledToggle = new GUIButton(Rect(40, 80, 240, 30), BLACK, "LED1: off");
+	ledToggle->setCustomHandler(handler);
+	firstView->addChild(ledToggle);
 	
-	SampleSelectEventHandler *selectEventHandler = new SampleSelectEventHandler();
-	selectEventHandler->statusLabel = label;
-	GUISelect *select = new GUISelect(Rect(50, 150, 200, 30), BLACK, 3, "b1", "b2", "b3");
+	LedSelectEventHandler *selectEventHandler = new LedSelectEventHandler(&led2, &led3, &led4);
+	GUISelect *select = new GUISelect(Rect(40, 120, 240, 30), BLACK, 3, "LED2", "LED3", "LED4");
 	select->setCustomHandler(selectEventHandler);
-	superView->addChild(*select);
+	firstView->addChild(select);
 	
-	GUITitleView *secondView = new GUITitleView(GUI::screenRect, WHITE, "second");
-	GUIMeasurement *measure = new GUIMeasurement(Rect(10, 10, 200, 30), BLACK, "t:", "s");
-	measure->setValue(10);
-	secondView->addChild(*measure);
+	//======POTI
+	GUITitleView *secondView = new GUITitleView(GUI::screenRect, WHITE, "POTI");
 	
-	GUIStepper *stepper = new GUIStepper(Rect(40, 100, 240, 30), BLACK, 0, 1, 0.1f);
-	secondView->addChild(*stepper);
+	GUIMeasurement *measure = new GUIMeasurement(Rect(40, 80, 240, 30), BLACK, "poti:", " mV");
+	measure->setAlignment(GUIAlignment::Left);
+	secondView->addChild(measure);
 	
-	GUIPagedView *pagedView = new GUIPagedView(GUI::screenRect, 2, superView, secondView);
+	//======SOUND
+	GUITitleView *thirdView = new GUITitleView(GUI::screenRect, WHITE, "SOUND");
 	
+	GUILabel *label = new GUILabel(Rect(40, 80, 240, 30), BLACK, "frequency");
+	thirdView->addChild(label);
+	
+	GUIStepper *stepper = new GUIStepper(Rect(40, 120, 240, 30), BLACK, 0, 1000, 100);
+	sampleTimer.stepper = stepper;
+	thirdView->addChild(stepper);
+	
+	GUIPagedView *pagedView = new GUIPagedView(GUI::screenRect, 3, firstView, secondView, thirdView);
 	GUIControls *controls = new GUIControls(pagedView, touch);
-	
 	pagedView->draw();
+	
+	int skipFrames = 0;
 	
   while(1)
 	{
 		controls->update();
+		
+		if (skipFrames++ == 100)
+		{
+			adc0.update();
+			measure->setValue(adc0.get(2));
+			skipFrames = 0;
+		}
 	}
 }
 

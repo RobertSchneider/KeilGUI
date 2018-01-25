@@ -41,11 +41,11 @@ public:
 		
 		bLeft = new GUIButton(Rect(_rect.x, _rect.y + _rect.h - 50, 50, 50), BLACK, "<");
 		bLeft->setCustomHandler(this);
-		addChild(*bLeft);
+		addChild(bLeft);
 		
 		bRight = new GUIButton(Rect(_rect.x + _rect.w - 50, _rect.y + _rect.h - 50, 50, 50), BLACK, ">");
 		bRight->setCustomHandler(this);
-		addChild(*bRight);
+		addChild(bRight);
 		
 		va_end(ptr);
 	}

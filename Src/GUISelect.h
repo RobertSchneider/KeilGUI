@@ -22,6 +22,7 @@ protected:
 	}
 public:
 	GUIButton *selectedButton;
+	int selectedIndex;
 	COLOR outlineColor;
 	void (*onCustomEvent)(GUISelect*, GUIEvent::Event);
 
@@ -41,8 +42,9 @@ public:
 		{
 			GUIButton *btn = new GUIButton(Rect(_rect.x + x, _rect.y, _rect.w / count, _rect.h), _color, title);
 			btn->setCustomHandler(this);
-			addChild(*btn);
+			addChild(btn);
 			
+			selectedIndex = i;
 			selectedButton = btn;
 			
 			x += _rect.w / count;
