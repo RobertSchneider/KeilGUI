@@ -8,7 +8,7 @@
 //-------------------------------------------------------------------
 
 #include "lib.h"
-#include "GUI.h"
+#include "GUIHelper.h"
 
 namespace GUIEvent
 {
@@ -31,7 +31,7 @@ public:
 	{
 		return isHidden;
 	}
-	virtual void draw(Rect _r = GUI::screenRect) = 0;
+	virtual void draw(Rect _r = GUIHelper::screenRect) = 0;
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger) = 0;
 	virtual bool shouldDraw(Rect _r) = 0;
 	virtual void redraw() = 0;

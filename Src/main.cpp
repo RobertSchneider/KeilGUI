@@ -13,17 +13,7 @@
   #error "Device type not defined"
 #endif
 
-#include "IDrawable.h"
-#include "GUIButton.h"
-#include "GUILabel.h"
 #include "GUI.h"
-#include "View.h"
-#include "GUIControls.h"
-#include "GUISelect.h"
-#include "GUIPagedView.h"
-#include "GUIMeasurement.h"
-#include "GUIStepper.h"
-#include "GUITitleView.h"
 
 #include <math.h>
 
@@ -103,14 +93,14 @@ SampleTimer sampleTimer(1000);
 int main(void)
 {
 	cDevDisplayGraphic graphics( dispHw );
-	GUI::init(&graphics, 320, 240, 8);
+	GUIHelper::init(&graphics, 320, 240, 8);
 	
 	//setup
 	adc0.enable(2);
 	timer.add(&sampleTimer);
 	
 	//======LEDS
-	GUITitleView *firstView = new GUITitleView(GUI::screenRect, WHITE, "LED");
+	GUITitleView *firstView = new GUITitleView(GUIHelper::screenRect, WHITE, "LED");
 	
 	LedToggleEventHandler *handler = new LedToggleEventHandler(led1);
 	GUIButton *ledToggle = new GUIButton(Rect(40, 80, 240, 30), BLACK, "LED1: off");
@@ -123,14 +113,14 @@ int main(void)
 	firstView->addChild(select);
 	
 	//======POTI
-	GUITitleView *secondView = new GUITitleView(GUI::screenRect, WHITE, "POTI");
+	GUITitleView *secondView = new GUITitleView(GUIHelper::screenRect, WHITE, "POTI");
 	
 	GUIMeasurement *measure = new GUIMeasurement(Rect(40, 80, 240, 30), BLACK, "poti:", " mV");
 	measure->setAlignment(GUIAlignment::Left);
 	secondView->addChild(measure);
 	
 	//======SOUND
-	GUITitleView *thirdView = new GUITitleView(GUI::screenRect, WHITE, "SOUND");
+	GUITitleView *thirdView = new GUITitleView(GUIHelper::screenRect, WHITE, "SOUND");
 	
 	GUILabel *label = new GUILabel(Rect(40, 80, 240, 30), BLACK, "frequency");
 	thirdView->addChild(label);
@@ -139,7 +129,7 @@ int main(void)
 	sampleTimer.stepper = stepper;
 	thirdView->addChild(stepper);
 	
-	GUIPagedView *pagedView = new GUIPagedView(GUI::screenRect, 3, firstView, secondView, thirdView);
+	GUIPagedView *pagedView = new GUIPagedView(GUIHelper::screenRect, 3, firstView, secondView, thirdView);
 	GUIControls *controls = new GUIControls(pagedView, touch);
 	pagedView->draw();
 	

@@ -8,20 +8,23 @@
 //-------------------------------------------------------------------
 
 #include "lib.h"
-#include "View.h"
+#include "IDrawable.h"
 #include "Rect.h"
 
 class GUIControls
 {
 private:
-	View *superView;
+	IDrawable *superDrawable;
 	cHwTouch &touch;
 	BYTE wasTouching;	
+	int xAvg;
+	int yAvg;
+	int avgCount;
 public:
-	GUIControls(View *_superView, cHwTouch &_touch)
-		: superView(_superView), touch(_touch)
+	GUIControls(IDrawable *_superDrawable, cHwTouch &_touch)
+		: superDrawable(_superDrawable), touch(_touch)
 	{
-		superView->isHidden = false;
+		superDrawable->isHidden = false;
 	}
 	
 	void update();

@@ -1,7 +1,7 @@
 .\bin\lpc17xx\guimeasurement.o: Src\GUIMeasurement.cpp
 .\bin\lpc17xx\guimeasurement.o: Src\GUIMeasurement.h
 .\bin\lpc17xx\guimeasurement.o: Src\GUILabel.h
-.\bin\lpc17xx\guimeasurement.o: Src\View.h
+.\bin\lpc17xx\guimeasurement.o: Src\GUIView.h
 .\bin\lpc17xx\guimeasurement.o: Src\IDrawable.h
 .\bin\lpc17xx\guimeasurement.o: ..\EmbSysLib\Lib\Src\lib.h
 .\bin\lpc17xx\guimeasurement.o: ..\EmbSysLib\Lib\Src\Hardware/Hardware.h
@@ -114,7 +114,7 @@
 .\bin\lpc17xx\guimeasurement.o: ..\EmbSysLib\Lib\Src\Device/Control/devControlEncoderRotaryKnob.h
 .\bin\lpc17xx\guimeasurement.o: ..\EmbSysLib\Lib\Src\Device/Control/devControlPointer.h
 .\bin\lpc17xx\guimeasurement.o: ..\EmbSysLib\Lib\Src\Task/TaskHandler.h
-.\bin\lpc17xx\guimeasurement.o: Src\GUI.h
+.\bin\lpc17xx\guimeasurement.o: Src\GUIHelper.h
 .\bin\lpc17xx\guimeasurement.o: Src\Rect.h
 .\bin\lpc17xx\guimeasurement.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
 .\bin\lpc17xx\guimeasurement.o: Src\IEventHandler.h

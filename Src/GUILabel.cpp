@@ -8,8 +8,8 @@
 
 void GUILabel::onDraw(Rect _r)
 {
-	View::onDraw(_r);
-	GUI::drawString(rect, textColor, backgroundColor, alignment, title);
+	GUIView::onDraw(_r);
+	GUIHelper::drawString(rect, textColor, backgroundColor, alignment, title);
 }
 
 void GUILabel::setTitle(const char *_title)

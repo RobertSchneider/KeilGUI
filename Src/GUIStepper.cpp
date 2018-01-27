@@ -8,12 +8,12 @@
 
 void GUIStepper::onDraw(Rect _r)
 {
-	View::onDraw(_r);
+	GUIView::onDraw(_r);
 }
 
 void GUIStepper::onEvent(GUIEvent::Event _e, Rect _finger)
 {
-	View::onEvent(_e, _finger);
+	GUIView::onEvent(_e, _finger);
 }
 
 void GUIStepper::onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)

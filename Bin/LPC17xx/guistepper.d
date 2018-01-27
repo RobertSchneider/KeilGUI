@@ -1,6 +1,6 @@
 .\bin\lpc17xx\guistepper.o: Src\GUIStepper.cpp
 .\bin\lpc17xx\guistepper.o: Src\GUIStepper.h
-.\bin\lpc17xx\guistepper.o: Src\View.h
+.\bin\lpc17xx\guistepper.o: Src\GUIView.h
 .\bin\lpc17xx\guistepper.o: Src\IDrawable.h
 .\bin\lpc17xx\guistepper.o: ..\EmbSysLib\Lib\Src\lib.h
 .\bin\lpc17xx\guistepper.o: ..\EmbSysLib\Lib\Src\Hardware/Hardware.h
@@ -113,7 +113,7 @@
 .\bin\lpc17xx\guistepper.o: ..\EmbSysLib\Lib\Src\Device/Control/devControlEncoderRotaryKnob.h
 .\bin\lpc17xx\guistepper.o: ..\EmbSysLib\Lib\Src\Device/Control/devControlPointer.h
 .\bin\lpc17xx\guistepper.o: ..\EmbSysLib\Lib\Src\Task/TaskHandler.h
-.\bin\lpc17xx\guistepper.o: Src\GUI.h
+.\bin\lpc17xx\guistepper.o: Src\GUIHelper.h
 .\bin\lpc17xx\guistepper.o: Src\Rect.h
 .\bin\lpc17xx\guistepper.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
 .\bin\lpc17xx\guistepper.o: Src\GUIButton.h

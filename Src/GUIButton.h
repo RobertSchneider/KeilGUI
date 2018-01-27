@@ -10,17 +10,17 @@
 #include "GUILabel.h"
 #include "IEventHandler.h"
 
-class GUIButton : public View, public IEventCaller
+class GUIButton : public GUIView, public IEventCaller
 {
 protected:
-	bool drawOutline;
 	virtual void onDraw(Rect _r);
 public:
+	bool drawOutline;
 	GUILabel *label;
 	COLOR outlineColor;
 
 	GUIButton(Rect _rect, COLOR _color, char *_title)
-		: View(_rect, _color),
+		: GUIView(_rect, _color),
 			outlineColor(RED)
 	{
 		label = new GUILabel(_rect, _color, _title);

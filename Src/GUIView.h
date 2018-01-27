@@ -2,15 +2,15 @@
 // IDrawable
 //*******************************************************************
 
-#ifndef __VIEW
-#define __VIEW
+#ifndef __GUIVIEW
+#define __GUIVIEW
 
 //-------------------------------------------------------------------
 
 #include "IDrawable.h"
 #include "Rect.h"
 
-class View : public IDrawable
+class GUIView : public IDrawable
 {
 protected:
 	cList children;
@@ -22,7 +22,7 @@ public:
 	COLOR backgroundColor;
 	Rect rect;
 
-	View(Rect _rect, COLOR _color)
+	GUIView(Rect _rect, COLOR _color)
 		: backgroundColor(_color), rect(_rect)
 	{
 		isHidden = true;
@@ -35,13 +35,13 @@ public:
 		children.add(_child);
 	}
 	
-	~View()
+	~GUIView()
 	{
 		destroy();
 	}
 	
 	virtual bool getIsHidden();
-	virtual void draw(Rect _r = GUI::screenRect);
+	virtual void draw(Rect _r = GUIHelper::screenRect);
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger);
 	virtual void redraw();
 };

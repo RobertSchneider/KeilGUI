@@ -6,6 +6,8 @@
 
 #include "GUIControls.h"
 
+#define AVGMAX 10
+
 void GUIControls::update()
 {
 	touch.update();
@@ -14,18 +16,29 @@ void GUIControls::update()
 	int x = touch.getPosX();
 	int y = touch.getPosY();
 	
-	Rect finger(x-10, y-10, 20, 20);
-	
-	if (wasTouching != t)
+	xAvg += x;
+	yAvg += y;
+	avgCount++;
+	if (avgCount >= AVGMAX)
 	{
-		wasTouching = t;
-		superView->onEvent(t ? GUIEvent::TouchDown : GUIEvent::TouchUp, finger);
-	
-		for (int i = 0; i < 10000; i++);
-	}
-	else if (t)
-	{
-		superView->onEvent(GUIEvent::Touch, finger);
+		xAvg /= AVGMAX;
+		yAvg /= AVGMAX;
+				
+		Rect finger(xAvg-10, yAvg-10, 5, 10);
+		
+		if (wasTouching != t)
+		{
+			wasTouching = t;
+			superDrawable->onEvent(t ? GUIEvent::TouchDown : GUIEvent::TouchUp, finger);
+		}
+		else if (t)
+		{
+			superDrawable->onEvent(GUIEvent::Touch, finger);
+		}
+		
+		xAvg = 0;
+		yAvg = 0;
+		avgCount = 0;
 	}
 }
 

@@ -7,10 +7,10 @@
 
 //-------------------------------------------------------------------
 
-#include "View.h"
+#include "GUIView.h"
 #include "GUIButton.h"
 
-class GUIPagedView : public View, public IEventHandler
+class GUIPagedView : public GUIView, public IEventHandler
 {
 protected:
 	virtual void onDraw(Rect _r);
@@ -21,20 +21,20 @@ public:
 	GUIButton *bLeft;
 	GUIButton *bRight;
 
-	GUIPagedView(Rect _rect, int _n, View *_views,...)
-		: View(_rect, BLACK),
+	GUIPagedView(Rect _rect, int _n, GUIView *_views,...)
+		: GUIView(_rect, BLACK),
 			selectedView(0)
 	{
 		va_list ptr;
 		va_start(ptr, _views);
 		
-		View *view = _views;
+		GUIView *view = _views;
 		
 		for(int i = 0; i < _n; i++)
 		{
 			view->isHidden = i != 0;
 			views.add(view);
-			view = va_arg(ptr, View*);
+			view = va_arg(ptr, GUIView*);
 		}
 		
 		viewCount = _n;

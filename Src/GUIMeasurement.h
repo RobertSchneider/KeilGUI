@@ -21,7 +21,7 @@ protected:
 		delete title;
 		delete desc;
 		delete unit;
-		View::destroy();
+		GUIView::destroy();
 	}
 public:
 

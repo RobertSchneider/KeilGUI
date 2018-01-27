@@ -8,24 +8,24 @@
 
 void GUISelect::onDraw(Rect _r)
 {
-	View::onDraw(_r);
+	GUIView::onDraw(_r);
 }
 
 void GUISelect::onLateDraw(Rect _r)
 {
-	View::onLateDraw(_r);
+	GUIView::onLateDraw(_r);
 	
 	updateSelected(GUIEvent::None);
 }
 
 void GUISelect::onEvent(GUIEvent::Event _e, Rect _finger)
 {
-	View::onEvent(_e, _finger);
+	GUIView::onEvent(_e, _finger);
 }
 
 void GUISelect::onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
 {
-	if (_e == GUIEvent::TouchUp)
+	if (_e == GUIEvent::TouchUp || _e == GUIEvent::TouchDown)
 	{
 		selectedIndex = 0;
 		IDrawable* ptr = (IDrawable*)children.getFirst();
@@ -38,9 +38,9 @@ void GUISelect::onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
 		}
 		
 		selectedButton = (GUIButton*)_caller;
-	}
 	
-	updateSelected(_e);
+		updateSelected(_e);
+	}
 }
 
 void GUISelect::updateSelected(GUIEvent::Event _e)
@@ -49,7 +49,7 @@ void GUISelect::updateSelected(GUIEvent::Event _e)
 	GUIButton* ptr = (GUIButton*)children.getFirst();
 	while(ptr)
 	{
-		GUI::drawRectOutline(ptr->rect, ptr == selectedButton ? outlineColor : ptr->backgroundColor, 2);
+		GUIHelper::drawRectOutline(ptr->rect, ptr == selectedButton ? outlineColor : ptr->backgroundColor, 2);
 		ptr = (GUIButton*)ptr->getNext();
 	}
 	

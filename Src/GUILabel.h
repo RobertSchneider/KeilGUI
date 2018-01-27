@@ -7,9 +7,9 @@
 
 //-------------------------------------------------------------------
 
-#include "View.h"
+#include "GUIView.h"
 
-class GUILabel : public View
+class GUILabel : public GUIView
 {
 protected:
 	int strLen;
@@ -19,14 +19,14 @@ protected:
 	virtual void destroy()
 	{
 		delete title;
-		View::destroy();
+		GUIView::destroy();
 	}
 public:
 	COLOR textColor;
 	GUIAlignment::Alignment alignment;
 
 	GUILabel(Rect _rect, COLOR _color, const char *_title)
-		: View(_rect, _color),
+		: GUIView(_rect, _color),
 			textColor(WHITE)
 	{
 		alignment = GUIAlignment::Center;

@@ -7,10 +7,10 @@
 
 //-------------------------------------------------------------------
 
-#include "View.h"
+#include "GUIView.h"
 #include "GUIButton.h"
 
-class GUISelect : public View, public IEventHandler, public IEventCaller
+class GUISelect : public GUIView, public IEventHandler, public IEventCaller
 {
 protected:
 	int count;
@@ -27,7 +27,7 @@ public:
 	void (*onCustomEvent)(GUISelect*, GUIEvent::Event);
 
 	GUISelect(Rect _rect, COLOR _color, int _n, char *_titles,...)
-		: View(_rect, _color),
+		: GUIView(_rect, _color),
 			count(_n),
 			outlineColor(YELLOW),
 			onCustomEvent(NULL)

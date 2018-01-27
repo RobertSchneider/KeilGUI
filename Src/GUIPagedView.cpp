@@ -8,7 +8,7 @@
 
 void GUIPagedView::onDraw(Rect _r)
 {
-	View* current = (View*)views[selectedView];
+	GUIView* current = (GUIView*)views[selectedView];
 	current->draw(_r);
 }
 
@@ -18,7 +18,7 @@ void GUIPagedView::onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
 	{
 		int prev = selectedView;
 		
-		((View*)views[selectedView])->isHidden = true;
+		((GUIView*)views[selectedView])->isHidden = true;
 		
 		if (_caller == bLeft)
 		{
@@ -29,7 +29,7 @@ void GUIPagedView::onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
 		}
 		
 		selectedView = selectedView < 0 ? 0 : (selectedView >= viewCount ? viewCount-1 : selectedView);
-		((View*)views[selectedView])->isHidden = false;
+		((GUIView*)views[selectedView])->isHidden = false;
 		if (prev != selectedView)
 		{
 			redraw();
@@ -39,9 +39,9 @@ void GUIPagedView::onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
 
 void GUIPagedView::onEvent(GUIEvent::Event _e, Rect _finger)
 {
-	View::onEvent(_e, _finger);
+	GUIView::onEvent(_e, _finger);
 	
-	View* current = (View*)views[selectedView];
+	GUIView* current = (GUIView*)views[selectedView];
 	current->onEvent(_e, _finger);
 }
 

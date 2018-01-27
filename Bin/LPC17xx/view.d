@@ -112,6 +112,6 @@
 .\bin\lpc17xx\view.o: ..\EmbSysLib\Lib\Src\Device/Control/devControlEncoderRotaryKnob.h
 .\bin\lpc17xx\view.o: ..\EmbSysLib\Lib\Src\Device/Control/devControlPointer.h
 .\bin\lpc17xx\view.o: ..\EmbSysLib\Lib\Src\Task/TaskHandler.h
-.\bin\lpc17xx\view.o: Src\GUI.h
+.\bin\lpc17xx\view.o: Src\GUIHelper.h
 .\bin\lpc17xx\view.o: Src\Rect.h
 .\bin\lpc17xx\view.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h

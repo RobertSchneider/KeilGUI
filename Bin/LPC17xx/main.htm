@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Bin\LPC17xx\main.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Bin\LPC17xx\main.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Thu Jan 25 22:04:42 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Sat Jan 27 23:45:47 2018
 <BR><P>
 <H3>Maximum Stack Usage =        480 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-GUILabel::onDraw(Rect) &rArr; GUI::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...) &rArr; __c89vsprintf &rArr; _printf_char_common &rArr; __printf
+GUILabel::onDraw(Rect) &rArr; GUIHelper::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...) &rArr; __c89vsprintf &rArr; _printf_char_common &rArr; __printf
 <P>
 <H3>
 Functions with no stack information
@@ -139,50 +139,6 @@ Function Pointers
  <LI><a href="#[7d]">LedSelectEventHandler::onEventHandle(IEventCaller*, GUIEvent::Event)</a> from main.o(i._ZN21LedSelectEventHandler13onEventHandleEP12IEventCallerN8GUIEvent5EventE) referenced from main.o(.constdata__ZTV21LedSelectEventHandler)
  <LI><a href="#[7e]">LedToggleEventHandler::onEventHandle(IEventCaller*, GUIEvent::Event)</a> from main.o(i._ZN21LedToggleEventHandler13onEventHandleEP12IEventCallerN8GUIEvent5EventE) referenced from main.o(.constdata__ZTV21LedToggleEventHandler)
  <LI><a href="#[7f]">cDevControlEncoderJoystick::getIncrement()</a> from lib.o(i._ZN26cDevControlEncoderJoystick12getIncrementEv) referenced from lib.o(.constdata__ZTV26cDevControlEncoderJoystick)
- <LI><a href="#[45]">View::onLateDraw(Rect)</a> from view.o(i._ZN4View10onLateDrawE4Rect) referenced from guistepper.o(.constdata__ZTV10GUIStepper)
- <LI><a href="#[45]">View::onLateDraw(Rect)</a> from view.o(i._ZN4View10onLateDrawE4Rect) referenced from guipagedview.o(.constdata__ZTV12GUIPagedView)
- <LI><a href="#[45]">View::onLateDraw(Rect)</a> from view.o(i._ZN4View10onLateDrawE4Rect) referenced from main.o(.constdata__ZTV12GUITitleView)
- <LI><a href="#[45]">View::onLateDraw(Rect)</a> from view.o(i._ZN4View10onLateDrawE4Rect) referenced from guimeasurement.o(.constdata__ZTV14GUIMeasurement)
- <LI><a href="#[45]">View::onLateDraw(Rect)</a> from view.o(i._ZN4View10onLateDrawE4Rect) referenced from view.o(.constdata__ZTV4View)
- <LI><a href="#[45]">View::onLateDraw(Rect)</a> from view.o(i._ZN4View10onLateDrawE4Rect) referenced from guilabel.o(.constdata__ZTV8GUILabel)
- <LI><a href="#[45]">View::onLateDraw(Rect)</a> from view.o(i._ZN4View10onLateDrawE4Rect) referenced from guibutton.o(.constdata__ZTV9GUIButton)
- <LI><a href="#[41]">View::shouldDraw(Rect)</a> from view.o(i._ZN4View10shouldDrawE4Rect) referenced from guistepper.o(.constdata__ZTV10GUIStepper)
- <LI><a href="#[41]">View::shouldDraw(Rect)</a> from view.o(i._ZN4View10shouldDrawE4Rect) referenced from guipagedview.o(.constdata__ZTV12GUIPagedView)
- <LI><a href="#[41]">View::shouldDraw(Rect)</a> from view.o(i._ZN4View10shouldDrawE4Rect) referenced from main.o(.constdata__ZTV12GUITitleView)
- <LI><a href="#[41]">View::shouldDraw(Rect)</a> from view.o(i._ZN4View10shouldDrawE4Rect) referenced from guimeasurement.o(.constdata__ZTV14GUIMeasurement)
- <LI><a href="#[41]">View::shouldDraw(Rect)</a> from view.o(i._ZN4View10shouldDrawE4Rect) referenced from view.o(.constdata__ZTV4View)
- <LI><a href="#[41]">View::shouldDraw(Rect)</a> from view.o(i._ZN4View10shouldDrawE4Rect) referenced from guilabel.o(.constdata__ZTV8GUILabel)
- <LI><a href="#[41]">View::shouldDraw(Rect)</a> from view.o(i._ZN4View10shouldDrawE4Rect) referenced from guibutton.o(.constdata__ZTV9GUIButton)
- <LI><a href="#[41]">View::shouldDraw(Rect)</a> from view.o(i._ZN4View10shouldDrawE4Rect) referenced from guiselect.o(.constdata__ZTV9GUISelect)
- <LI><a href="#[3e]">View::getIsHidden()</a> from view.o(i._ZN4View11getIsHiddenEv) referenced from guistepper.o(.constdata__ZTV10GUIStepper)
- <LI><a href="#[3e]">View::getIsHidden()</a> from view.o(i._ZN4View11getIsHiddenEv) referenced from guipagedview.o(.constdata__ZTV12GUIPagedView)
- <LI><a href="#[3e]">View::getIsHidden()</a> from view.o(i._ZN4View11getIsHiddenEv) referenced from main.o(.constdata__ZTV12GUITitleView)
- <LI><a href="#[3e]">View::getIsHidden()</a> from view.o(i._ZN4View11getIsHiddenEv) referenced from guimeasurement.o(.constdata__ZTV14GUIMeasurement)
- <LI><a href="#[3e]">View::getIsHidden()</a> from view.o(i._ZN4View11getIsHiddenEv) referenced from view.o(.constdata__ZTV4View)
- <LI><a href="#[3e]">View::getIsHidden()</a> from view.o(i._ZN4View11getIsHiddenEv) referenced from guilabel.o(.constdata__ZTV8GUILabel)
- <LI><a href="#[3e]">View::getIsHidden()</a> from view.o(i._ZN4View11getIsHiddenEv) referenced from guibutton.o(.constdata__ZTV9GUIButton)
- <LI><a href="#[3e]">View::getIsHidden()</a> from view.o(i._ZN4View11getIsHiddenEv) referenced from guiselect.o(.constdata__ZTV9GUISelect)
- <LI><a href="#[3f]">View::draw(Rect)</a> from view.o(i._ZN4View4drawE4Rect) referenced from guistepper.o(.constdata__ZTV10GUIStepper)
- <LI><a href="#[3f]">View::draw(Rect)</a> from view.o(i._ZN4View4drawE4Rect) referenced from guipagedview.o(.constdata__ZTV12GUIPagedView)
- <LI><a href="#[3f]">View::draw(Rect)</a> from view.o(i._ZN4View4drawE4Rect) referenced from main.o(.constdata__ZTV12GUITitleView)
- <LI><a href="#[3f]">View::draw(Rect)</a> from view.o(i._ZN4View4drawE4Rect) referenced from guimeasurement.o(.constdata__ZTV14GUIMeasurement)
- <LI><a href="#[3f]">View::draw(Rect)</a> from view.o(i._ZN4View4drawE4Rect) referenced from view.o(.constdata__ZTV4View)
- <LI><a href="#[3f]">View::draw(Rect)</a> from view.o(i._ZN4View4drawE4Rect) referenced from guilabel.o(.constdata__ZTV8GUILabel)
- <LI><a href="#[3f]">View::draw(Rect)</a> from view.o(i._ZN4View4drawE4Rect) referenced from guibutton.o(.constdata__ZTV9GUIButton)
- <LI><a href="#[3f]">View::draw(Rect)</a> from view.o(i._ZN4View4drawE4Rect) referenced from guiselect.o(.constdata__ZTV9GUISelect)
- <LI><a href="#[59]">View::onDraw(Rect)</a> from view.o(i._ZN4View6onDrawE4Rect) referenced from main.o(.constdata__ZTV12GUITitleView)
- <LI><a href="#[59]">View::onDraw(Rect)</a> from view.o(i._ZN4View6onDrawE4Rect) referenced from view.o(.constdata__ZTV4View)
- <LI><a href="#[42]">View::redraw()</a> from view.o(i._ZN4View6redrawEv) referenced from guistepper.o(.constdata__ZTV10GUIStepper)
- <LI><a href="#[42]">View::redraw()</a> from view.o(i._ZN4View6redrawEv) referenced from guipagedview.o(.constdata__ZTV12GUIPagedView)
- <LI><a href="#[42]">View::redraw()</a> from view.o(i._ZN4View6redrawEv) referenced from main.o(.constdata__ZTV12GUITitleView)
- <LI><a href="#[42]">View::redraw()</a> from view.o(i._ZN4View6redrawEv) referenced from guimeasurement.o(.constdata__ZTV14GUIMeasurement)
- <LI><a href="#[42]">View::redraw()</a> from view.o(i._ZN4View6redrawEv) referenced from view.o(.constdata__ZTV4View)
- <LI><a href="#[42]">View::redraw()</a> from view.o(i._ZN4View6redrawEv) referenced from guilabel.o(.constdata__ZTV8GUILabel)
- <LI><a href="#[42]">View::redraw()</a> from view.o(i._ZN4View6redrawEv) referenced from guibutton.o(.constdata__ZTV9GUIButton)
- <LI><a href="#[42]">View::redraw()</a> from view.o(i._ZN4View6redrawEv) referenced from guiselect.o(.constdata__ZTV9GUISelect)
- <LI><a href="#[58]">View::onEvent(GUIEvent::Event, Rect)</a> from view.o(i._ZN4View7onEventEN8GUIEvent5EventE4Rect) referenced from main.o(.constdata__ZTV12GUITitleView)
- <LI><a href="#[58]">View::onEvent(GUIEvent::Event, Rect)</a> from view.o(i._ZN4View7onEventEN8GUIEvent5EventE4Rect) referenced from view.o(.constdata__ZTV4View)
- <LI><a href="#[58]">View::onEvent(GUIEvent::Event, Rect)</a> from view.o(i._ZN4View7onEventEN8GUIEvent5EventE4Rect) referenced from guilabel.o(.constdata__ZTV8GUILabel)
  <LI><a href="#[9b]">cList::Item::update()</a> from lib.o(i._ZN5cList4Item6updateEv) referenced from lib.o(.constdata__ZTVN5cList4ItemE)
  <LI><a href="#[82]">cHwADC::get(unsigned char)</a> from lib.o(i._ZN6cHwADC3getEh) referenced from lib.o(.constdata__ZTV6cHwADC)
  <LI><a href="#[82]">cHwADC::get(unsigned char)</a> from lib.o(i._ZN6cHwADC3getEh) referenced from lib.o(.constdata__ZTV8cHwADC_0)
@@ -192,6 +148,50 @@ Function Pointers
  <LI><a href="#[81]">cHwADC::enable(unsigned char)</a> from lib.o(i._ZN6cHwADC6enableEh) referenced from lib.o(.constdata__ZTV8cHwADC_0)
  <LI><a href="#[80]">cHwADC::update()</a> from lib.o(i._ZN6cHwADC6updateEv) referenced from lib.o(.constdata__ZTV6cHwADC)
  <LI><a href="#[80]">cHwADC::update()</a> from lib.o(i._ZN6cHwADC6updateEv) referenced from lib.o(.constdata__ZTV8cHwADC_0)
+ <LI><a href="#[45]">GUIView::onLateDraw(Rect)</a> from guiview.o(i._ZN7GUIView10onLateDrawE4Rect) referenced from guistepper.o(.constdata__ZTV10GUIStepper)
+ <LI><a href="#[45]">GUIView::onLateDraw(Rect)</a> from guiview.o(i._ZN7GUIView10onLateDrawE4Rect) referenced from guipagedview.o(.constdata__ZTV12GUIPagedView)
+ <LI><a href="#[45]">GUIView::onLateDraw(Rect)</a> from guiview.o(i._ZN7GUIView10onLateDrawE4Rect) referenced from main.o(.constdata__ZTV12GUITitleView)
+ <LI><a href="#[45]">GUIView::onLateDraw(Rect)</a> from guiview.o(i._ZN7GUIView10onLateDrawE4Rect) referenced from guimeasurement.o(.constdata__ZTV14GUIMeasurement)
+ <LI><a href="#[45]">GUIView::onLateDraw(Rect)</a> from guiview.o(i._ZN7GUIView10onLateDrawE4Rect) referenced from guiview.o(.constdata__ZTV7GUIView)
+ <LI><a href="#[45]">GUIView::onLateDraw(Rect)</a> from guiview.o(i._ZN7GUIView10onLateDrawE4Rect) referenced from guilabel.o(.constdata__ZTV8GUILabel)
+ <LI><a href="#[45]">GUIView::onLateDraw(Rect)</a> from guiview.o(i._ZN7GUIView10onLateDrawE4Rect) referenced from guibutton.o(.constdata__ZTV9GUIButton)
+ <LI><a href="#[41]">GUIView::shouldDraw(Rect)</a> from guiview.o(i._ZN7GUIView10shouldDrawE4Rect) referenced from guistepper.o(.constdata__ZTV10GUIStepper)
+ <LI><a href="#[41]">GUIView::shouldDraw(Rect)</a> from guiview.o(i._ZN7GUIView10shouldDrawE4Rect) referenced from guipagedview.o(.constdata__ZTV12GUIPagedView)
+ <LI><a href="#[41]">GUIView::shouldDraw(Rect)</a> from guiview.o(i._ZN7GUIView10shouldDrawE4Rect) referenced from main.o(.constdata__ZTV12GUITitleView)
+ <LI><a href="#[41]">GUIView::shouldDraw(Rect)</a> from guiview.o(i._ZN7GUIView10shouldDrawE4Rect) referenced from guimeasurement.o(.constdata__ZTV14GUIMeasurement)
+ <LI><a href="#[41]">GUIView::shouldDraw(Rect)</a> from guiview.o(i._ZN7GUIView10shouldDrawE4Rect) referenced from guiview.o(.constdata__ZTV7GUIView)
+ <LI><a href="#[41]">GUIView::shouldDraw(Rect)</a> from guiview.o(i._ZN7GUIView10shouldDrawE4Rect) referenced from guilabel.o(.constdata__ZTV8GUILabel)
+ <LI><a href="#[41]">GUIView::shouldDraw(Rect)</a> from guiview.o(i._ZN7GUIView10shouldDrawE4Rect) referenced from guibutton.o(.constdata__ZTV9GUIButton)
+ <LI><a href="#[41]">GUIView::shouldDraw(Rect)</a> from guiview.o(i._ZN7GUIView10shouldDrawE4Rect) referenced from guiselect.o(.constdata__ZTV9GUISelect)
+ <LI><a href="#[3e]">GUIView::getIsHidden()</a> from guiview.o(i._ZN7GUIView11getIsHiddenEv) referenced from guistepper.o(.constdata__ZTV10GUIStepper)
+ <LI><a href="#[3e]">GUIView::getIsHidden()</a> from guiview.o(i._ZN7GUIView11getIsHiddenEv) referenced from guipagedview.o(.constdata__ZTV12GUIPagedView)
+ <LI><a href="#[3e]">GUIView::getIsHidden()</a> from guiview.o(i._ZN7GUIView11getIsHiddenEv) referenced from main.o(.constdata__ZTV12GUITitleView)
+ <LI><a href="#[3e]">GUIView::getIsHidden()</a> from guiview.o(i._ZN7GUIView11getIsHiddenEv) referenced from guimeasurement.o(.constdata__ZTV14GUIMeasurement)
+ <LI><a href="#[3e]">GUIView::getIsHidden()</a> from guiview.o(i._ZN7GUIView11getIsHiddenEv) referenced from guiview.o(.constdata__ZTV7GUIView)
+ <LI><a href="#[3e]">GUIView::getIsHidden()</a> from guiview.o(i._ZN7GUIView11getIsHiddenEv) referenced from guilabel.o(.constdata__ZTV8GUILabel)
+ <LI><a href="#[3e]">GUIView::getIsHidden()</a> from guiview.o(i._ZN7GUIView11getIsHiddenEv) referenced from guibutton.o(.constdata__ZTV9GUIButton)
+ <LI><a href="#[3e]">GUIView::getIsHidden()</a> from guiview.o(i._ZN7GUIView11getIsHiddenEv) referenced from guiselect.o(.constdata__ZTV9GUISelect)
+ <LI><a href="#[3f]">GUIView::draw(Rect)</a> from guiview.o(i._ZN7GUIView4drawE4Rect) referenced from guistepper.o(.constdata__ZTV10GUIStepper)
+ <LI><a href="#[3f]">GUIView::draw(Rect)</a> from guiview.o(i._ZN7GUIView4drawE4Rect) referenced from guipagedview.o(.constdata__ZTV12GUIPagedView)
+ <LI><a href="#[3f]">GUIView::draw(Rect)</a> from guiview.o(i._ZN7GUIView4drawE4Rect) referenced from main.o(.constdata__ZTV12GUITitleView)
+ <LI><a href="#[3f]">GUIView::draw(Rect)</a> from guiview.o(i._ZN7GUIView4drawE4Rect) referenced from guimeasurement.o(.constdata__ZTV14GUIMeasurement)
+ <LI><a href="#[3f]">GUIView::draw(Rect)</a> from guiview.o(i._ZN7GUIView4drawE4Rect) referenced from guiview.o(.constdata__ZTV7GUIView)
+ <LI><a href="#[3f]">GUIView::draw(Rect)</a> from guiview.o(i._ZN7GUIView4drawE4Rect) referenced from guilabel.o(.constdata__ZTV8GUILabel)
+ <LI><a href="#[3f]">GUIView::draw(Rect)</a> from guiview.o(i._ZN7GUIView4drawE4Rect) referenced from guibutton.o(.constdata__ZTV9GUIButton)
+ <LI><a href="#[3f]">GUIView::draw(Rect)</a> from guiview.o(i._ZN7GUIView4drawE4Rect) referenced from guiselect.o(.constdata__ZTV9GUISelect)
+ <LI><a href="#[59]">GUIView::onDraw(Rect)</a> from guiview.o(i._ZN7GUIView6onDrawE4Rect) referenced from main.o(.constdata__ZTV12GUITitleView)
+ <LI><a href="#[59]">GUIView::onDraw(Rect)</a> from guiview.o(i._ZN7GUIView6onDrawE4Rect) referenced from guiview.o(.constdata__ZTV7GUIView)
+ <LI><a href="#[42]">GUIView::redraw()</a> from guiview.o(i._ZN7GUIView6redrawEv) referenced from guistepper.o(.constdata__ZTV10GUIStepper)
+ <LI><a href="#[42]">GUIView::redraw()</a> from guiview.o(i._ZN7GUIView6redrawEv) referenced from guipagedview.o(.constdata__ZTV12GUIPagedView)
+ <LI><a href="#[42]">GUIView::redraw()</a> from guiview.o(i._ZN7GUIView6redrawEv) referenced from main.o(.constdata__ZTV12GUITitleView)
+ <LI><a href="#[42]">GUIView::redraw()</a> from guiview.o(i._ZN7GUIView6redrawEv) referenced from guimeasurement.o(.constdata__ZTV14GUIMeasurement)
+ <LI><a href="#[42]">GUIView::redraw()</a> from guiview.o(i._ZN7GUIView6redrawEv) referenced from guiview.o(.constdata__ZTV7GUIView)
+ <LI><a href="#[42]">GUIView::redraw()</a> from guiview.o(i._ZN7GUIView6redrawEv) referenced from guilabel.o(.constdata__ZTV8GUILabel)
+ <LI><a href="#[42]">GUIView::redraw()</a> from guiview.o(i._ZN7GUIView6redrawEv) referenced from guibutton.o(.constdata__ZTV9GUIButton)
+ <LI><a href="#[42]">GUIView::redraw()</a> from guiview.o(i._ZN7GUIView6redrawEv) referenced from guiselect.o(.constdata__ZTV9GUISelect)
+ <LI><a href="#[58]">GUIView::onEvent(GUIEvent::Event, Rect)</a> from guiview.o(i._ZN7GUIView7onEventEN8GUIEvent5EventE4Rect) referenced from main.o(.constdata__ZTV12GUITitleView)
+ <LI><a href="#[58]">GUIView::onEvent(GUIEvent::Event, Rect)</a> from guiview.o(i._ZN7GUIView7onEventEN8GUIEvent5EventE4Rect) referenced from guiview.o(.constdata__ZTV7GUIView)
+ <LI><a href="#[58]">GUIView::onEvent(GUIEvent::Event, Rect)</a> from guiview.o(i._ZN7GUIView7onEventEN8GUIEvent5EventE4Rect) referenced from guilabel.o(.constdata__ZTV8GUILabel)
  <LI><a href="#[9f]">cHwPort::Pin::clr()</a> from lib.o(i._ZN7cHwPort3Pin3clrEv) referenced from lib.o(.constdata__ZTVN7cHwPort3PinE)
  <LI><a href="#[a0]">cHwPort::Pin::get()</a> from lib.o(i._ZN7cHwPort3Pin3getEv) referenced from lib.o(.constdata__ZTVN7cHwPort3PinE)
  <LI><a href="#[9e]">cHwPort::Pin::set(bool)</a> from lib.o(i._ZN7cHwPort3Pin3setEb) referenced from lib.o(.constdata__ZTVN7cHwPort3PinE)
@@ -231,7 +231,7 @@ Function Pointers
  <LI><a href="#[43]">IDrawable::onAddedToDrawable(IDrawable*)</a> from main.o(i._ZN9IDrawable17onAddedToDrawableEPS_) referenced from guipagedview.o(.constdata__ZTV12GUIPagedView)
  <LI><a href="#[43]">IDrawable::onAddedToDrawable(IDrawable*)</a> from main.o(i._ZN9IDrawable17onAddedToDrawableEPS_) referenced from main.o(.constdata__ZTV12GUITitleView)
  <LI><a href="#[43]">IDrawable::onAddedToDrawable(IDrawable*)</a> from main.o(i._ZN9IDrawable17onAddedToDrawableEPS_) referenced from guimeasurement.o(.constdata__ZTV14GUIMeasurement)
- <LI><a href="#[43]">IDrawable::onAddedToDrawable(IDrawable*)</a> from main.o(i._ZN9IDrawable17onAddedToDrawableEPS_) referenced from view.o(.constdata__ZTV4View)
+ <LI><a href="#[43]">IDrawable::onAddedToDrawable(IDrawable*)</a> from main.o(i._ZN9IDrawable17onAddedToDrawableEPS_) referenced from guiview.o(.constdata__ZTV7GUIView)
  <LI><a href="#[43]">IDrawable::onAddedToDrawable(IDrawable*)</a> from main.o(i._ZN9IDrawable17onAddedToDrawableEPS_) referenced from guilabel.o(.constdata__ZTV8GUILabel)
  <LI><a href="#[43]">IDrawable::onAddedToDrawable(IDrawable*)</a> from main.o(i._ZN9IDrawable17onAddedToDrawableEPS_) referenced from guibutton.o(.constdata__ZTV9GUIButton)
  <LI><a href="#[43]">IDrawable::onAddedToDrawable(IDrawable*)</a> from main.o(i._ZN9IDrawable17onAddedToDrawableEPS_) referenced from guiselect.o(.constdata__ZTV9GUISelect)
@@ -240,7 +240,7 @@ Function Pointers
  <LI><a href="#[3d]">IDrawable::update()</a> from main.o(i._ZN9IDrawable6updateEv) referenced from guipagedview.o(.constdata__ZTV12GUIPagedView)
  <LI><a href="#[3d]">IDrawable::update()</a> from main.o(i._ZN9IDrawable6updateEv) referenced from main.o(.constdata__ZTV12GUITitleView)
  <LI><a href="#[3d]">IDrawable::update()</a> from main.o(i._ZN9IDrawable6updateEv) referenced from guimeasurement.o(.constdata__ZTV14GUIMeasurement)
- <LI><a href="#[3d]">IDrawable::update()</a> from main.o(i._ZN9IDrawable6updateEv) referenced from view.o(.constdata__ZTV4View)
+ <LI><a href="#[3d]">IDrawable::update()</a> from main.o(i._ZN9IDrawable6updateEv) referenced from guiview.o(.constdata__ZTV7GUIView)
  <LI><a href="#[3d]">IDrawable::update()</a> from main.o(i._ZN9IDrawable6updateEv) referenced from guilabel.o(.constdata__ZTV8GUILabel)
  <LI><a href="#[3d]">IDrawable::update()</a> from main.o(i._ZN9IDrawable6updateEv) referenced from guibutton.o(.constdata__ZTV9GUIButton)
  <LI><a href="#[3d]">IDrawable::update()</a> from main.o(i._ZN9IDrawable6updateEv) referenced from guiselect.o(.constdata__ZTV9GUISelect)
@@ -267,7 +267,7 @@ Function Pointers
  <LI><a href="#[49]">__cxa_pure_virtual</a> from lib.o(i.__cxa_pure_virtual) referenced from lib.o(.constdata__ZTV8cHwTouch)
  <LI><a href="#[49]">__cxa_pure_virtual</a> from lib.o(i.__cxa_pure_virtual) referenced 4 times from main.o(.constdata__ZTV9IDrawable)
  <LI><a href="#[a4]">__main</a> from __main.o(!!!main) referenced from startup_lpc17xx.o(.text)
- <LI><a href="#[a2]">__sti___7_GUI_cpp</a> from gui.o(i.__sti___7_GUI_cpp) referenced from gui.o(.init_array)
+ <LI><a href="#[a2]">__sti___13_GUIHelper_cpp</a> from guihelper.o(i.__sti___13_GUIHelper_cpp) referenced from guihelper.o(.init_array)
  <LI><a href="#[a1]">__sti___8_main_cpp</a> from main.o(i.__sti___8_main_cpp) referenced from main.o(.init_array)
  <LI><a href="#[3c]">_get_lc_ctype</a> from lc_ctype_c.o(locale$$code) referenced from rt_ctype_table.o(.text)
  <LI><a href="#[3b]">_printf_input_char</a> from _printf_char_common.o(.text) referenced from _printf_char_common.o(.text)
@@ -734,10 +734,10 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Full
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_heap_descriptor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::setTitle(const char*)
+<BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMeasurement::setText(char*, char*, const char*)
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::setTitle(const char*)
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned)
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMeasurement::GUIMeasurement(Rect, unsigned short, char*, char*)
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMeasurement::setText(char*, char*, const char*)
 <LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new[] (unsigned)
 </UL>
 
@@ -748,7 +748,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
-<BR>[Called By]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
+<BR>[Called By]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIHelper::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
 </UL>
 
 <P><STRONG><a name="[e3]"></a>free</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, h1_free.o(.text))
@@ -846,11 +846,11 @@ Global Symbols
 <P><STRONG><a name="[147]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, strlen.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::setTitle(const char*)
+<BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMeasurement::setText(char*, char*, const char*)
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIHelper::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::setTitle(const char*)
 <LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::GUILabel(Rect, unsigned short, const char*)
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMeasurement::GUIMeasurement(Rect, unsigned short, char*, char*)
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMeasurement::setText(char*, char*, const char*)
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
 </UL>
 
 <P><STRONG><a name="[14b]"></a>__aeabi_memcpy</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memcpy_v6.o(.text))
@@ -1382,8 +1382,8 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
-<P><STRONG><a name="[175]"></a>SystemInit</STRONG> (Thumb, 538 bytes, Stack size 0 bytes, lib.o(i.SystemInit))
-<BR><BR>[Called By]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::cSystem(unsigned char)
+<P><STRONG><a name="[172]"></a>SystemInit</STRONG> (Thumb, 538 bytes, Stack size 0 bytes, lib.o(i.SystemInit))
+<BR><BR>[Called By]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::cSystem(unsigned char)
 </UL>
 
 <P><STRONG><a name="[16]"></a>TIMER0_IRQHandler</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, lib.o(i.TIMER0_IRQHandler))
@@ -1451,16 +1451,16 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> guistepper.o(.constdata__ZTV10GUIStepper)
 </UL>
 <P><STRONG><a name="[44]"></a>GUIStepper::onDraw(Rect)</STRONG> (Thumb, 26 bytes, Stack size 32 bytes, guistepper.o(i._ZN10GUIStepper6onDrawE4Rect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = GUIStepper::onDraw(Rect) &rArr; View::onDraw(Rect)
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = GUIStepper::onDraw(Rect) &rArr; GUIView::onDraw(Rect)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::onDraw(Rect)
+<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::onDraw(Rect)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> guistepper.o(.constdata__ZTV10GUIStepper)
 </UL>
 <P><STRONG><a name="[40]"></a>GUIStepper::onEvent(GUIEvent::Event, Rect)</STRONG> (Thumb, 34 bytes, Stack size 40 bytes, guistepper.o(i._ZN10GUIStepper7onEventEN8GUIEvent5EventE4Rect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = GUIStepper::onEvent(GUIEvent::Event, Rect) &rArr; View::onEvent(GUIEvent::Event, Rect)
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = GUIStepper::onEvent(GUIEvent::Event, Rect) &rArr; GUIView::onEvent(GUIEvent::Event, Rect)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::onEvent(GUIEvent::Event, Rect)
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::onEvent(GUIEvent::Event, Rect)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> guistepper.o(.constdata__ZTV10GUIStepper)
 </UL>
@@ -1471,8 +1471,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMeasurement::setValue(float)
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned)
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::GUIButton(Rect, unsigned short, char*)
-<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::View(Rect, unsigned short)
-<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::addChild(IDrawable*)
+<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::GUIView(Rect, unsigned short)
+<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::addChild(IDrawable*)
 <LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rect::Rect(int, int, int, int)
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMeasurement::GUIMeasurement(Rect, unsigned short, char*, char*)
 <LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IEventHandler::IEventHandler__sub_object()
@@ -1524,7 +1524,7 @@ Global Symbols
 
 <P><STRONG><a name="[1e4]"></a>cHwTimer_N::cHwTimer_N__sub_object(cHwTimer_N::TimerId, unsigned)</STRONG> (Thumb, 0 bytes, Stack size 64 bytes, lib.o(i._ZN10cHwTimer_NC1ENS_7TimerIdEj), UNUSED)
 
-<P><STRONG><a name="[18e]"></a>GUIControls::update()</STRONG> (Thumb, 154 bytes, Stack size 48 bytes, guicontrols.o(i._ZN11GUIControls6updateEv))
+<P><STRONG><a name="[18e]"></a>GUIControls::update()</STRONG> (Thumb, 200 bytes, Stack size 48 bytes, guicontrols.o(i._ZN11GUIControls6updateEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = GUIControls::update()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1606,20 +1606,20 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
 </UL>
 <P><STRONG><a name="[54]"></a>GUIPagedView::onEvent(GUIEvent::Event, Rect)</STRONG> (Thumb, 74 bytes, Stack size 48 bytes, guipagedview.o(i._ZN12GUIPagedView7onEventEN8GUIEvent5EventE4Rect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = GUIPagedView::onEvent(GUIEvent::Event, Rect) &rArr; View::onEvent(GUIEvent::Event, Rect)
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = GUIPagedView::onEvent(GUIEvent::Event, Rect) &rArr; GUIView::onEvent(GUIEvent::Event, Rect)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::onEvent(GUIEvent::Event, Rect)
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::onEvent(GUIEvent::Event, Rect)
 <LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::operator [](unsigned short)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
 </UL>
-<P><STRONG><a name="[13c]"></a>GUIPagedView::GUIPagedView(Rect, int, View*, ...)</STRONG> (Thumb, 306 bytes, Stack size 72 bytes, main.o(i._ZN12GUIPagedViewC1E4RectiP4Viewz))
-<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = GUIPagedView::GUIPagedView(Rect, int, View*, ...) &rArr; GUIButton::GUIButton(Rect, unsigned short, char*) &rArr; GUILabel::GUILabel(Rect, unsigned short, const char*) &rArr; GUILabel::setTitle(const char*) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
+<P><STRONG><a name="[13c]"></a>GUIPagedView::GUIPagedView(Rect, int, GUIView*, ...)</STRONG> (Thumb, 306 bytes, Stack size 72 bytes, main.o(i._ZN12GUIPagedViewC1E4RectiP7GUIViewz))
+<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = GUIPagedView::GUIPagedView(Rect, int, GUIView*, ...) &rArr; GUIButton::GUIButton(Rect, unsigned short, char*) &rArr; GUILabel::GUILabel(Rect, unsigned short, const char*) &rArr; GUILabel::setTitle(const char*) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned)
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::GUIButton(Rect, unsigned short, char*)
-<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::View(Rect, unsigned short)
-<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::addChild(IDrawable*)
+<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::GUIView(Rect, unsigned short)
+<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::addChild(IDrawable*)
 <LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rect::Rect(int, int, int, int)
 <LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IEventHandler::IEventHandler__sub_object()
 <LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IEventCaller::setCustomHandler(IEventHandler*)
@@ -1629,15 +1629,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[1e6]"></a>GUIPagedView::GUIPagedView__sub_object(Rect, int, View*, ...)</STRONG> (Thumb, 0 bytes, Stack size 72 bytes, main.o(i._ZN12GUIPagedViewC1E4RectiP4Viewz), UNUSED)
+<P><STRONG><a name="[1e6]"></a>GUIPagedView::GUIPagedView__sub_object(Rect, int, GUIView*, ...)</STRONG> (Thumb, 0 bytes, Stack size 72 bytes, main.o(i._ZN12GUIPagedViewC1E4RectiP7GUIViewz), UNUSED)
 
 <P><STRONG><a name="[13e]"></a>GUITitleView::GUITitleView(Rect, unsigned short, const char*)</STRONG> (Thumb, 110 bytes, Stack size 72 bytes, main.o(i._ZN12GUITitleViewC1E4RecttPKc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = GUITitleView::GUITitleView(Rect, unsigned short, const char*) &rArr; GUILabel::GUILabel(Rect, unsigned short, const char*) &rArr; GUILabel::setTitle(const char*) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned)
 <LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::GUILabel(Rect, unsigned short, const char*)
-<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::View(Rect, unsigned short)
-<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::addChild(IDrawable*)
+<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::GUIView(Rect, unsigned short)
+<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::addChild(IDrawable*)
 <LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rect::Rect(int, int, int, int)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1662,7 +1662,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::GUISelect(Rect, unsigned short, int, char*, ...)
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, View*, ...)
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, GUIView*, ...)
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
 </UL>
 
@@ -1734,7 +1734,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwSPImaster_1::cHwSPImaster_1(cHwSPImaster::MODE, cHwSPImaster::ClockPolPha)
 <LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwI2Cmaster_N::cHwI2Cmaster_N(cHwI2Cmaster_N::I2C_ID, cHwI2Cmaster::MODE, unsigned char)
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDAC_0::cHwDAC_0()
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDAC_0::cHwDAC_0()
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC_0::configCh(unsigned char)
 </UL>
 
@@ -1790,14 +1790,14 @@ Global Symbols
 <P><STRONG><a name="[121]"></a>IEventHandler::IEventHandler__sub_object()</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, main.o(i._ZN13IEventHandlerC2Ev))
 <BR><BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::GUISelect(Rect, unsigned short, int, char*, ...)
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, View*, ...)
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, GUIView*, ...)
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
 </UL>
 
 <P><STRONG><a name="[5c]"></a>GUIMeasurement::onEvent(GUIEvent::Event, Rect)</STRONG> (Thumb, 34 bytes, Stack size 40 bytes, guimeasurement.o(i._ZN14GUIMeasurement7onEventEN8GUIEvent5EventE4Rect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = GUIMeasurement::onEvent(GUIEvent::Event, Rect) &rArr; View::onEvent(GUIEvent::Event, Rect)
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = GUIMeasurement::onEvent(GUIEvent::Event, Rect) &rArr; GUIView::onEvent(GUIEvent::Event, Rect)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::onEvent(GUIEvent::Event, Rect)
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::onEvent(GUIEvent::Event, Rect)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> guimeasurement.o(.constdata__ZTV14GUIMeasurement)
 </UL>
@@ -1841,8 +1841,8 @@ Global Symbols
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2snprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::onEventHandle(IEventCaller*, GUIEvent::Event)
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::onEventHandle(IEventCaller*, GUIEvent::Event)
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
 </UL>
 
 <P><STRONG><a name="[14a]"></a>GUIMeasurement::setValue(int)</STRONG> (Thumb, 28 bytes, Stack size 32 bytes, guimeasurement.o(i._ZN14GUIMeasurement8setValueEi))
@@ -2195,174 +2195,21 @@ Global Symbols
 
 <P><STRONG><a name="[1f4]"></a>cDevControlEncoderJoystick::cDevControlEncoderJoystick__sub_object(cDevDigital*, cDevDigital*, cDevDigital*, cHwTimer*, unsigned short)</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, lib.o(i._ZN26cDevControlEncoderJoystickC1EP11cDevDigitalS1_S1_P8cHwTimert), UNUSED)
 
-<P><STRONG><a name="[16c]"></a>GUI::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)</STRONG> (Thumb, 186 bytes, Stack size 320 bytes, guilabel.o(i._ZN3GUI10drawStringE4RectttN12GUIAlignment9AlignmentEPKcz))
-<BR><BR>[Stack]<UL><LI>Max Depth = 440 + Unknown Stack Size
-<LI>Call Chain = GUI::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...) &rArr; __c89vsprintf &rArr; _printf_char_common &rArr; __printf
-</UL>
-<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI::getInstance()
-<LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
-<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2iz
-<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
-<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__c89vsprintf
-</UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::onDraw(Rect)
-</UL>
-
-<P><STRONG><a name="[16d]"></a>GUI::getInstance()</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, main.o(i._ZN3GUI11getInstanceEv))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GUI::getInstance()
-</UL>
-<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
-</UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
-</UL>
-
-<P><STRONG><a name="[16f]"></a>GUI::drawRectOutline(Rect, unsigned short, unsigned char)</STRONG> (Thumb, 74 bytes, Stack size 48 bytes, guibutton.o(i._ZN3GUI15drawRectOutlineE4Rectth))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = GUI::drawRectOutline(Rect, unsigned short, unsigned char)
-</UL>
-<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
-</UL>
-<BR>[Called By]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::updateSelected(GUIEvent::Event)
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::onEvent(GUIEvent::Event, Rect)
-</UL>
-
 <P><STRONG><a name="[126]"></a>Rect::Rect(int, int, int, int)</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, main.o(i._ZN4RectC1Eiiii))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Rect::Rect(int, int, int, int)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::GUISelect(Rect, unsigned short, int, char*, ...)
 <LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUITitleView::GUITitleView(Rect, unsigned short, const char*)
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, View*, ...)
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, GUIView*, ...)
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
 </UL>
 
 <P><STRONG><a name="[1f5]"></a>Rect::Rect__sub_object(int, int, int, int)</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, main.o(i._ZN4RectC1Eiiii), UNUSED)
 
-<P><STRONG><a name="[45]"></a>View::onLateDraw(Rect)</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, view.o(i._ZN4View10onLateDrawE4Rect))
-<BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::onLateDraw(Rect)
-</UL>
-<BR>[Address Reference Count : 7]<UL><LI> view.o(.constdata__ZTV4View)
-<LI> guibutton.o(.constdata__ZTV9GUIButton)
-<LI> guilabel.o(.constdata__ZTV8GUILabel)
-<LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
-<LI> guimeasurement.o(.constdata__ZTV14GUIMeasurement)
-<LI> guistepper.o(.constdata__ZTV10GUIStepper)
-<LI> main.o(.constdata__ZTV12GUITitleView)
-</UL>
-<P><STRONG><a name="[41]"></a>View::shouldDraw(Rect)</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, view.o(i._ZN4View10shouldDrawE4Rect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = View::shouldDraw(Rect)
-</UL>
-<BR>[Address Reference Count : 8]<UL><LI> view.o(.constdata__ZTV4View)
-<LI> guibutton.o(.constdata__ZTV9GUIButton)
-<LI> guilabel.o(.constdata__ZTV8GUILabel)
-<LI> guiselect.o(.constdata__ZTV9GUISelect)
-<LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
-<LI> guimeasurement.o(.constdata__ZTV14GUIMeasurement)
-<LI> guistepper.o(.constdata__ZTV10GUIStepper)
-<LI> main.o(.constdata__ZTV12GUITitleView)
-</UL>
-<P><STRONG><a name="[3e]"></a>View::getIsHidden()</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, view.o(i._ZN4View11getIsHiddenEv))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = View::getIsHidden()
-</UL>
-<BR>[Address Reference Count : 8]<UL><LI> view.o(.constdata__ZTV4View)
-<LI> guibutton.o(.constdata__ZTV9GUIButton)
-<LI> guilabel.o(.constdata__ZTV8GUILabel)
-<LI> guiselect.o(.constdata__ZTV9GUISelect)
-<LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
-<LI> guimeasurement.o(.constdata__ZTV14GUIMeasurement)
-<LI> guistepper.o(.constdata__ZTV10GUIStepper)
-<LI> main.o(.constdata__ZTV12GUITitleView)
-</UL>
-<P><STRONG><a name="[3f]"></a>View::draw(Rect)</STRONG> (Thumb, 144 bytes, Stack size 40 bytes, view.o(i._ZN4View4drawE4Rect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = View::draw(Rect)
-</UL>
-<BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::getFirst()
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::Item::getNext()
-</UL>
-<BR>[Address Reference Count : 8]<UL><LI> view.o(.constdata__ZTV4View)
-<LI> guibutton.o(.constdata__ZTV9GUIButton)
-<LI> guilabel.o(.constdata__ZTV8GUILabel)
-<LI> guiselect.o(.constdata__ZTV9GUISelect)
-<LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
-<LI> guimeasurement.o(.constdata__ZTV14GUIMeasurement)
-<LI> guistepper.o(.constdata__ZTV10GUIStepper)
-<LI> main.o(.constdata__ZTV12GUITitleView)
-</UL>
-<P><STRONG><a name="[59]"></a>View::onDraw(Rect)</STRONG> (Thumb, 124 bytes, Stack size 80 bytes, view.o(i._ZN4View6onDrawE4Rect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = View::onDraw(Rect)
-</UL>
-<BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
-</UL>
-<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::onDraw(Rect)
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::onDraw(Rect)
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::onDraw(Rect)
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::onDraw(Rect)
-</UL>
-<BR>[Address Reference Count : 2]<UL><LI> view.o(.constdata__ZTV4View)
-<LI> main.o(.constdata__ZTV12GUITitleView)
-</UL>
-<P><STRONG><a name="[42]"></a>View::redraw()</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, view.o(i._ZN4View6redrawEv))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = View::redraw()
-</UL>
-<BR>[Address Reference Count : 8]<UL><LI> view.o(.constdata__ZTV4View)
-<LI> guibutton.o(.constdata__ZTV9GUIButton)
-<LI> guilabel.o(.constdata__ZTV8GUILabel)
-<LI> guiselect.o(.constdata__ZTV9GUISelect)
-<LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
-<LI> guimeasurement.o(.constdata__ZTV14GUIMeasurement)
-<LI> guistepper.o(.constdata__ZTV10GUIStepper)
-<LI> main.o(.constdata__ZTV12GUITitleView)
-</UL>
-<P><STRONG><a name="[58]"></a>View::onEvent(GUIEvent::Event, Rect)</STRONG> (Thumb, 86 bytes, Stack size 48 bytes, view.o(i._ZN4View7onEventEN8GUIEvent5EventE4Rect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = View::onEvent(GUIEvent::Event, Rect)
-</UL>
-<BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::getFirst()
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::Item::getNext()
-</UL>
-<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMeasurement::onEvent(GUIEvent::Event, Rect)
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::onEvent(GUIEvent::Event, Rect)
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::onEvent(GUIEvent::Event, Rect)
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::onEvent(GUIEvent::Event, Rect)
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::onEvent(GUIEvent::Event, Rect)
-</UL>
-<BR>[Address Reference Count : 3]<UL><LI> view.o(.constdata__ZTV4View)
-<LI> guilabel.o(.constdata__ZTV8GUILabel)
-<LI> main.o(.constdata__ZTV12GUITitleView)
-</UL>
-<P><STRONG><a name="[129]"></a>View::addChild(IDrawable*)</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, main.o(i._ZN4View8addChildEP9IDrawable))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = View::addChild(IDrawable*)
-</UL>
-<BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::add(cList::Item*)
-</UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::GUISelect(Rect, unsigned short, int, char*, ...)
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::GUIButton(Rect, unsigned short, char*)
-<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUITitleView::GUITitleView(Rect, unsigned short, const char*)
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, View*, ...)
-<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
-</UL>
-
-<P><STRONG><a name="[120]"></a>View::View(Rect, unsigned short)</STRONG> (Thumb, 64 bytes, Stack size 32 bytes, main.o(i._ZN4ViewC1E4Rectt))
-<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = View::View(Rect, unsigned short) &rArr; cList::Item::Item(cList*)
-</UL>
-<BR>[Calls]<UL><LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::cList()
-<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::Item::Item(cList*)
-</UL>
-<BR>[Called By]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::GUISelect(Rect, unsigned short, int, char*, ...)
-<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::GUIButton(Rect, unsigned short, char*)
-<LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::GUILabel(Rect, unsigned short, const char*)
-<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUITitleView::GUITitleView(Rect, unsigned short, const char*)
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, View*, ...)
-<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
-</UL>
-
-<P><STRONG><a name="[1f6]"></a>View::View__sub_object(Rect, unsigned short)</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, main.o(i._ZN4ViewC1E4Rectt), UNUSED)
-
 <P><STRONG><a name="[13d]"></a>cList::add(cList::Item*)</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, lib.o(i._ZN5cList3addEPNS_4ItemE))
-<BR><BR>[Called By]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::addChild(IDrawable*)
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, View*, ...)
+<BR><BR>[Called By]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::addChild(IDrawable*)
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, GUIView*, ...)
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer::add(cList::Item*)
 <LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::Item::Item(cList*)
 </UL>
@@ -2370,11 +2217,11 @@ Global Symbols
 <P><STRONG><a name="[9b]"></a>cList::Item::update()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, lib.o(i._ZN5cList4Item6updateEv))
 <BR>[Address Reference Count : 1]<UL><LI> lib.o(.constdata__ZTVN5cList4ItemE)
 </UL>
-<P><STRONG><a name="[171]"></a>cList::Item::getNext()</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lib.o(i._ZN5cList4Item7getNextEv))
-<BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::onEvent(GUIEvent::Event, Rect)
-<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::draw(Rect)
-<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::updateSelected(GUIEvent::Event)
+<P><STRONG><a name="[16e]"></a>cList::Item::getNext()</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lib.o(i._ZN5cList4Item7getNextEv))
+<BR><BR>[Called By]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::updateSelected(GUIEvent::Event)
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::onEventHandle(IEventCaller*, GUIEvent::Event)
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::onEvent(GUIEvent::Event, Rect)
+<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::draw(Rect)
 </UL>
 
 <P><STRONG><a name="[15c]"></a>cList::Item::Item(cList*)</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, lib.o(i._ZN5cList4ItemC1EPS_))
@@ -2382,34 +2229,34 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::add(cList::Item*)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::View(Rect, unsigned short)
+<BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::GUIView(Rect, unsigned short)
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___8_main_cpp
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC::cHwADC__sub_object(unsigned char, cHwTimer*)
+<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC::cHwADC__sub_object(unsigned char, cHwTimer*)
 <LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cDevControlEncoder::cDevControlEncoder__sub_object(cDevDigital*, cHwTimer*)
 </UL>
 
-<P><STRONG><a name="[1f7]"></a>cList::Item::Item__sub_object(cList*)</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, lib.o(i._ZN5cList4ItemC1EPS_), UNUSED)
+<P><STRONG><a name="[1f6]"></a>cList::Item::Item__sub_object(cList*)</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, lib.o(i._ZN5cList4ItemC1EPS_), UNUSED)
 
-<P><STRONG><a name="[170]"></a>cList::getFirst()</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lib.o(i._ZN5cList8getFirstEv))
-<BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::onEvent(GUIEvent::Event, Rect)
-<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::draw(Rect)
-<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::updateSelected(GUIEvent::Event)
+<P><STRONG><a name="[16d]"></a>cList::getFirst()</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lib.o(i._ZN5cList8getFirstEv))
+<BR><BR>[Called By]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::updateSelected(GUIEvent::Event)
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::onEventHandle(IEventCaller*, GUIEvent::Event)
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::onEvent(GUIEvent::Event, Rect)
+<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::draw(Rect)
 </UL>
 
-<P><STRONG><a name="[17a]"></a>cList::updateAll()</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, lib.o(i._ZN5cList9updateAllEv))
+<P><STRONG><a name="[178]"></a>cList::updateAll()</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, lib.o(i._ZN5cList9updateAllEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = cList::updateAll()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer::isrHandler()
 </UL>
 
 <P><STRONG><a name="[12d]"></a>cList::cList()</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lib.o(i._ZN5cListC1Ev))
-<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::View(Rect, unsigned short)
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, View*, ...)
+<BR><BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::GUIView(Rect, unsigned short)
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, GUIView*, ...)
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
 </UL>
 
-<P><STRONG><a name="[1f8]"></a>cList::cList__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, lib.o(i._ZN5cListC1Ev), UNUSED)
+<P><STRONG><a name="[1f7]"></a>cList::cList__sub_object()</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, lib.o(i._ZN5cListC1Ev), UNUSED)
 
 <P><STRONG><a name="[13b]"></a>cList::operator [](unsigned short)</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, lib.o(i._ZN5cListixEt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = cList::operator [](unsigned short)
@@ -2452,18 +2299,138 @@ Global Symbols
 <BR>[Address Reference Count : 2]<UL><LI> lib.o(.constdata__ZTV6cHwADC)
 <LI> lib.o(.constdata__ZTV8cHwADC_0)
 </UL>
-<P><STRONG><a name="[172]"></a>cHwADC::cHwADC__sub_object(unsigned char, cHwTimer*)</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, lib.o(i._ZN6cHwADCC2EhP8cHwTimer))
+<P><STRONG><a name="[16c]"></a>cHwADC::cHwADC__sub_object(unsigned char, cHwTimer*)</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, lib.o(i._ZN6cHwADCC2EhP8cHwTimer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = cHwADC::cHwADC__sub_object(unsigned char, cHwTimer*) &rArr; operator new[] (unsigned) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new[] (unsigned)
 <LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::Item::Item(cList*)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC_0::cHwADC_0(cHwTimer*)
+<BR>[Called By]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC_0::cHwADC_0(cHwTimer*)
 </UL>
 
-<P><STRONG><a name="[179]"></a>cHwDAC::cHwDAC__sub_object(unsigned char)</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lib.o(i._ZN6cHwDACC2Eh))
-<BR><BR>[Called By]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDAC_0::cHwDAC_0()
+<P><STRONG><a name="[177]"></a>cHwDAC::cHwDAC__sub_object(unsigned char)</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lib.o(i._ZN6cHwDACC2Eh))
+<BR><BR>[Called By]<UL><LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDAC_0::cHwDAC_0()
 </UL>
+
+<P><STRONG><a name="[45]"></a>GUIView::onLateDraw(Rect)</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, guiview.o(i._ZN7GUIView10onLateDrawE4Rect))
+<BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::onLateDraw(Rect)
+</UL>
+<BR>[Address Reference Count : 7]<UL><LI> guibutton.o(.constdata__ZTV9GUIButton)
+<LI> guilabel.o(.constdata__ZTV8GUILabel)
+<LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
+<LI> guimeasurement.o(.constdata__ZTV14GUIMeasurement)
+<LI> guistepper.o(.constdata__ZTV10GUIStepper)
+<LI> guiview.o(.constdata__ZTV7GUIView)
+<LI> main.o(.constdata__ZTV12GUITitleView)
+</UL>
+<P><STRONG><a name="[41]"></a>GUIView::shouldDraw(Rect)</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, guiview.o(i._ZN7GUIView10shouldDrawE4Rect))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = GUIView::shouldDraw(Rect)
+</UL>
+<BR>[Address Reference Count : 8]<UL><LI> guibutton.o(.constdata__ZTV9GUIButton)
+<LI> guilabel.o(.constdata__ZTV8GUILabel)
+<LI> guiselect.o(.constdata__ZTV9GUISelect)
+<LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
+<LI> guimeasurement.o(.constdata__ZTV14GUIMeasurement)
+<LI> guistepper.o(.constdata__ZTV10GUIStepper)
+<LI> guiview.o(.constdata__ZTV7GUIView)
+<LI> main.o(.constdata__ZTV12GUITitleView)
+</UL>
+<P><STRONG><a name="[3e]"></a>GUIView::getIsHidden()</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, guiview.o(i._ZN7GUIView11getIsHiddenEv))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GUIView::getIsHidden()
+</UL>
+<BR>[Address Reference Count : 8]<UL><LI> guibutton.o(.constdata__ZTV9GUIButton)
+<LI> guilabel.o(.constdata__ZTV8GUILabel)
+<LI> guiselect.o(.constdata__ZTV9GUISelect)
+<LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
+<LI> guimeasurement.o(.constdata__ZTV14GUIMeasurement)
+<LI> guistepper.o(.constdata__ZTV10GUIStepper)
+<LI> guiview.o(.constdata__ZTV7GUIView)
+<LI> main.o(.constdata__ZTV12GUITitleView)
+</UL>
+<P><STRONG><a name="[3f]"></a>GUIView::draw(Rect)</STRONG> (Thumb, 144 bytes, Stack size 40 bytes, guiview.o(i._ZN7GUIView4drawE4Rect))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = GUIView::draw(Rect)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::getFirst()
+<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::Item::getNext()
+</UL>
+<BR>[Address Reference Count : 8]<UL><LI> guibutton.o(.constdata__ZTV9GUIButton)
+<LI> guilabel.o(.constdata__ZTV8GUILabel)
+<LI> guiselect.o(.constdata__ZTV9GUISelect)
+<LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
+<LI> guimeasurement.o(.constdata__ZTV14GUIMeasurement)
+<LI> guistepper.o(.constdata__ZTV10GUIStepper)
+<LI> guiview.o(.constdata__ZTV7GUIView)
+<LI> main.o(.constdata__ZTV12GUITitleView)
+</UL>
+<P><STRONG><a name="[59]"></a>GUIView::onDraw(Rect)</STRONG> (Thumb, 124 bytes, Stack size 80 bytes, guiview.o(i._ZN7GUIView6onDrawE4Rect))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = GUIView::onDraw(Rect)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+</UL>
+<BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::onDraw(Rect)
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::onDraw(Rect)
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::onDraw(Rect)
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::onDraw(Rect)
+</UL>
+<BR>[Address Reference Count : 2]<UL><LI> guiview.o(.constdata__ZTV7GUIView)
+<LI> main.o(.constdata__ZTV12GUITitleView)
+</UL>
+<P><STRONG><a name="[42]"></a>GUIView::redraw()</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, guiview.o(i._ZN7GUIView6redrawEv))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = GUIView::redraw()
+</UL>
+<BR>[Address Reference Count : 8]<UL><LI> guibutton.o(.constdata__ZTV9GUIButton)
+<LI> guilabel.o(.constdata__ZTV8GUILabel)
+<LI> guiselect.o(.constdata__ZTV9GUISelect)
+<LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
+<LI> guimeasurement.o(.constdata__ZTV14GUIMeasurement)
+<LI> guistepper.o(.constdata__ZTV10GUIStepper)
+<LI> guiview.o(.constdata__ZTV7GUIView)
+<LI> main.o(.constdata__ZTV12GUITitleView)
+</UL>
+<P><STRONG><a name="[58]"></a>GUIView::onEvent(GUIEvent::Event, Rect)</STRONG> (Thumb, 86 bytes, Stack size 48 bytes, guiview.o(i._ZN7GUIView7onEventEN8GUIEvent5EventE4Rect))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = GUIView::onEvent(GUIEvent::Event, Rect)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::getFirst()
+<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::Item::getNext()
+</UL>
+<BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::onEvent(GUIEvent::Event, Rect)
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMeasurement::onEvent(GUIEvent::Event, Rect)
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::onEvent(GUIEvent::Event, Rect)
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::onEvent(GUIEvent::Event, Rect)
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::onEvent(GUIEvent::Event, Rect)
+</UL>
+<BR>[Address Reference Count : 3]<UL><LI> guilabel.o(.constdata__ZTV8GUILabel)
+<LI> guiview.o(.constdata__ZTV7GUIView)
+<LI> main.o(.constdata__ZTV12GUITitleView)
+</UL>
+<P><STRONG><a name="[129]"></a>GUIView::addChild(IDrawable*)</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, main.o(i._ZN7GUIView8addChildEP9IDrawable))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = GUIView::addChild(IDrawable*)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::add(cList::Item*)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::GUISelect(Rect, unsigned short, int, char*, ...)
+<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::GUIButton(Rect, unsigned short, char*)
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUITitleView::GUITitleView(Rect, unsigned short, const char*)
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, GUIView*, ...)
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
+</UL>
+
+<P><STRONG><a name="[120]"></a>GUIView::GUIView(Rect, unsigned short)</STRONG> (Thumb, 64 bytes, Stack size 32 bytes, main.o(i._ZN7GUIViewC1E4Rectt))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = GUIView::GUIView(Rect, unsigned short) &rArr; cList::Item::Item(cList*)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::cList()
+<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::Item::Item(cList*)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::GUISelect(Rect, unsigned short, int, char*, ...)
+<LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::GUIButton(Rect, unsigned short, char*)
+<LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::GUILabel(Rect, unsigned short, const char*)
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUITitleView::GUITitleView(Rect, unsigned short, const char*)
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, GUIView*, ...)
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
+</UL>
+
+<P><STRONG><a name="[1f8]"></a>GUIView::GUIView__sub_object(Rect, unsigned short)</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, main.o(i._ZN7GUIViewC1E4Rectt), UNUSED)
 
 <P><STRONG><a name="[9f]"></a>cHwPort::Pin::clr()</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, lib.o(i._ZN7cHwPort3Pin3clrEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = cHwPort::Pin::clr()
@@ -2515,7 +2482,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwPort_N::cHwPort_N(cHwPort_N::PortId)
 </UL>
 
-<P><STRONG><a name="[173]"></a>cSystem::delayMicroSec(unsigned short)</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, lib.o(i._ZN7cSystem13delayMicroSecEt))
+<P><STRONG><a name="[170]"></a>cSystem::delayMicroSec(unsigned short)</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, lib.o(i._ZN7cSystem13delayMicroSecEt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = cSystem::delayMicroSec(unsigned short) &rArr; __aeabi_dmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
@@ -2528,14 +2495,14 @@ Global Symbols
 <P><STRONG><a name="[160]"></a>cSystem::delayMilliSec(unsigned short)</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, lib.o(i._ZN7cSystem13delayMilliSecEt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = cSystem::delayMilliSec(unsigned short) &rArr; cSystem::delayMicroSec(unsigned short) &rArr; __aeabi_dmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::delayMicroSec(unsigned short)
+<BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::delayMicroSec(unsigned short)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTouch_STMPE811i2c::cHwTouch_STMPE811i2c(cHwI2Cmaster&, unsigned char, unsigned short, unsigned short)
 <LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDisp_SPFD5408Bspi::init()
 </UL>
 
-<P><STRONG><a name="[176]"></a>cSystem::disableWatchdog()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, lib.o(i._ZN7cSystem15disableWatchdogEv))
-<BR><BR>[Called By]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::cSystem(unsigned char)
+<P><STRONG><a name="[173]"></a>cSystem::disableWatchdog()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, lib.o(i._ZN7cSystem15disableWatchdogEv))
+<BR><BR>[Called By]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::cSystem(unsigned char)
 </UL>
 
 <P><STRONG><a name="[141]"></a>cSystem::enableInterrupt()</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, lib.o(i._ZN7cSystem15enableInterruptEv))
@@ -2553,16 +2520,16 @@ Global Symbols
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwI2Cmaster::read(unsigned char, unsigned char*, unsigned char, unsigned char*, unsigned char)
 <LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cFifo&lang;cDevControlEncoder::tEvent&rang;::operator &lang;&lang;(const cDevControlEncoder::tEvent&)
 <LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cFifo&lang;cDevControlEncoder::tEvent&rang;::isFull()
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::cSystem(unsigned char)
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::cSystem(unsigned char)
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC::get(unsigned char)
 </UL>
 
-<P><STRONG><a name="[174]"></a>cSystem::cSystem(unsigned char)</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, lib.o(i._ZN7cSystemC1Eh))
+<P><STRONG><a name="[171]"></a>cSystem::cSystem(unsigned char)</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, lib.o(i._ZN7cSystemC1Eh))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = cSystem::cSystem(unsigned char)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
+<BR>[Calls]<UL><LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::disableInterrupt()
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::disableWatchdog()
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::disableWatchdog()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___8_main_cpp
 </UL>
@@ -2577,10 +2544,10 @@ Global Symbols
 </UL>
 <P><STRONG><a name="[5d]"></a>GUILabel::onDraw(Rect)</STRONG> (Thumb, 54 bytes, Stack size 40 bytes, guilabel.o(i._ZN8GUILabel6onDrawE4Rect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 480 + Unknown Stack Size
-<LI>Call Chain = GUILabel::onDraw(Rect) &rArr; GUI::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...) &rArr; __c89vsprintf &rArr; _printf_char_common &rArr; __printf
+<LI>Call Chain = GUILabel::onDraw(Rect) &rArr; GUIHelper::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...) &rArr; __c89vsprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::onDraw(Rect)
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
+<BR>[Calls]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIHelper::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::onDraw(Rect)
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> guilabel.o(.constdata__ZTV8GUILabel)
 <LI> guimeasurement.o(.constdata__ZTV14GUIMeasurement)
@@ -2602,7 +2569,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = GUILabel::GUILabel(Rect, unsigned short, const char*) &rArr; GUILabel::setTitle(const char*) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::setTitle(const char*)
-<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::View(Rect, unsigned short)
+<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::GUIView(Rect, unsigned short)
 <LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -2626,11 +2593,11 @@ Global Symbols
 <P><STRONG><a name="[84]"></a>cHwADC_0::getResult()</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lib.o(i._ZN8cHwADC_09getResultEv))
 <BR>[Address Reference Count : 1]<UL><LI> lib.o(.constdata__ZTV8cHwADC_0)
 </UL>
-<P><STRONG><a name="[177]"></a>cHwADC_0::cHwADC_0(cHwTimer*)</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, lib.o(i._ZN8cHwADC_0C1EP8cHwTimer))
+<P><STRONG><a name="[175]"></a>cHwADC_0::cHwADC_0(cHwTimer*)</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, lib.o(i._ZN8cHwADC_0C1EP8cHwTimer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = cHwADC_0::cHwADC_0(cHwTimer*) &rArr; cHwADC::cHwADC__sub_object(unsigned char, cHwTimer*) &rArr; operator new[] (unsigned) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ(IRQn)
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC::cHwADC__sub_object(unsigned char, cHwTimer*)
+<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC::cHwADC__sub_object(unsigned char, cHwTimer*)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___8_main_cpp
 </UL>
@@ -2642,11 +2609,11 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lib.o(.constdata__ZTV8cHwDAC_0)
 </UL>
-<P><STRONG><a name="[178]"></a>cHwDAC_0::cHwDAC_0()</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, lib.o(i._ZN8cHwDAC_0C1Ev))
+<P><STRONG><a name="[176]"></a>cHwDAC_0::cHwDAC_0()</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, lib.o(i._ZN8cHwDAC_0C1Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = cHwDAC_0::cHwDAC_0() &rArr; cHwPinConfig::set(cHwPinConfig::Function, unsigned)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwPinConfig::set(cHwPinConfig::Function, unsigned)
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDAC::cHwDAC__sub_object(unsigned char)
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDAC::cHwDAC__sub_object(unsigned char)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___8_main_cpp
 </UL>
@@ -2656,7 +2623,7 @@ Global Symbols
 <P><STRONG><a name="[4c]"></a>cHwTimer::isrHandler()</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, lib.o(i._ZN8cHwTimer10isrHandlerEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = cHwTimer::isrHandler() &rArr; cList::updateAll()
 </UL>
-<BR>[Calls]<UL><LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::updateAll()
+<BR>[Calls]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::updateAll()
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> lib.o(.constdata__ZTV8cHwTimer)
 <LI> lib.o(.constdata__ZTV10cHwTimer_N)
@@ -2694,32 +2661,32 @@ Global Symbols
 <P><STRONG><a name="[119]"></a>cHwUSB_0::isr()</STRONG> (Thumb, 196 bytes, Stack size 32 bytes, lib.o(i._ZN8cHwUSB_03isrEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = cHwUSB_0::isr()
 </UL>
-<BR>[Calls]<UL><LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwUSB_0::RdCmdDat(unsigned)
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwUSB_0::WrCmd(unsigned)
+<BR>[Calls]<UL><LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwUSB_0::RdCmdDat(unsigned)
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwUSB_0::WrCmd(unsigned)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_IRQHandler
 </UL>
 
-<P><STRONG><a name="[17b]"></a>cHwUSB_0::WrCmd(unsigned)</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, lib.o(i._ZN8cHwUSB_05WrCmdEj))
+<P><STRONG><a name="[179]"></a>cHwUSB_0::WrCmd(unsigned)</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, lib.o(i._ZN8cHwUSB_05WrCmdEj))
 <BR><BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwUSB_0::isr()
 </UL>
 
-<P><STRONG><a name="[17c]"></a>cHwUSB_0::RdCmdDat(unsigned)</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, lib.o(i._ZN8cHwUSB_08RdCmdDatEj))
+<P><STRONG><a name="[17a]"></a>cHwUSB_0::RdCmdDat(unsigned)</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, lib.o(i._ZN8cHwUSB_08RdCmdDatEj))
 <BR><BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwUSB_0::isr()
 </UL>
 
 <P><STRONG><a name="[89]"></a>GUIButton::onDraw(Rect)</STRONG> (Thumb, 26 bytes, Stack size 32 bytes, guibutton.o(i._ZN9GUIButton6onDrawE4Rect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = GUIButton::onDraw(Rect) &rArr; View::onDraw(Rect)
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = GUIButton::onDraw(Rect) &rArr; GUIView::onDraw(Rect)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::onDraw(Rect)
+<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::onDraw(Rect)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> guibutton.o(.constdata__ZTV9GUIButton)
 </UL>
 <P><STRONG><a name="[88]"></a>GUIButton::onEvent(GUIEvent::Event, Rect)</STRONG> (Thumb, 120 bytes, Stack size 48 bytes, guibutton.o(i._ZN9GUIButton7onEventEN8GUIEvent5EventE4Rect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = GUIButton::onEvent(GUIEvent::Event, Rect) &rArr; View::onEvent(GUIEvent::Event, Rect)
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = GUIButton::onEvent(GUIEvent::Event, Rect) &rArr; GUIHelper::drawRectOutline(Rect, unsigned short, unsigned char)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::onEvent(GUIEvent::Event, Rect)
-<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI::drawRectOutline(Rect, unsigned short, unsigned char)
+<BR>[Calls]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIHelper::drawRectOutline(Rect, unsigned short, unsigned char)
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::onEvent(GUIEvent::Event, Rect)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> guibutton.o(.constdata__ZTV9GUIButton)
 </UL>
@@ -2728,23 +2695,56 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned)
 <LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::GUILabel(Rect, unsigned short, const char*)
-<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::View(Rect, unsigned short)
-<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::addChild(IDrawable*)
+<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::GUIView(Rect, unsigned short)
+<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::addChild(IDrawable*)
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IEventCaller::IEventCaller()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::GUISelect(Rect, unsigned short, int, char*, ...)
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, View*, ...)
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, GUIView*, ...)
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
 </UL>
 
 <P><STRONG><a name="[1fe]"></a>GUIButton::GUIButton__sub_object(Rect, unsigned short, char*)</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, main.o(i._ZN9GUIButtonC1E4RecttPc), UNUSED)
 
-<P><STRONG><a name="[8c]"></a>GUISelect::onLateDraw(Rect)</STRONG> (Thumb, 34 bytes, Stack size 32 bytes, guiselect.o(i._ZN9GUISelect10onLateDrawE4Rect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = GUISelect::onLateDraw(Rect) &rArr; GUISelect::updateSelected(GUIEvent::Event) &rArr; GUI::drawRectOutline(Rect, unsigned short, unsigned char)
+<P><STRONG><a name="[174]"></a>GUIHelper::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)</STRONG> (Thumb, 186 bytes, Stack size 320 bytes, guilabel.o(i._ZN9GUIHelper10drawStringE4RectttN12GUIAlignment9AlignmentEPKcz))
+<BR><BR>[Stack]<UL><LI>Max Depth = 440 + Unknown Stack Size
+<LI>Call Chain = GUIHelper::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...) &rArr; __c89vsprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::onLateDraw(Rect)
-<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::updateSelected(GUIEvent::Event)
+<BR>[Calls]<UL><LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIHelper::getInstance()
+<LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2iz
+<LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__c89vsprintf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::onDraw(Rect)
+</UL>
+
+<P><STRONG><a name="[17c]"></a>GUIHelper::getInstance()</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, main.o(i._ZN9GUIHelper11getInstanceEv))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GUIHelper::getInstance()
+</UL>
+<BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+</UL>
+<BR>[Called By]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIHelper::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[17b]"></a>GUIHelper::drawRectOutline(Rect, unsigned short, unsigned char)</STRONG> (Thumb, 74 bytes, Stack size 48 bytes, guibutton.o(i._ZN9GUIHelper15drawRectOutlineE4Rectth))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = GUIHelper::drawRectOutline(Rect, unsigned short, unsigned char)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+</UL>
+<BR>[Called By]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::updateSelected(GUIEvent::Event)
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::onEvent(GUIEvent::Event, Rect)
+</UL>
+
+<P><STRONG><a name="[8c]"></a>GUISelect::onLateDraw(Rect)</STRONG> (Thumb, 34 bytes, Stack size 32 bytes, guiselect.o(i._ZN9GUISelect10onLateDrawE4Rect))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = GUISelect::onLateDraw(Rect) &rArr; GUISelect::updateSelected(GUIEvent::Event) &rArr; GUIHelper::drawRectOutline(Rect, unsigned short, unsigned char)
+</UL>
+<BR>[Calls]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::updateSelected(GUIEvent::Event)
+<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::onLateDraw(Rect)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> guiselect.o(.constdata__ZTV9GUISelect)
 </UL>
@@ -2757,40 +2757,40 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> guiselect.o(.constdata__ZTV9GUISelect)
 </UL>
-<P><STRONG><a name="[8e]"></a>GUISelect::onEventHandle(IEventCaller*, GUIEvent::Event)</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, guiselect.o(i._ZN9GUISelect13onEventHandleEP12IEventCallerN8GUIEvent5EventE))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = GUISelect::onEventHandle(IEventCaller*, GUIEvent::Event) &rArr; GUISelect::updateSelected(GUIEvent::Event) &rArr; GUI::drawRectOutline(Rect, unsigned short, unsigned char)
+<P><STRONG><a name="[8e]"></a>GUISelect::onEventHandle(IEventCaller*, GUIEvent::Event)</STRONG> (Thumb, 96 bytes, Stack size 24 bytes, guiselect.o(i._ZN9GUISelect13onEventHandleEP12IEventCallerN8GUIEvent5EventE))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = GUISelect::onEventHandle(IEventCaller*, GUIEvent::Event) &rArr; GUISelect::updateSelected(GUIEvent::Event) &rArr; GUIHelper::drawRectOutline(Rect, unsigned short, unsigned char)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::updateSelected(GUIEvent::Event)
-<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::getFirst()
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::Item::getNext()
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::getFirst()
+<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::Item::getNext()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;thunk{-40} to GUISelect::onEventHandle(IEventCaller*, GUIEvent::Event)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> guiselect.o(.constdata__ZTV9GUISelect)
 </UL>
 <P><STRONG><a name="[17d]"></a>GUISelect::updateSelected(GUIEvent::Event)</STRONG> (Thumb, 72 bytes, Stack size 24 bytes, guiselect.o(i._ZN9GUISelect14updateSelectedEN8GUIEvent5EventE))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = GUISelect::updateSelected(GUIEvent::Event) &rArr; GUI::drawRectOutline(Rect, unsigned short, unsigned char)
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = GUISelect::updateSelected(GUIEvent::Event) &rArr; GUIHelper::drawRectOutline(Rect, unsigned short, unsigned char)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IEventCaller::callHandler(GUIEvent::Event)
-<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI::drawRectOutline(Rect, unsigned short, unsigned char)
-<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::getFirst()
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::Item::getNext()
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIHelper::drawRectOutline(Rect, unsigned short, unsigned char)
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::getFirst()
+<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::Item::getNext()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::onEventHandle(IEventCaller*, GUIEvent::Event)
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::onLateDraw(Rect)
 </UL>
 
 <P><STRONG><a name="[8b]"></a>GUISelect::onDraw(Rect)</STRONG> (Thumb, 26 bytes, Stack size 32 bytes, guiselect.o(i._ZN9GUISelect6onDrawE4Rect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = GUISelect::onDraw(Rect) &rArr; View::onDraw(Rect)
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = GUISelect::onDraw(Rect) &rArr; GUIView::onDraw(Rect)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::onDraw(Rect)
+<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::onDraw(Rect)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> guiselect.o(.constdata__ZTV9GUISelect)
 </UL>
 <P><STRONG><a name="[8a]"></a>GUISelect::onEvent(GUIEvent::Event, Rect)</STRONG> (Thumb, 34 bytes, Stack size 40 bytes, guiselect.o(i._ZN9GUISelect7onEventEN8GUIEvent5EventE4Rect))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = GUISelect::onEvent(GUIEvent::Event, Rect) &rArr; View::onEvent(GUIEvent::Event, Rect)
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = GUISelect::onEvent(GUIEvent::Event, Rect) &rArr; GUIView::onEvent(GUIEvent::Event, Rect)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::onEvent(GUIEvent::Event, Rect)
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::onEvent(GUIEvent::Event, Rect)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> guiselect.o(.constdata__ZTV9GUISelect)
 </UL>
@@ -2799,8 +2799,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned)
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::GUIButton(Rect, unsigned short, char*)
-<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::View(Rect, unsigned short)
-<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::addChild(IDrawable*)
+<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::GUIView(Rect, unsigned short)
+<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::addChild(IDrawable*)
 <LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rect::Rect(int, int, int, int)
 <LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IEventHandler::IEventHandler__sub_object()
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IEventCaller::IEventCaller()
@@ -2815,24 +2815,24 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.constdata__ZTV9IDrawable)
 </UL>
 <P><STRONG><a name="[43]"></a>IDrawable::onAddedToDrawable(IDrawable*)</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, main.o(i._ZN9IDrawable17onAddedToDrawableEPS_))
-<BR>[Address Reference Count : 9]<UL><LI> view.o(.constdata__ZTV4View)
-<LI> guibutton.o(.constdata__ZTV9GUIButton)
+<BR>[Address Reference Count : 9]<UL><LI> guibutton.o(.constdata__ZTV9GUIButton)
 <LI> guilabel.o(.constdata__ZTV8GUILabel)
 <LI> guiselect.o(.constdata__ZTV9GUISelect)
 <LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
 <LI> guimeasurement.o(.constdata__ZTV14GUIMeasurement)
 <LI> guistepper.o(.constdata__ZTV10GUIStepper)
+<LI> guiview.o(.constdata__ZTV7GUIView)
 <LI> main.o(.constdata__ZTV9IDrawable)
 <LI> main.o(.constdata__ZTV12GUITitleView)
 </UL>
 <P><STRONG><a name="[3d]"></a>IDrawable::update()</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, main.o(i._ZN9IDrawable6updateEv))
-<BR>[Address Reference Count : 9]<UL><LI> view.o(.constdata__ZTV4View)
-<LI> guibutton.o(.constdata__ZTV9GUIButton)
+<BR>[Address Reference Count : 9]<UL><LI> guibutton.o(.constdata__ZTV9GUIButton)
 <LI> guilabel.o(.constdata__ZTV8GUILabel)
 <LI> guiselect.o(.constdata__ZTV9GUISelect)
 <LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
 <LI> guimeasurement.o(.constdata__ZTV14GUIMeasurement)
 <LI> guistepper.o(.constdata__ZTV10GUIStepper)
+<LI> guiview.o(.constdata__ZTV7GUIView)
 <LI> main.o(.constdata__ZTV9IDrawable)
 <LI> main.o(.constdata__ZTV12GUITitleView)
 </UL>
@@ -2885,7 +2885,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> guipagedview.o(.constdata__ZTV12GUIPagedView)
 </UL>
 <P><STRONG><a name="[8f]"></a>thunk{-40} to GUISelect::onEventHandle(IEventCaller*, GUIEvent::Event)</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, guiselect.o(i._ZThn40_N9GUISelect13onEventHandleEP12IEventCallerN8GUIEvent5EventE))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = thunk{-40} to GUISelect::onEventHandle(IEventCaller*, GUIEvent::Event) &rArr; GUISelect::onEventHandle(IEventCaller*, GUIEvent::Event) &rArr; GUISelect::updateSelected(GUIEvent::Event) &rArr; GUI::drawRectOutline(Rect, unsigned short, unsigned char)
+<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = thunk{-40} to GUISelect::onEventHandle(IEventCaller*, GUIEvent::Event) &rArr; GUISelect::onEventHandle(IEventCaller*, GUIEvent::Event) &rArr; GUISelect::updateSelected(GUIEvent::Event) &rArr; GUIHelper::drawRectOutline(Rect, unsigned short, unsigned char)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::onEventHandle(IEventCaller*, GUIEvent::Event)
 </UL>
@@ -2903,8 +2903,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::setTitle(const char*)
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMeasurement::setText(char*, char*, const char*)
+<BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMeasurement::setText(char*, char*, const char*)
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::setTitle(const char*)
 </UL>
 
 <P><STRONG><a name="[15d]"></a>operator new[] (unsigned)</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, lib.o(i._Znaj))
@@ -2912,7 +2912,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC::cHwADC__sub_object(unsigned char, cHwTimer*)
+<BR>[Called By]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC::cHwADC__sub_object(unsigned char, cHwTimer*)
 <LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cDevControlEncoder::cDevControlEncoder__sub_object(cDevDigital*, cHwTimer*)
 </UL>
 
@@ -2925,7 +2925,7 @@ Global Symbols
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::GUISelect(Rect, unsigned short, int, char*, ...)
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::GUIButton(Rect, unsigned short, char*)
 <LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUITitleView::GUITitleView(Rect, unsigned short, const char*)
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, View*, ...)
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, GUIView*, ...)
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
 </UL>
 
@@ -2934,10 +2934,10 @@ Global Symbols
 <LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_sin
 </UL>
 
-<P><STRONG><a name="[16e]"></a>__cxa_guard_acquire</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, cxa_guard_acquire.o(i.__cxa_guard_acquire))
-<BR><BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::onDraw(Rect)
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI::getInstance()
-<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI::drawRectOutline(Rect, unsigned short, unsigned char)
+<P><STRONG><a name="[16f]"></a>__cxa_guard_acquire</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, cxa_guard_acquire.o(i.__cxa_guard_acquire))
+<BR><BR>[Called By]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIHelper::drawRectOutline(Rect, unsigned short, unsigned char)
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::onDraw(Rect)
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIHelper::getInstance()
 </UL>
 
 <P><STRONG><a name="[49]"></a>__cxa_pure_virtual</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, lib.o(i.__cxa_pure_virtual))
@@ -3031,16 +3031,16 @@ Global Symbols
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIControls::update()
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned)
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUISelect::GUISelect(Rect, unsigned short, int, char*, ...)
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIHelper::getInstance()
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIButton::GUIButton(Rect, unsigned short, char*)
 <LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUILabel::GUILabel(Rect, unsigned short, const char*)
-<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;View::addChild(IDrawable*)
+<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIView::addChild(IDrawable*)
 <LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rect::Rect(int, int, int, int)
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI::getInstance()
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIMeasurement::GUIMeasurement(Rect, unsigned short, char*, char*)
 <LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IEventHandler::IEventHandler__sub_object()
 <LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IEventCaller::setCustomHandler(IEventHandler*)
 <LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUITitleView::GUITitleView(Rect, unsigned short, const char*)
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, View*, ...)
+<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIPagedView::GUIPagedView(Rect, int, GUIView*, ...)
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer::add(cList::Item*)
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC::update()
@@ -3161,7 +3161,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __aeabi_d2uiz
 </UL>
 <BR>[Called By]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::delayMicroSec(unsigned short)
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::delayMicroSec(unsigned short)
 </UL>
 
 <P><STRONG><a name="[19a]"></a>_dfixu</STRONG> (Thumb, 90 bytes, Stack size 32 bytes, dfixu.o(x$fpl$dfixu), UNUSED)
@@ -3177,7 +3177,7 @@ Global Symbols
 <P><STRONG><a name="[132]"></a>__aeabi_ui2d</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dfltu))
 <BR><BR>[Called By]<UL><LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ieee754_rem_pio2
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::delayMicroSec(unsigned short)
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::delayMicroSec(unsigned short)
 </UL>
 
 <P><STRONG><a name="[202]"></a>_dfltu</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dfltu), UNUSED)
@@ -3191,7 +3191,7 @@ Global Symbols
 <LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ieee754_rem_pio2
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_cos
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::delayMicroSec(unsigned short)
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::delayMicroSec(unsigned short)
 </UL>
 
 <P><STRONG><a name="[19b]"></a>_dmul</STRONG> (Thumb, 332 bytes, Stack size 32 bytes, dmul.o(x$fpl$dmul), UNUSED)
@@ -3257,10 +3257,10 @@ Global Symbols
 <P><STRONG><a name="[11a]"></a>__aeabi_fadd</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, faddsub_clz.o(x$fpl$fadd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_fadd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SampleTimer::update()
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::onEventHandle(IEventCaller*, GUIEvent::Event)
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIHelper::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SampleTimer::update()
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::onEventHandle(IEventCaller*, GUIEvent::Event)
 </UL>
 
 <P><STRONG><a name="[1a1]"></a>_fadd</STRONG> (Thumb, 196 bytes, Stack size 16 bytes, faddsub_clz.o(x$fpl$fadd), UNUSED)
@@ -3276,8 +3276,8 @@ Global Symbols
 <P><STRONG><a name="[130]"></a>__aeabi_fdiv</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, fdiv.o(x$fpl$fdiv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_fdiv
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SampleTimer::update()
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
+<BR>[Called By]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIHelper::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SampleTimer::update()
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
 </UL>
 
@@ -3289,8 +3289,8 @@ Global Symbols
 <P><STRONG><a name="[124]"></a>__aeabi_f2iz</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, ffix.o(x$fpl$ffix))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_f2iz
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
+<BR>[Called By]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIHelper::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
 </UL>
 
 <P><STRONG><a name="[1a4]"></a>_ffix</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, ffix.o(x$fpl$ffix), UNUSED)
@@ -3309,8 +3309,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[125]"></a>__aeabi_i2f</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, fflt_clz.o(x$fpl$fflt))
-<BR><BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
+<BR><BR>[Called By]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIHelper::drawString(Rect, unsigned short, unsigned short, GUIAlignment::Alignment, const char*, ...)
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
 </UL>
 
 <P><STRONG><a name="[203]"></a>_fflt</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, fflt_clz.o(x$fpl$fflt), UNUSED)
@@ -3324,8 +3324,8 @@ Global Symbols
 <P><STRONG><a name="[11c]"></a>__aeabi_cfcmple</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, fleqf.o(x$fpl$fleqf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_cfcmple
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::onEventHandle(IEventCaller*, GUIEvent::Event)
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::onEventHandle(IEventCaller*, GUIEvent::Event)
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
 </UL>
 
 <P><STRONG><a name="[1a6]"></a>_fcmple</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, fleqf.o(x$fpl$fleqf), UNUSED)
@@ -3380,8 +3380,8 @@ Global Symbols
 <P><STRONG><a name="[11b]"></a>__aeabi_fsub</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, faddsub_clz.o(x$fpl$fsub))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_fsub
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::onEventHandle(IEventCaller*, GUIEvent::Event)
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::onEventHandle(IEventCaller*, GUIEvent::Event)
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUIStepper::GUIStepper(Rect, unsigned short, float, float, float, float)
 </UL>
 
 <P><STRONG><a name="[1ab]"></a>_fsub</STRONG> (Thumb, 234 bytes, Stack size 16 bytes, faddsub_clz.o(x$fpl$fsub), UNUSED)
@@ -3424,7 +3424,7 @@ Local Symbols
 </H3>
 <P><STRONG><a name="[12e]"></a>NVIC_EnableIRQ(IRQn)</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, lib.o(i._Z14NVIC_EnableIRQ4IRQn))
 <BR><BR>[Called By]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC_0::cHwADC_0(cHwTimer*)
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC_0::cHwADC_0(cHwTimer*)
 </UL>
 
 <P><STRONG><a name="[a1]"></a>__sti___8_main_cpp</STRONG> (Thumb, 358 bytes, Stack size 40 bytes, main.o(i.__sti___8_main_cpp))
@@ -3438,9 +3438,9 @@ Local Symbols
 <LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cDevDigital::cDevDigital(cHwPort&, unsigned char, cDevDigital::Mode, bool)
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwTimer_N::cHwTimer_N(cHwTimer_N::TimerId, unsigned)
 <LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwPort_N::cHwPort_N(cHwPort_N::PortId)
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDAC_0::cHwDAC_0()
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC_0::cHwADC_0(cHwTimer*)
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::cSystem(unsigned char)
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwDAC_0::cHwDAC_0()
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwADC_0::cHwADC_0(cHwTimer*)
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cSystem::cSystem(unsigned char)
 <LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cHwPort::Pin::Pin(cHwPort&, unsigned char)
 <LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cList::Item::Item(cList*)
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cDevControlEncoderJoystick::cDevControlEncoderJoystick(cDevDigital*, cDevDigital*, cDevDigital*, cHwTimer*, unsigned short)
@@ -3449,8 +3449,8 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.init_array)
 </UL>
-<P><STRONG><a name="[a2]"></a>__sti___7_GUI_cpp</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, gui.o(i.__sti___7_GUI_cpp))
-<BR>[Address Reference Count : 1]<UL><LI> gui.o(.init_array)
+<P><STRONG><a name="[a2]"></a>__sti___13_GUIHelper_cpp</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, guihelper.o(i.__sti___13_GUIHelper_cpp))
+<BR>[Address Reference Count : 1]<UL><LI> guihelper.o(.init_array)
 </UL>
 <P><STRONG><a name="[1ac]"></a>_fadd1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, faddsub_clz.o(x$fpl$fadd), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fsub

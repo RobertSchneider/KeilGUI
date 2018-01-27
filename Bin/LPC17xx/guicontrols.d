@@ -111,8 +111,7 @@
 .\bin\lpc17xx\guicontrols.o: ..\EmbSysLib\Lib\Src\Device/Control/devControlEncoderRotaryKnob.h
 .\bin\lpc17xx\guicontrols.o: ..\EmbSysLib\Lib\Src\Device/Control/devControlPointer.h
 .\bin\lpc17xx\guicontrols.o: ..\EmbSysLib\Lib\Src\Task/TaskHandler.h
-.\bin\lpc17xx\guicontrols.o: Src\View.h
 .\bin\lpc17xx\guicontrols.o: Src\IDrawable.h
-.\bin\lpc17xx\guicontrols.o: Src\GUI.h
+.\bin\lpc17xx\guicontrols.o: Src\GUIHelper.h
 .\bin\lpc17xx\guicontrols.o: Src\Rect.h
 .\bin\lpc17xx\guicontrols.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h

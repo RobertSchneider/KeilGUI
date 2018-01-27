@@ -4,10 +4,9 @@
 
 //-------------------------------------------------------------------
 
-#include "View.h"
+#include "GUIView.h"
 
-
-void View::destroy()
+void GUIView::destroy()
 {
 	IDrawable* ptr = (IDrawable*)children.getFirst();
 	while(ptr)
@@ -17,12 +16,12 @@ void View::destroy()
 	}
 }
 
-bool View::shouldDraw(Rect _r)
+bool GUIView::shouldDraw(Rect _r)
 {
 	return _r.intersects(rect);
 }
 
-void View::draw(Rect _r)
+void GUIView::draw(Rect _r)
 {
 	if (getIsHidden()) 
 	{
@@ -45,12 +44,12 @@ void View::draw(Rect _r)
 	}
 }
 
-bool View::getIsHidden()
+bool GUIView::getIsHidden()
 {
 	return isHidden || (parent != NULL && parent->getIsHidden());
 }
 
-void View::redraw()
+void GUIView::redraw()
 {
 	if (getIsHidden()) 
 	{
@@ -67,17 +66,17 @@ void View::redraw()
 	}
 }
 
-void View::onDraw(Rect _r)
+void GUIView::onDraw(Rect _r)
 {
-	GUI::drawRect(MINRECT(_r, rect), backgroundColor);
+	GUIHelper::drawRect(MINRECT(_r, rect), backgroundColor);
 }
 
-void View::onLateDraw(Rect _r)
+void GUIView::onLateDraw(Rect _r)
 {
 	
 }
 
-void View::onEvent(GUIEvent::Event _e, Rect _finger)
+void GUIView::onEvent(GUIEvent::Event _e, Rect _finger)
 {
 	IDrawable* ptr = (IDrawable*)children.getFirst();
 	while(ptr)

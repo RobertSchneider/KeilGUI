@@ -48,7 +48,7 @@ void GUIMeasurement::setValue(float _val)
 
 void GUIMeasurement::onEvent(GUIEvent::Event _e, Rect _finger)
 {
-	View::onEvent(_e, _finger);
+	GUIView::onEvent(_e, _finger);
 }
 
 //EOF

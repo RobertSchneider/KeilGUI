@@ -1,5 +1,6 @@
 .\bin\lpc17xx\gui.o: Src\GUI.cpp
 .\bin\lpc17xx\gui.o: Src\GUI.h
+.\bin\lpc17xx\gui.o: Src\IDrawable.h
 .\bin\lpc17xx\gui.o: ..\EmbSysLib\Lib\Src\lib.h
 .\bin\lpc17xx\gui.o: ..\EmbSysLib\Lib\Src\Hardware/Hardware.h
 .\bin\lpc17xx\gui.o: ..\EmbSysLib\Lib\Src\Hardware/MCU/MCU.h
@@ -111,5 +112,17 @@
 .\bin\lpc17xx\gui.o: ..\EmbSysLib\Lib\Src\Device/Control/devControlEncoderRotaryKnob.h
 .\bin\lpc17xx\gui.o: ..\EmbSysLib\Lib\Src\Device/Control/devControlPointer.h
 .\bin\lpc17xx\gui.o: ..\EmbSysLib\Lib\Src\Task/TaskHandler.h
+.\bin\lpc17xx\gui.o: Src\GUIHelper.h
 .\bin\lpc17xx\gui.o: Src\Rect.h
 .\bin\lpc17xx\gui.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
+.\bin\lpc17xx\gui.o: Src\GUIButton.h
+.\bin\lpc17xx\gui.o: Src\GUILabel.h
+.\bin\lpc17xx\gui.o: Src\View.h
+.\bin\lpc17xx\gui.o: Src\IEventHandler.h
+.\bin\lpc17xx\gui.o: Src\GUI.h
+.\bin\lpc17xx\gui.o: Src\GUIControls.h
+.\bin\lpc17xx\gui.o: Src\GUISelect.h
+.\bin\lpc17xx\gui.o: Src\GUIPagedView.h
+.\bin\lpc17xx\gui.o: Src\GUIMeasurement.h
+.\bin\lpc17xx\gui.o: Src\GUIStepper.h
+.\bin\lpc17xx\gui.o: Src\GUITitleView.h

@@ -7,11 +7,11 @@
 
 //-------------------------------------------------------------------
 
-#include "View.h"
+#include "GUIView.h"
 #include "GUIButton.h"
 #include "GUIMeasurement.h"
 
-class GUIStepper : public View, public IEventHandler, public IEventCaller
+class GUIStepper : public GUIView, public IEventHandler, public IEventCaller
 {
 protected:
 	virtual void onDraw(Rect _r);
@@ -25,7 +25,7 @@ public:
 	float stepSize;
 
 	GUIStepper(Rect _rect, COLOR _color, float _min, float _max, float _stepSize, float _current = 0)
-		: View(_rect, _color)
+		: GUIView(_rect, _color)
 	{
 		max = _max;
 		min = _min;

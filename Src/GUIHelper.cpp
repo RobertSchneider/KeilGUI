@@ -2,8 +2,8 @@
 // IDrawable
 //*******************************************************************
 
-#include "GUI.h"
+#include "GUIHelper.h"
 
-Rect GUI::screenRect;
+Rect GUIHelper::screenRect;
 
 //EOF
