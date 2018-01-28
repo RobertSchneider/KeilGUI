@@ -16,7 +16,7 @@ void GUIStepper::onEvent(GUIEvent::Event _e, Rect _finger)
 	GUIView::onEvent(_e, _finger);
 }
 
-void GUIStepper::onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
+void GUIStepper::onEventHandle(GUIEventCaller *_caller, GUIEvent::Event _e)
 {
 	if (_e == GUIEvent::TouchUp)
 	{

@@ -116,6 +116,7 @@
 .\bin\lpc17xx\guiselect.o: Src\GUIHelper.h
 .\bin\lpc17xx\guiselect.o: Src\Rect.h
 .\bin\lpc17xx\guiselect.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
+.\bin\lpc17xx\guiselect.o: Src\GUIEventCaller.h
+.\bin\lpc17xx\guiselect.o: Src\GUIEventHandler.h
 .\bin\lpc17xx\guiselect.o: Src\GUIButton.h
 .\bin\lpc17xx\guiselect.o: Src\GUILabel.h
-.\bin\lpc17xx\guiselect.o: Src\IEventHandler.h

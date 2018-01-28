@@ -436,16 +436,6 @@
               <FilePath>.\Src\IDrawable.h</FilePath>
             </File>
             <File>
-              <FileName>View.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Src\View.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>View.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Src\View.h</FilePath>
-            </File>
-            <File>
               <FileName>Rect.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Src\Rect.h</FilePath>
@@ -496,11 +486,6 @@
               <FilePath>.\Src\GUISelect.h</FilePath>
             </File>
             <File>
-              <FileName>IEventHandler.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Src\IEventHandler.h</FilePath>
-            </File>
-            <File>
               <FileName>GUIPagedView.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>.\Src\GUIPagedView.cpp</FilePath>
@@ -536,9 +521,34 @@
               <FilePath>.\Src\GUITitleView.h</FilePath>
             </File>
             <File>
-              <FileName>GUI.cpp</FileName>
+              <FileName>GUIHelper.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Src\GUI.cpp</FilePath>
+              <FilePath>.\Src\GUIHelper.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>GUIHelper.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\GUIHelper.h</FilePath>
+            </File>
+            <File>
+              <FileName>GUIView.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\GUIView.h</FilePath>
+            </File>
+            <File>
+              <FileName>GUIView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Src\GUIView.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>GUIEventHandler.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\GUIEventHandler.h</FilePath>
+            </File>
+            <File>
+              <FileName>GUIEventCaller.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src\GUIEventCaller.h</FilePath>
             </File>
           </Files>
         </Group>

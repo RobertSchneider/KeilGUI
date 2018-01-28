@@ -8,7 +8,6 @@
 //-------------------------------------------------------------------
 
 #include "GUILabel.h"
-#include "IEventHandler.h"
 
 class GUIMeasurement : public GUILabel
 {

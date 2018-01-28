@@ -23,7 +23,7 @@ void GUISelect::onEvent(GUIEvent::Event _e, Rect _finger)
 	GUIView::onEvent(_e, _finger);
 }
 
-void GUISelect::onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
+void GUISelect::onEventHandle(GUIEventCaller *_caller, GUIEvent::Event _e)
 {
 	if (_e == GUIEvent::TouchUp || _e == GUIEvent::TouchDown)
 	{

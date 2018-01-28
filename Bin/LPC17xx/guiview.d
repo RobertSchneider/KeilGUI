@@ -115,3 +115,5 @@
 .\bin\lpc17xx\guiview.o: Src\GUIHelper.h
 .\bin\lpc17xx\guiview.o: Src\Rect.h
 .\bin\lpc17xx\guiview.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
+.\bin\lpc17xx\guiview.o: Src\GUIEventCaller.h
+.\bin\lpc17xx\guiview.o: Src\GUIEventHandler.h

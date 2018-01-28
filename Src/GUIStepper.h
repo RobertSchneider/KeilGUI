@@ -11,7 +11,7 @@
 #include "GUIButton.h"
 #include "GUIMeasurement.h"
 
-class GUIStepper : public GUIView, public IEventHandler, public IEventCaller
+class GUIStepper : public GUIView, public GUIEventHandler, public GUIEventCaller
 {
 protected:
 	virtual void onDraw(Rect _r);
@@ -34,7 +34,7 @@ public:
 		
 		float btnWidth = 30;
 		
-		btnUp = new GUIButton(Rect(_rect.x + _rect.w - btnWidth, _rect.y, btnWidth, _rect.h), _color, "+");
+		btnUp = new GUIButton(Rect(_rect.x + _rect.w - btnWidth - 1, _rect.y, btnWidth, _rect.h), _color, "+");
 		btnUp->setCustomHandler(this);
 		addChild(btnUp);
 		
@@ -48,7 +48,7 @@ public:
 	}
 	
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger);
-	virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e);
+	virtual void onEventHandle(GUIEventCaller *_caller, GUIEvent::Event _e);
 };
 
 #endif

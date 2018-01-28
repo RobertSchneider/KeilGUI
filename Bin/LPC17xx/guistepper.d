@@ -116,7 +116,8 @@
 .\bin\lpc17xx\guistepper.o: Src\GUIHelper.h
 .\bin\lpc17xx\guistepper.o: Src\Rect.h
 .\bin\lpc17xx\guistepper.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
+.\bin\lpc17xx\guistepper.o: Src\GUIEventCaller.h
+.\bin\lpc17xx\guistepper.o: Src\GUIEventHandler.h
 .\bin\lpc17xx\guistepper.o: Src\GUIButton.h
 .\bin\lpc17xx\guistepper.o: Src\GUILabel.h
-.\bin\lpc17xx\guistepper.o: Src\IEventHandler.h
 .\bin\lpc17xx\guistepper.o: Src\GUIMeasurement.h

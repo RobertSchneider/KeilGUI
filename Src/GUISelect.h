@@ -10,7 +10,7 @@
 #include "GUIView.h"
 #include "GUIButton.h"
 
-class GUISelect : public GUIView, public IEventHandler, public IEventCaller
+class GUISelect : public GUIView, public GUIEventHandler, public GUIEventCaller
 {
 protected:
 	int count;
@@ -24,13 +24,11 @@ public:
 	GUIButton *selectedButton;
 	int selectedIndex;
 	COLOR outlineColor;
-	void (*onCustomEvent)(GUISelect*, GUIEvent::Event);
 
 	GUISelect(Rect _rect, COLOR _color, int _n, char *_titles,...)
 		: GUIView(_rect, _color),
 			count(_n),
-			outlineColor(YELLOW),
-			onCustomEvent(NULL)
+			outlineColor(YELLOW)
 	{
 		va_list ptr;
 		va_start(ptr, _titles);
@@ -57,7 +55,7 @@ public:
 	void onButtonSelected(GUIButton *_b, GUIEvent::Event _e);
 	void updateSelected(GUIEvent::Event _e);
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger);
-	virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e);
+	virtual void onEventHandle(GUIEventCaller *_caller, GUIEvent::Event _e);
 };
 
 #endif

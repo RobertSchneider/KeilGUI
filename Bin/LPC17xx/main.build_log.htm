@@ -8,9 +8,11 @@ Project File Date:  01/24/2018
 
 <h2>Output:</h2>
 Build target 'Target 1'
-compiling GUISelect.cpp...
+compiling main.cpp...
+compiling GUIPagedView.cpp...
+compiling GUIStepper.cpp...
 linking...
-Program Size: Code=26910 RO-data=3738 RW-data=252 ZI-data=29244  
+Program Size: Code=26934 RO-data=3738 RW-data=252 ZI-data=29244  
 FromELF: creating hex file...
 ".\Bin\LPC17xx\main.axf" - 0 Error(s), 0 Warning(s).
 Load "C:\\Users\\robert\\Documents\\fh\\Project\\GUI\\Bin\\LPC17xx\\main.axf" 
@@ -18,169 +20,151 @@ Erase Done.
 Programming Done.
 Verify OK.
 Application running ...
-\\Project\\GUI\\Bin\\LPC17xx\\main.axf" 
-Erase Done.
-Programming Done.
-Verify OK.
+</pre>
+</body>
+</html>
+OK.
 Application running ...
-).
-Target not created
-: 0 warnings, 2 errors
-compiling GUISelect.cpp...
-compiling GUIPagedView.cpp...
-Src\GUIPagedView.h(37): error:  #20: identifier "View" is undefined
-                        view = va_arg(ptr, View*);
-Src\GUIPagedView.cpp: 0 warnings, 1 error
-".\Bin\LPC17xx\main.axf" - 4 Error(s), 0 Warning(s).
-Target not created
-ntifier "View" is undefined
-                        view = va_arg(ptr, View*);
-Src\GUIPagedView.cpp: 0 warnings, 1 error
-".\Bin\LPC17xx\main.axf" - 5 Error(s), 0 Warning(s).
-Target not created
-              view = va_arg(ptr, View*);
-Src\GUIPagedView.cpp: 0 warnings, 1 error
-".\Bin\LPC17xx\main.axf" - 6 Error(s), 0 Warning(s).
-Target not created
-.cpp...
-Src\GUIPagedView.h(37): error:  #20: identifier "View" is undefined
-                        view = va_arg(ptr, View*);
-Src\GUIPagedView.cpp: 0 warnings, 1 error
-".\Bin\LPC17xx\main.axf" - 8 Error(s), 0 Warning(s).
-Target not created
-iew];
-Src\GUIPagedView.cpp(11): error:  #20: identifier "current" is undefined
-        View* current = (View*)views[selectedView];
-Src\GUIPagedView.cpp(11): error:  #29: expected an expression
-        View* current = (View*)views[selectedView];
-Src\GUIPagedView.cpp(11): error:  #65: expected a ";"
-        View* current = (View*)views[selectedView];
-Src\GUIPagedView.cpp(21): error:  #20: identifier "View" is undefined
-                ((View*)views[selectedView])->isHidden = true;
-Src\GUIPagedView.cpp(21): error:  #29: expected an expression
-                ((View*)views[selectedView])->isHidden = true;
-Src\GUIPagedView.cpp(21): error:  #18: expected a ")"
-                ((View*)views[selectedView])->isHidden = true;
-Src\GUIPagedView.cpp(32): error:  #29: expected an expression
-                ((View*)views[selectedView])->isHidden = false;
-Src\GUIPagedView.cpp(32): error:  #18: expected a ")"
-                ((View*)views[selectedView])->isHidden = false;
-Src\GUIPagedView.cpp(42): error:  #276: name followed by "::" must be a class or namespace name
-        View::onEvent(_e, _finger);
-Src\GUIPagedView.cpp(44): error:  #20: identifier "View" is undefined
-        View* current = (View*)views[selectedView];
-Src\GUIPagedView.cpp(44): error:  #20: identifier "current" is undefined
-        View* current = (View*)views[selectedView];
-Src\GUIPagedView.cpp(44): error:  #29: expected an expression
-        View* current = (View*)views[selectedView];
-Src\GUIPagedView.cpp(44): error:  #65: expected a ";"
-        View* current = (View*)views[selectedView];
-Src\GUIPagedView.cpp: 0 warnings, 15 errors
-compiling GUIStepper.cpp...
-".\Bin\LPC17xx\main.axf" - 22 Error(s), 0 Warning(s).
-Target not created
- followed by "::" must be a class or namespace name
-        View::onDraw(_r);
-Src\GUIStepper.cpp(16): error:  #276: name followed by "::" must be a class or namespace name
-        View::onEvent(_e, _finger);
-Src\GUIStepper.cpp: 0 warnings, 2 errors
-".\Bin\LPC17xx\main.axf" - 24 Error(s), 0 Warning(s).
-Target not created
-name followed by "::" must be a class or namespace name
-        View::onEvent(_e, _finger);
-Src\GUIStepper.cpp: 0 warnings, 2 errors
-".\Bin\LPC17xx\main.axf" - 25 Error(s), 0 Warning(s).
-Target not created
-  {
-Src\main.cpp: 0 warnings, 30 errors
+ror:  #135: class "GUIButton" has no member "setCustomHandler"
+                bRight->setCustomHandler(this);
+Src\GUIStepper.h(38): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                btnUp->setCustomHandler(this);
+Src\GUIStepper.h(42): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                btnDown->setCustomHandler(this);
+Src\main.cpp(107): error:  #135: class "GUIButton" has no member "setCustomHandler"
+        ledToggle->setCustomHandler(handler);
+Src\main.cpp: 0 warnings, 7 errors
 compiling GUIButton.cpp...
-Src\GUILabel.h(22): error:  #276: name followed by "::" must be a class or namespace name
-                View::destroy();
-Src\GUILabel.h(29): error:  #292: "View" is not a nonstatic data member or base class of class "GUILabel"
-                : View(_rect, _color),
-Src\GUILabel.h(29): error:  #18: expected a ")"
-                : View(_rect, _color),
-Src\GUILabel.h(31): error:  #291: no default constructor exists for class "GUIView"
-        {
 Src\GUIButton.h(13): error:  #262: not a class or struct name
-  class GUIButton : public View, public IEventCaller
-Src\GUIButton.h(23): error:  #292: "View" is not a nonstatic data member or base class of class "GUIButton"
-                : View(_rect, _color),
-Src\GUIButton.h(23): error:  #18: expected a ")"
-                : View(_rect, _color),
-Src\GUIButton.h(28): error:  #20: identifier "addChild" is undefined
-                addChild(label);
-Src\GUIButton.cpp(11): error:  #276: name followed by "::" must be a class or namespace name
-        View::onDraw(_r);
-Src\GUIButton.cpp(16): error:  #276: name followed by "::" must be a class or namespace name
-        View::onEvent(_e, _finger);
-Src\GUIButton.cpp(21): error:  #20: identifier "rect" is undefined
-                GUIHelper::drawRectOutline(rect, drawOutline ? outlineColor : backgroundColor, 2);
-Src\GUIButton.cpp(21): error:  #20: identifier "backgroundColor" is undefined
-                GUIHelper::drawRectOutline(rect, drawOutline ? outlineColor : backgroundColor, 2);
-Src\GUIButton.cpp: 0 warnings, 12 errors
-compiling GUIControls.cpp...
-Src\GUIControls.h(17): error:  #20: identifier "View" is undefined
-        View *superView;
-Src\GUIControls.h(21): error:  #20: identifier "View" is undefined
-        GUIControls(View *_superView, cHwTouch &_touch)
-Src\GUIControls.h(24): error:  #131: expression must have pointer-to-class type
-                superView->isHidden = false;
-Src\GUIControls.cpp(22): error:  #131: expression must have pointer-to-class type
-                superView->onEvent(t ? GUIEvent::TouchDown : GUIEvent::TouchUp, finger);
-Src\GUIControls.cpp(28): error:  #131: expression must have pointer-to-class type
-                superView->onEvent(GUIEvent::Touch, finger);
-Src\GUIControls.cpp: 0 warnings, 5 errors
+  class GUIButton : public GUIView, public GUGUIEventCaller
+Src\GUIButton.cpp(22): error:  #20: identifier "callHandler" is undefined
+                callHandler(_e);
+Src\GUIButton.cpp: 0 warnings, 2 errors
 compiling GUILabel.cpp...
-Src\GUILabel.h(22): error:  #276: name followed by "::" must be a class or namespace name
-                View::destroy();
-Src\GUILabel.h(29): error:  #292: "View" is not a nonstatic data member or base class of class "GUILabel"
-                : View(_rect, _color),
-Src\GUILabel.h(29): error:  #18: expected a ")"
-                : View(_rect, _color),
-Src\GUILabel.h(31): error:  #291: no default constructor exists for class "GUIView"
-        {
-Src\GUILabel.cpp(11): error:  #276: name followed by "::" must be a class or namespace name
-        View::onDraw(_r);
-Src\GUILabel.cpp: 0 warnings, 5 errors
 compiling GUISelect.cpp...
-Src\GUILabel.h(22): error:  #276: name followed by "::" must be a class or namespace name
-                View::destroy();
-Src\GUILabel.h(29): error:  #292: "View" is not a nonstatic data member or base class of class "GUILabel"
-                : View(_rect, _color),
-Src\GUILabel.h(29): error:  #18: expected a ")"
-                : View(_rect, _color),
-Src\GUILabel.h(31): error:  #291: no default constructor exists for class "GUIView"
-        {
 Src\GUIButton.h(13): error:  #262: not a class or struct name
-  class GUIButton : public View, public IEventCaller
-Src\GUIButton.h(23): error:  #292: "View" is not a nonstatic data member or base class of class "GUIButton"
-                : View(_rect, _color),
-Src\GUIButton.h(23): error:  #18: expected a ")"
-                : View(_rect, _color),
-Src\GUIButton.h(28): error:  #20: identifier "addChild" is undefined
-                addChild(label);
-Src\GUISelect.h(30): error:  #292: "View" is not a nonstatic data member or base class of class "GUISelect"
-                : View(_rect, _color),
-Src\GUISelect.h(30): error:  #18: expected a ")"
-                : View(_rect, _color),
-Src\GUISelect.h(34): error:  #291: no default constructor exists for class "GUIView"
-        {
-Src\GUISelect.h(45): error:  #167: argument of type "GUIButton *" is incompatible with parameter of type "IDrawable *"
-                        addChild(btn);
-Src\GUISelect.cpp(11): error:  #276: name followed by "::" must be a class or namespace name
-        View::onDraw(_r);
-Src\GUISelect.cpp(16): error:  #276: name followed by "::" must be a class or namespace name
-        View::onLateDraw(_r);
-Src\GUISelect.cpp(23): error:  #276: name followed by "::" must be a class or namespace name
-        View::onEvent(_e, _finger);
-Src\GUISelect.cpp(34): error:  #42: operand types are incompatible ("IDrawable *" and "GUIButton *")
-                        if (ptr == (GUIButton*)_caller)
-Src\GUISelect.cpp(52): error:  #135: class "GUIButton" has no member "rect"
-                GUIHelper::drawRectOutline(ptr->rect, ptr == selectedButton ? outlineColor : ptr->backgroundColor, 2);
-Src\GUISelect.cpp(52): error:  #135: class "GUIButton" has no member "backgroundColor"
-                GUIHelper::drawRectOutline(ptr->rect, ptr == selectedButton ? outlineColor : ptr->backgroundColor, 2);
-Src\GUISelect.cpp(53): error:  #135: class "GUIButton" has no member "getNext"
+  class GUIButton : public GUIView, public GUGUIEventCaller
+Src\GUISelect.h(42): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                        btn->setCustomHandler(this);
+Src\GUISelect.cpp: 0 warnings, 2 errors
+compiling GUIPagedView.cpp...
+Src\GUIButton.h(13): error:  #262: not a class or struct name
+  class GUIButton : public GUIView, public GUGUIEventCaller
+Src\GUIPagedView.h(43): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                bLeft->setCustomHandler(this);
+Src\GUIPagedView.h(47): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                bRight->setCustomHandler(this);
+Src\GUIPagedView.cpp(23): error:  #42: operand types are incompatible ("GUIEventCaller *" and "GUIButton *")
+                if (_caller == bLeft)
+Src\GUIPagedView.cpp(26): error:  #42: operand types are incompatible ("GUIEventCaller *" and "GUIButton *")
+                }else if (_caller == bRight)
+Src\GUIPagedView.cpp: 0 warnings, 5 errors
+compiling GUIMeasurement.cpp...
+compiling GUIStepper.cpp...
+Src\GUIButton.h(13): error:  #262: not a class or struct name
+  class GUIButton : public GUIView, public GUGUIEventCaller
+Src\GUIStepper.h(38): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                btnUp->setCustomHandler(this);
+Src\GUIStepper.h(42): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                btnDown->setCustomHandler(this);
+Src\GUIStepper.cpp(23): error:  #42: operand types are incompatible ("GUIEventCaller *" and "GUIButton *")
+                if (_caller == btnUp)
+Src\GUIStepper.cpp(27): error:  #42: operand types are incompatible ("GUIEventCaller *" and "GUIButton *")
+                if (_caller == btnDown)
+Src\GUIStepper.cpp: 0 warnings, 5 errors
+compiling GUIView.cpp...
+".\Bin\LPC17xx\main.axf" - 21 Error(s), 0 Warning(s).
+Target not created
+lete class type is not allowed
+                        customHandler->onEventHandle(this, _e);
+Src\GUIMeasurement.cpp: 0 warnings, 1 error
+compiling GUIStepper.cpp...
+Src\GUIEventCaller.h(33): error:  #393: pointer to incomplete class type is not allowed
+                        customHandler->onEventHandle(this, _e);
+Src\GUIButton.h(13): error:  #262: not a class or struct name
+  class GUIButton : public GUIView, public GUGUIEventCaller
+Src\GUIStepper.h(38): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                btnUp->setCustomHandler(this);
+Src\GUIStepper.h(42): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                btnDown->setCustomHandler(this);
+Src\GUIStepper.cpp(23): error:  #42: operand types are incompatible ("GUIEventCaller *" and "GUIButton *")
+                if (_caller == btnUp)
+Src\GUIStepper.cpp(27): error:  #42: operand types are incompatible ("GUIEventCaller *" and "GUIButton *")
+                if (_caller == btnDown)
+Src\GUIStepper.cpp: 0 warnings, 6 errors
+compiling GUIView.cpp...
+Src\GUIEventCaller.h(33): error:  #393: pointer to incomplete class type is not allowed
+                        customHandler->onEventHandle(this, _e);
+Src\GUIView.cpp: 0 warnings, 1 error
+".\Bin\LPC17xx\main.axf" - 29 Error(s), 0 Warning(s).
+Target not created
+ GUISelect.cpp...
+Src\GUIEventHandler.h(18): error:  #20: identifier "GUIEventCaller" is undefined
+        virtual void onEventHandle(GUIEventCaller *_c, GUIEvent::Event _e) = 0;
+Src\GUIButton.h(13): error:  #262: not a class or struct name
+  class GUIButton : public GUIView, public GUIEventCaller
+Src\GUISelect.h(13): error:  #70: incomplete type is not allowed
+  class GUISelect : public GUIView, public IEventHandler, public IEventCaller
+Src\GUISelect.h(58): warning:  #997-D: function "IEventHandler::onEventHandle(<error-type> *, GUIEvent::Event)" is hidden by "GUISelect::onEventHandle" -- virtual function override intended?
+        virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e);
+Src\GUISelect.h(21): error:  #20: identifier "callHandler" is undefined
+                callHandler(GUIEvent::TouchUp);
+Src\GUISelect.h(42): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                        btn->setCustomHandler(this);
+Src\GUISelect.cpp(56): error:  #20: identifier "callHandler" is undefined
+        callHandler(_e);
+Src\GUISelect.cpp: 1 warning, 6 errors
+compiling GUIPagedView.cpp...
+Src\GUIEventHandler.h(18): error:  #20: identifier "GUIEventCaller" is undefined
+        virtual void onEventHandle(GUIEventCaller *_c, GUIEvent::Event _e) = 0;
+Src\GUIButton.h(13): error:  #262: not a class or struct name
+  class GUIButton : public GUIView, public GUIEventCaller
+Src\GUIPagedView.h(13): error:  #262: not a class or struct name
+  class GUIPagedView : public GUIView, public GUIEventHandler
+Src\GUIPagedView.h(43): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                bLeft->setCustomHandler(this);
+Src\GUIPagedView.h(47): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                bRight->setCustomHandler(this);
+Src\GUIPagedView.cpp(23): error:  #42: operand types are incompatible ("IEventCaller *" and "GUIButton *")
+                if (_caller == bLeft)
+Src\GUIPagedView.cpp(26): error:  #42: operand types are incompatible ("IEventCaller *" and "GUIButton *")
+                }else if (_caller == bRight)
+Src\GUIPagedView.cpp: 0 warnings, 7 errors
+compiling GUIStepper.cpp...
+Src\GUIEventHandler.h(18): error:  #20: identifier "GUIEventCaller" is undefined
+        virtual void onEventHandle(GUIEventCaller *_c, GUIEvent::Event _e) = 0;
+Src\GUIButton.h(13): error:  #262: not a class or struct name
+  class GUIButton : public GUIView, public GUIEventCaller
+Src\GUIStepper.h(14): error:  #70: incomplete type is not allowed
+  class GUIStepper : public GUIView, public IEventHandler, public IEventCaller
+Src\GUIStepper.h(51): warning:  #997-D: function "IEventHandler::onEventHandle(<error-type> *, GUIEvent::Event)" is hidden by "GUIStepper::onEventHandle" -- virtual function override intended?
+        virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e);
+Src\GUIStepper.h(38): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                btnUp->setCustomHandler(this);
+Src\GUIStepper.h(42): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                btnDown->setCustomHandler(this);
+Src\GUIStepper.cpp(23): error:  #42: operand types are incompatible ("IEventCaller *" and "GUIButton *")
+                if (_caller == btnUp)
+Src\GUIStepper.cpp(27): error:  #42: operand types are incompatible ("IEventCaller *" and "GUIButton *")
+                if (_caller == btnDown)
+Src\GUIStepper.cpp(34): error:  #20: identifier "callHandler" is undefined
+                callHandler(_e);
+Src\GUIStepper.cpp: 1 warning, 8 errors
+".\Bin\LPC17xx\main.axf" - 41 Error(s), 6 Warning(s).
+Target not created
+is);
+Src\GUIStepper.h(42): error:  #135: class "GUIButton" has no member "setCustomHandler"
+                btnDown->setCustomHandler(this);
+Src\GUIStepper.cpp(23): error:  #42: operand types are incompatible ("IEventCaller *" and "GUIButton *")
+                if (_caller == btnUp)
+Src\GUIStepper.cpp(27): error:  #42: operand types are incompatible ("IEventCaller *" and "GUIButton *")
+                if (_caller == btnDown)
+Src\GUIStepper.cpp(34): error:  #20: identifier "callHandler" is undefined
+                callHandler(_e);
+Src\GUIStepper.cpp: 1 warning, 8 errors
+".\Bin\LPC17xx\main.axf" - 40 Error(s), 8 Warning(s).
+Target not created
+elect.cpp(53): error:  #135: class "GUIButton" has no member "getNext"
                 ptr = (GUIButton*)ptr->getNext();
 Src\GUISelect.cpp: 0 warnings, 19 errors
 compiling GUIPagedView.cpp...

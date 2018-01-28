@@ -116,6 +116,7 @@
 .\bin\lpc17xx\guipagedview.o: Src\GUIHelper.h
 .\bin\lpc17xx\guipagedview.o: Src\Rect.h
 .\bin\lpc17xx\guipagedview.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
+.\bin\lpc17xx\guipagedview.o: Src\GUIEventCaller.h
+.\bin\lpc17xx\guipagedview.o: Src\GUIEventHandler.h
 .\bin\lpc17xx\guipagedview.o: Src\GUIButton.h
 .\bin\lpc17xx\guipagedview.o: Src\GUILabel.h
-.\bin\lpc17xx\guipagedview.o: Src\IEventHandler.h

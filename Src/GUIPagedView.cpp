@@ -12,7 +12,7 @@ void GUIPagedView::onDraw(Rect _r)
 	current->draw(_r);
 }
 
-void GUIPagedView::onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
+void GUIPagedView::onEventHandle(GUIEventCaller *_caller, GUIEvent::Event _e)
 {
 	if (_e == GUIEvent::TouchUp)
 	{

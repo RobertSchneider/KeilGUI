@@ -9,6 +9,8 @@
 
 #include "IDrawable.h"
 #include "Rect.h"
+#include "GUIEventCaller.h"
+#include "GUIEventHandler.h"
 
 class GUIView : public IDrawable
 {

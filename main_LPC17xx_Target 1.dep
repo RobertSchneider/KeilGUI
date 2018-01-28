@@ -331,7 +331,7 @@ I (..\EmbSysLib\Lib\Src\Device/Control/devControlPointer.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Task/TaskHandler.h)(0x5A1B19D0)
 I (..\EmbSysLib\Lib\Src\Module\RTOS/RTOS_Scheduler.cpp)(0x5A1B19CF)
 I (..\EmbSysLib\Lib\Src\Module\RTOS/RTOS_Scheduler.h)(0x5A1B19CF)
-F (.\Src\main.cpp)(0x5A6CF5EC)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.\src -I..\EmbSysLib\Lib\Src-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-D_KEIL -DLPC1758-o .\bin\lpc17xx\main.o --omf_browse .\bin\lpc17xx\main.crf --depend .\bin\lpc17xx\main.d)
+F (.\Src\main.cpp)(0x5A6D15B2)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.\src -I..\EmbSysLib\Lib\Src-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-D_KEIL -DLPC1758-o .\bin\lpc17xx\main.o --omf_browse .\bin\lpc17xx\main.crf --depend .\bin\lpc17xx\main.d)
 I (..\EmbSysLib\Lib\Src\lib.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/Hardware.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/MCU/MCU.h)(0x5A1B19CC)
@@ -448,29 +448,30 @@ I (..\EmbSysLib\Lib\Src\Module/RTOS/RTOS_Scheduler.h)(0x5A1B19CF)
 I (Src\configLPC17xx.h)(0x5A6A4666)
 I (..\EmbSysLib\Lib\Src\Hardware/Common/Font/Font_8x12.h)(0x5A1B19CC)
 I (Src\GUI.h)(0x5A6CFE0F)
-I (Src\IDrawable.h)(0x5A6CF4C1)
+I (Src\IDrawable.h)(0x5A6D0681)
 I (Src\GUIHelper.h)(0x5A6CF3CD)
 I (Src\Rect.h)(0x5A1D99F5)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C819B4)
-I (Src\GUIButton.h)(0x5A6CFFD3)
+I (Src\GUIButton.h)(0x5A6D113B)
 I (Src\GUILabel.h)(0x5A6CF5DA)
-I (Src\GUIView.h)(0x5A6CF661)
-I (Src\IEventHandler.h)(0x5A6A2D2A)
+I (Src\GUIView.h)(0x5A6D10DA)
+I (Src\GUIEventCaller.h)(0x5A6D111D)
+I (Src\GUIEventHandler.h)(0x5A6D1104)
 I (Src\GUIControls.h)(0x5A6CFCC8)
-I (Src\GUISelect.h)(0x5A6CF5BC)
-I (Src\GUIPagedView.h)(0x5A6CF915)
-I (Src\GUIMeasurement.h)(0x5A6CF5A3)
-I (Src\GUIStepper.h)(0x5A6CF59E)
+I (Src\GUISelect.h)(0x5A6D10BB)
+I (Src\GUIPagedView.h)(0x5A6D15A2)
+I (Src\GUIMeasurement.h)(0x5A6D1064)
+I (Src\GUIStepper.h)(0x5A6D161F)
 I (Src\GUITitleView.h)(0x5A6CF594)
 I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C819B4)
-F (.\Src\IDrawable.h)(0x5A6CF4C1)()
+F (.\Src\IDrawable.h)(0x5A6D0681)()
 F (.\Src\Rect.h)(0x5A1D99F5)()
 F (.\Src\GUI.h)(0x5A6CFE0F)()
 F (.\Src\GUIButton.cpp)(0x5A6CFC8A)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.\src -I..\EmbSysLib\Lib\Src-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-D_KEIL -DLPC1758-o .\bin\lpc17xx\guibutton.o --omf_browse .\bin\lpc17xx\guibutton.crf --depend .\bin\lpc17xx\guibutton.d)
-I (Src\GUIButton.h)(0x5A6CFFD3)
+I (Src\GUIButton.h)(0x5A6D113B)
 I (Src\GUILabel.h)(0x5A6CF5DA)
-I (Src\GUIView.h)(0x5A6CF661)
-I (Src\IDrawable.h)(0x5A6CF4C1)
+I (Src\GUIView.h)(0x5A6D10DA)
+I (Src\IDrawable.h)(0x5A6D0681)
 I (..\EmbSysLib\Lib\Src\lib.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/Hardware.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/MCU/MCU.h)(0x5A1B19CC)
@@ -584,8 +585,9 @@ I (..\EmbSysLib\Lib\Src\Task/TaskHandler.h)(0x5A1B19D0)
 I (Src\GUIHelper.h)(0x5A6CF3CD)
 I (Src\Rect.h)(0x5A1D99F5)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C819B4)
-I (Src\IEventHandler.h)(0x5A6A2D2A)
-F (.\Src\GUIButton.h)(0x5A6CFFD3)()
+I (Src\GUIEventCaller.h)(0x5A6D111D)
+I (Src\GUIEventHandler.h)(0x5A6D1104)
+F (.\Src\GUIButton.h)(0x5A6D113B)()
 F (.\Src\GUIControls.cpp)(0x5A6CFF83)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.\src -I..\EmbSysLib\Lib\Src-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-D_KEIL -DLPC1758-o .\bin\lpc17xx\guicontrols.o --omf_browse .\bin\lpc17xx\guicontrols.crf --depend .\bin\lpc17xx\guicontrols.d)
 I (Src\GUIControls.h)(0x5A6CFCC8)
 I (..\EmbSysLib\Lib\Src\lib.h)(0x5A1B19CB)
@@ -698,15 +700,15 @@ I (..\EmbSysLib\Lib\Src\Device/Control/devControlEncoderJoystick.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Device/Control/devControlEncoderRotaryKnob.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Device/Control/devControlPointer.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Task/TaskHandler.h)(0x5A1B19D0)
-I (Src\IDrawable.h)(0x5A6CF4C1)
+I (Src\IDrawable.h)(0x5A6D0681)
 I (Src\GUIHelper.h)(0x5A6CF3CD)
 I (Src\Rect.h)(0x5A1D99F5)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C819B4)
 F (.\Src\GUIControls.h)(0x5A6CFCC8)()
 F (.\Src\GUILabel.cpp)(0x5A6CF61C)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.\src -I..\EmbSysLib\Lib\Src-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-D_KEIL -DLPC1758-o .\bin\lpc17xx\guilabel.o --omf_browse .\bin\lpc17xx\guilabel.crf --depend .\bin\lpc17xx\guilabel.d)
 I (Src\GUILabel.h)(0x5A6CF5DA)
-I (Src\GUIView.h)(0x5A6CF661)
-I (Src\IDrawable.h)(0x5A6CF4C1)
+I (Src\GUIView.h)(0x5A6D10DA)
+I (Src\IDrawable.h)(0x5A6D0681)
 I (..\EmbSysLib\Lib\Src\lib.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/Hardware.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/MCU/MCU.h)(0x5A1B19CC)
@@ -820,11 +822,13 @@ I (..\EmbSysLib\Lib\Src\Task/TaskHandler.h)(0x5A1B19D0)
 I (Src\GUIHelper.h)(0x5A6CF3CD)
 I (Src\Rect.h)(0x5A1D99F5)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C819B4)
+I (Src\GUIEventCaller.h)(0x5A6D111D)
+I (Src\GUIEventHandler.h)(0x5A6D1104)
 F (.\Src\GUILabel.h)(0x5A6CF5DA)()
-F (.\Src\GUISelect.cpp)(0x5A6D0119)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.\src -I..\EmbSysLib\Lib\Src-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-D_KEIL -DLPC1758-o .\bin\lpc17xx\guiselect.o --omf_browse .\bin\lpc17xx\guiselect.crf --depend .\bin\lpc17xx\guiselect.d)
-I (Src\GUISelect.h)(0x5A6CF5BC)
-I (Src\GUIView.h)(0x5A6CF661)
-I (Src\IDrawable.h)(0x5A6CF4C1)
+F (.\Src\GUISelect.cpp)(0x5A6D10BA)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.\src -I..\EmbSysLib\Lib\Src-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-D_KEIL -DLPC1758-o .\bin\lpc17xx\guiselect.o --omf_browse .\bin\lpc17xx\guiselect.crf --depend .\bin\lpc17xx\guiselect.d)
+I (Src\GUISelect.h)(0x5A6D10BB)
+I (Src\GUIView.h)(0x5A6D10DA)
+I (Src\IDrawable.h)(0x5A6D0681)
 I (..\EmbSysLib\Lib\Src\lib.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/Hardware.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/MCU/MCU.h)(0x5A1B19CC)
@@ -938,15 +942,15 @@ I (..\EmbSysLib\Lib\Src\Task/TaskHandler.h)(0x5A1B19D0)
 I (Src\GUIHelper.h)(0x5A6CF3CD)
 I (Src\Rect.h)(0x5A1D99F5)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C819B4)
-I (Src\GUIButton.h)(0x5A6CFFD3)
+I (Src\GUIEventCaller.h)(0x5A6D111D)
+I (Src\GUIEventHandler.h)(0x5A6D1104)
+I (Src\GUIButton.h)(0x5A6D113B)
 I (Src\GUILabel.h)(0x5A6CF5DA)
-I (Src\IEventHandler.h)(0x5A6A2D2A)
-F (.\Src\GUISelect.h)(0x5A6CF5BC)()
-F (.\Src\IEventHandler.h)(0x5A6A2D2A)()
-F (.\Src\GUIPagedView.cpp)(0x5A6CF60F)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.\src -I..\EmbSysLib\Lib\Src-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-D_KEIL -DLPC1758-o .\bin\lpc17xx\guipagedview.o --omf_browse .\bin\lpc17xx\guipagedview.crf --depend .\bin\lpc17xx\guipagedview.d)
-I (Src\GUIPagedView.h)(0x5A6CF915)
-I (Src\GUIView.h)(0x5A6CF661)
-I (Src\IDrawable.h)(0x5A6CF4C1)
+F (.\Src\GUISelect.h)(0x5A6D10BB)()
+F (.\Src\GUIPagedView.cpp)(0x5A6D10BB)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.\src -I..\EmbSysLib\Lib\Src-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-D_KEIL -DLPC1758-o .\bin\lpc17xx\guipagedview.o --omf_browse .\bin\lpc17xx\guipagedview.crf --depend .\bin\lpc17xx\guipagedview.d)
+I (Src\GUIPagedView.h)(0x5A6D15A2)
+I (Src\GUIView.h)(0x5A6D10DA)
+I (Src\IDrawable.h)(0x5A6D0681)
 I (..\EmbSysLib\Lib\Src\lib.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/Hardware.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/MCU/MCU.h)(0x5A1B19CC)
@@ -1060,15 +1064,16 @@ I (..\EmbSysLib\Lib\Src\Task/TaskHandler.h)(0x5A1B19D0)
 I (Src\GUIHelper.h)(0x5A6CF3CD)
 I (Src\Rect.h)(0x5A1D99F5)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C819B4)
-I (Src\GUIButton.h)(0x5A6CFFD3)
+I (Src\GUIEventCaller.h)(0x5A6D111D)
+I (Src\GUIEventHandler.h)(0x5A6D1104)
+I (Src\GUIButton.h)(0x5A6D113B)
 I (Src\GUILabel.h)(0x5A6CF5DA)
-I (Src\IEventHandler.h)(0x5A6A2D2A)
-F (.\Src\GUIPagedView.h)(0x5A6CF915)()
+F (.\Src\GUIPagedView.h)(0x5A6D15A2)()
 F (.\Src\GUIMeasurement.cpp)(0x5A6CF5F6)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.\src -I..\EmbSysLib\Lib\Src-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-D_KEIL -DLPC1758-o .\bin\lpc17xx\guimeasurement.o --omf_browse .\bin\lpc17xx\guimeasurement.crf --depend .\bin\lpc17xx\guimeasurement.d)
-I (Src\GUIMeasurement.h)(0x5A6CF5A3)
+I (Src\GUIMeasurement.h)(0x5A6D1064)
 I (Src\GUILabel.h)(0x5A6CF5DA)
-I (Src\GUIView.h)(0x5A6CF661)
-I (Src\IDrawable.h)(0x5A6CF4C1)
+I (Src\GUIView.h)(0x5A6D10DA)
+I (Src\IDrawable.h)(0x5A6D0681)
 I (..\EmbSysLib\Lib\Src\lib.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/Hardware.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/MCU/MCU.h)(0x5A1B19CC)
@@ -1182,12 +1187,13 @@ I (..\EmbSysLib\Lib\Src\Task/TaskHandler.h)(0x5A1B19D0)
 I (Src\GUIHelper.h)(0x5A6CF3CD)
 I (Src\Rect.h)(0x5A1D99F5)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C819B4)
-I (Src\IEventHandler.h)(0x5A6A2D2A)
-F (.\Src\GUIMeasurement.h)(0x5A6CF5A3)()
-F (.\Src\GUIStepper.cpp)(0x5A6CF600)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.\src -I..\EmbSysLib\Lib\Src-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-D_KEIL -DLPC1758-o .\bin\lpc17xx\guistepper.o --omf_browse .\bin\lpc17xx\guistepper.crf --depend .\bin\lpc17xx\guistepper.d)
-I (Src\GUIStepper.h)(0x5A6CF59E)
-I (Src\GUIView.h)(0x5A6CF661)
-I (Src\IDrawable.h)(0x5A6CF4C1)
+I (Src\GUIEventCaller.h)(0x5A6D111D)
+I (Src\GUIEventHandler.h)(0x5A6D1104)
+F (.\Src\GUIMeasurement.h)(0x5A6D1064)()
+F (.\Src\GUIStepper.cpp)(0x5A6D10BA)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.\src -I..\EmbSysLib\Lib\Src-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-D_KEIL -DLPC1758-o .\bin\lpc17xx\guistepper.o --omf_browse .\bin\lpc17xx\guistepper.crf --depend .\bin\lpc17xx\guistepper.d)
+I (Src\GUIStepper.h)(0x5A6D161F)
+I (Src\GUIView.h)(0x5A6D10DA)
+I (Src\IDrawable.h)(0x5A6D0681)
 I (..\EmbSysLib\Lib\Src\lib.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/Hardware.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/MCU/MCU.h)(0x5A1B19CC)
@@ -1301,11 +1307,12 @@ I (..\EmbSysLib\Lib\Src\Task/TaskHandler.h)(0x5A1B19D0)
 I (Src\GUIHelper.h)(0x5A6CF3CD)
 I (Src\Rect.h)(0x5A1D99F5)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C819B4)
-I (Src\GUIButton.h)(0x5A6CFFD3)
+I (Src\GUIEventCaller.h)(0x5A6D111D)
+I (Src\GUIEventHandler.h)(0x5A6D1104)
+I (Src\GUIButton.h)(0x5A6D113B)
 I (Src\GUILabel.h)(0x5A6CF5DA)
-I (Src\IEventHandler.h)(0x5A6A2D2A)
-I (Src\GUIMeasurement.h)(0x5A6CF5A3)
-F (.\Src\GUIStepper.h)(0x5A6CF59E)()
+I (Src\GUIMeasurement.h)(0x5A6D1064)
+F (.\Src\GUIStepper.h)(0x5A6D161F)()
 F (.\Src\GUITitleView.h)(0x5A6CF594)()
 F (.\Src\GUIHelper.cpp)(0x5A6CF3C4)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.\src -I..\EmbSysLib\Lib\Src-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-D_KEIL -DLPC1758-o .\bin\lpc17xx\guihelper.o --omf_browse .\bin\lpc17xx\guihelper.crf --depend .\bin\lpc17xx\guihelper.d)
 I (Src\GUIHelper.h)(0x5A6CF3CD)
@@ -1422,10 +1429,10 @@ I (..\EmbSysLib\Lib\Src\Task/TaskHandler.h)(0x5A1B19D0)
 I (Src\Rect.h)(0x5A1D99F5)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C819B4)
 F (.\Src\GUIHelper.h)(0x5A6CF3CD)()
-F (.\Src\GUIView.h)(0x5A6CF661)()
+F (.\Src\GUIView.h)(0x5A6D10DA)()
 F (.\Src\GUIView.cpp)(0x5A6CF518)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.\src -I..\EmbSysLib\Lib\Src-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-D_KEIL -DLPC1758-o .\bin\lpc17xx\guiview.o --omf_browse .\bin\lpc17xx\guiview.crf --depend .\bin\lpc17xx\guiview.d)
-I (Src\GUIView.h)(0x5A6CF661)
-I (Src\IDrawable.h)(0x5A6CF4C1)
+I (Src\GUIView.h)(0x5A6D10DA)
+I (Src\IDrawable.h)(0x5A6D0681)
 I (..\EmbSysLib\Lib\Src\lib.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/Hardware.h)(0x5A1B19CB)
 I (..\EmbSysLib\Lib\Src\Hardware/MCU/MCU.h)(0x5A1B19CC)
@@ -1539,3 +1546,7 @@ I (..\EmbSysLib\Lib\Src\Task/TaskHandler.h)(0x5A1B19D0)
 I (Src\GUIHelper.h)(0x5A6CF3CD)
 I (Src\Rect.h)(0x5A1D99F5)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C819B4)
+I (Src\GUIEventCaller.h)(0x5A6D111D)
+I (Src\GUIEventHandler.h)(0x5A6D1104)
+F (.\Src\GUIEventHandler.h)(0x5A6D1104)()
+F (.\Src\GUIEventCaller.h)(0x5A6D111D)()

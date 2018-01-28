@@ -17,7 +17,7 @@
 
 #include <math.h>
 
-class LedToggleEventHandler : public IEventHandler
+class LedToggleEventHandler : public GUIEventHandler
 {
 public:
 	bool toggled;
@@ -28,7 +28,7 @@ public:
 		digital = &_digital;
 	}
 
-	virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
+	virtual void onEventHandle(GUIEventCaller *_caller, GUIEvent::Event _e)
 	{
 		GUIButton *b = (GUIButton*)_caller;
 		if (_e == GUIEvent::TouchUp)
@@ -40,7 +40,7 @@ public:
 	}
 };
 
-class LedSelectEventHandler : public IEventHandler
+class LedSelectEventHandler : public GUIEventHandler
 {
 public:
 	cDevDigital *digitalLed1;
@@ -54,7 +54,7 @@ public:
 		digitalLed3 = _l3;
 	}
 
-	virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e)
+	virtual void onEventHandle(GUIEventCaller *_caller, GUIEvent::Event _e)
 	{
 		if (_e == GUIEvent::TouchUp)
 		{
@@ -115,7 +115,7 @@ int main(void)
 	//======POTI
 	GUITitleView *secondView = new GUITitleView(GUIHelper::screenRect, WHITE, "POTI");
 	
-	GUIMeasurement *measure = new GUIMeasurement(Rect(40, 80, 240, 30), BLACK, "poti:", " mV");
+	GUIMeasurement *measure = new GUIMeasurement(Rect(40, 80, 240, 30), BLACK, "poti:", " kg");
 	measure->setAlignment(GUIAlignment::Left);
 	secondView->addChild(measure);
 	
@@ -147,5 +147,37 @@ int main(void)
 		}
 	}
 }
+
+/*======TEST SPECIFICATION========
+
+Requirements: MCB1700, Embedded Lib, GUI Lib, Touch Display (Keil)
+
+Test1: Input
+	Test of general input
+	Buttons, switches, views, etc.
+	Condition: view with test buttons etc.
+	Expectations: worse touch recognition on edges, easy navigation
+
+Test2: Memory
+	Test of memory consumption
+	Condition: many views with many labels (cause of strings)
+	Expectations: approximately ~15 bytes per label, more than 30 views possible
+
+Test3: UI Tests
+	Test of implemented ui element
+	Condition: multiple instances of every ui element
+	Expectations: 
+			GUISelect sometimes hard to choose (buttons very close),
+			Buttons in corners sometimes hard to click
+			Redraw interval of changing GUIMeasurement might be slow
+			
+Test4: Lib usability
+	Test of implementation of lib
+	Condition: setup of a view stack
+	Expectations:
+			Easy handler / caller behaviours (listeners)
+			Easy implementation of own custom ui elements
+
+==================================*/
 
 //EOF

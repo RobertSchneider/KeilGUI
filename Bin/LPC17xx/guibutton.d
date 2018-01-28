@@ -117,4 +117,5 @@
 .\bin\lpc17xx\guibutton.o: Src\GUIHelper.h
 .\bin\lpc17xx\guibutton.o: Src\Rect.h
 .\bin\lpc17xx\guibutton.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
-.\bin\lpc17xx\guibutton.o: Src\IEventHandler.h
+.\bin\lpc17xx\guibutton.o: Src\GUIEventCaller.h
+.\bin\lpc17xx\guibutton.o: Src\GUIEventHandler.h

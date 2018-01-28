@@ -10,7 +10,7 @@
 #include "GUIView.h"
 #include "GUIButton.h"
 
-class GUIPagedView : public GUIView, public IEventHandler
+class GUIPagedView : public GUIView, public GUIEventHandler
 {
 protected:
 	virtual void onDraw(Rect _r);
@@ -39,11 +39,11 @@ public:
 		
 		viewCount = _n;
 		
-		bLeft = new GUIButton(Rect(_rect.x, _rect.y + _rect.h - 50, 50, 50), BLACK, "<");
+		bLeft = new GUIButton(Rect(_rect.x, _rect.y + _rect.h - 50, _rect.w / 3, 50), BLACK, "<");
 		bLeft->setCustomHandler(this);
 		addChild(bLeft);
 		
-		bRight = new GUIButton(Rect(_rect.x + _rect.w - 50, _rect.y + _rect.h - 50, 50, 50), BLACK, ">");
+		bRight = new GUIButton(Rect(_rect.x + _rect.w / 3 * 2, _rect.y + _rect.h - 50, _rect.w / 3, 50), BLACK, ">");
 		bRight->setCustomHandler(this);
 		addChild(bRight);
 		
@@ -51,7 +51,7 @@ public:
 	}
 	
 	virtual void onEvent(GUIEvent::Event _e, Rect _finger);
-	virtual void onEventHandle(IEventCaller *_caller, GUIEvent::Event _e);
+	virtual void onEventHandle(GUIEventCaller *_caller, GUIEvent::Event _e);
 };
 
 #endif

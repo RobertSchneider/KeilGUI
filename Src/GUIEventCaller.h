@@ -2,32 +2,25 @@
 // IDrawable
 //*******************************************************************
 
-#ifndef __IEVENTHANDLER
-#define __IEVENTHANDLER
+#ifndef __GUIEVENTCALLER
+#define __GUIEVENTCALLER
 
 //-------------------------------------------------------------------
 
 #include "lib.h"
 #include "IDrawable.h"
+#include "GUIEventHandler.h"
 
-class IEventCaller;
-
-class IEventHandler
-{
-public:
-	virtual void onEventHandle(IEventCaller *_c, GUIEvent::Event _e) = 0;
-};
-
-class IEventCaller
+class GUIEventCaller
 {
 protected:
-	IEventHandler *customHandler;
+	GUIEventHandler *customHandler;
 	virtual void onHandlerSet()
 	{
 		
 	}
 public:
-	void setCustomHandler(IEventHandler *_handler)
+	void setCustomHandler(GUIEventHandler *_handler)
 	{
 		customHandler = _handler;
 		onHandlerSet();

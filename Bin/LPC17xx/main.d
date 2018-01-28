@@ -123,7 +123,8 @@
 .\bin\lpc17xx\main.o: Src\GUIButton.h
 .\bin\lpc17xx\main.o: Src\GUILabel.h
 .\bin\lpc17xx\main.o: Src\GUIView.h
-.\bin\lpc17xx\main.o: Src\IEventHandler.h
+.\bin\lpc17xx\main.o: Src\GUIEventCaller.h
+.\bin\lpc17xx\main.o: Src\GUIEventHandler.h
 .\bin\lpc17xx\main.o: Src\GUI.h
 .\bin\lpc17xx\main.o: Src\GUIControls.h
 .\bin\lpc17xx\main.o: Src\GUISelect.h

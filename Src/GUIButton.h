@@ -8,9 +8,9 @@
 //-------------------------------------------------------------------
 
 #include "GUILabel.h"
-#include "IEventHandler.h"
+#include "GUIEventHandler.h"
 
-class GUIButton : public GUIView, public IEventCaller
+class GUIButton : public GUIView, public GUIEventCaller
 {
 protected:
 	virtual void onDraw(Rect _r);

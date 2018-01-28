@@ -117,4 +117,5 @@
 .\bin\lpc17xx\guimeasurement.o: Src\GUIHelper.h
 .\bin\lpc17xx\guimeasurement.o: Src\Rect.h
 .\bin\lpc17xx\guimeasurement.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
-.\bin\lpc17xx\guimeasurement.o: Src\IEventHandler.h
+.\bin\lpc17xx\guimeasurement.o: Src\GUIEventCaller.h
+.\bin\lpc17xx\guimeasurement.o: Src\GUIEventHandler.h
